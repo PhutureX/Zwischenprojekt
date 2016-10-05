@@ -1,0 +1,78 @@
+/* #################### IMPORTS #################### */
+@import url ("normalize.css");
+@import 'https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,700,700i&subset=latin-ext';
+
+/* #################### GENERAL #################### */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body{
+  background-color: rgb(26, 26, 26);
+}
+
+p{
+  font-family: 'Titilium Web', sans-serif;
+}
+
+main{
+  /*background-color: fuchsia;*/
+}
+
+.wrapper {
+  width: 1440px;
+  /*background-color: green;*/
+  margin: auto;
+}
+
+body main > section {
+  background-color: orange;
+}
+
+/* #################### HEADER #################### */
+
+header{
+  background-color: rgb(34, 31, 31);
+  width: auto;
+}
+
+
+
+
+/* #################### FOOTER #################### */
+
+footer{
+  background-color: rgb(56, 54, 54);
+  height: 324px;
+}
+
+footer h3{
+  font-size: 24px;
+  color: rgb(179, 24, 25);
+}
+
+footer .footer_flex{
+  display: flex;
+  justify-content: space-between;;
+  align-items: center;
+  height: 324px;
+}
+
+footer .footer_flex table td{
+  display: inline;
+}
+
+
+
+
+
+
+
+/* #################### HELPERS #################### */
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
