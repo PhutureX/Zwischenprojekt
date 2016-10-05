@@ -16,6 +16,10 @@ p{
   font-family: 'Titilium Web', sans-serif;
 }
 
+a{
+  font-family: 'Titilium Web', sans-serif;
+}
+
 main{
   /*background-color: fuchsia;*/
 }
@@ -48,7 +52,7 @@ footer{
 }
 
 footer h3{
-  font-size: 24px;
+  font-size: 32px;
   color: rgb(179, 24, 25);
 }
 
@@ -59,9 +63,164 @@ footer .footer_flex{
   height: 324px;
 }
 
-footer .footer_flex table td{
-  display: inline;
+
+footer .footer_flex .footer_space{
+  display: block;
+  width: 50px;
 }
+
+footer .footer_flex .footer_left .footer_middle .footer_right{
+  display: block;
+}
+
+footer .footer_flex ul{
+  margin-top: 0px;
+  padding: 5px 0px 0px 0px;
+}
+
+footer .footer_flex ul li{
+  list-style-type: none;
+  padding-top: 5px;
+}
+
+
+footer .footer_flex ul li a {
+  font-size: 18px;
+  color: rgb(240, 240, 240);
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+footer .footer_flex ul li a:hover {
+  font-size: 18px;
+  color: rgb(179, 24, 25);
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+footer .newsletter {
+  width: 290px;
+}
+
+footer .newsletter tr:first-child {
+    background-color: rgb(179, 24, 25);
+    width: 144px;
+    height: 85px;
+}
+
+
+footer .newsletter tr td .nl_button{
+  display: block;
+}
+
+footer .newsletter h4{
+  font-size: 24px;
+  color: rgb(240, 240, 240);
+  display: inline-block;
+}
+
+footer .newsletter tbody tr td{
+  display: block;
+  padding-left: 10px;
+}
+
+footer .newsletter tbody tr .nlemail {
+    height: 30px;
+    width: 94%;
+    padding-left: 5px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 22px;
+}
+
+footer .newsletter tbody tr .nl_button{
+  width: 150px;
+  height: 30px;
+  margin-left: -10px;
+  background-color: rgb(179, 24, 25);
+  border: none;
+  color: rgb(240, 240, 240);
+  font-weight: bold;
+  transition: color 300ms;
+  cursor: pointer;
+}
+
+footer .newsletter tbody tr .nl_button:hover{
+  width: 150px;
+  height: 30px;
+  margin-left: -10px;
+  background-color: rgb(240, 240, 240);
+  border: none;
+  color: rgb(179, 24, 25);
+  font-weight: bold;
+}
+
+
+
+footer .newsletter .social_icons .social_object_1{
+  padding-left: 0px;
+  padding-top: 30px;
+  display: inline-block;
+}
+
+footer .newsletter .social_icons .social_object_2{
+  padding-left: 40px;
+  padding-top: 30px;
+  display: inline-block;
+}
+
+footer .newsletter .social_icons .social_object_3{
+  padding-left: 40px;
+  padding-top: 30px;
+  display: inline-block;
+}
+
+footer .newsletter .social_icons .social_object_4{
+  padding-left: 40px;
+  padding-top: 30px;
+  display: inline-block;
+}
+
+footer .newsletter .social_icons .social_object_1 i{
+  color: rgb(240, 240, 240);
+  transition: color 300ms;
+}
+
+footer .newsletter .social_icons .social_object_1 i:hover{
+  color: #bb0000;
+}
+
+footer .newsletter .social_icons .social_object_2 i{
+  color: rgb(240, 240, 240);
+  transition: color 300ms;
+}
+
+footer .newsletter .social_icons .social_object_2 i:hover{
+  color: #3b5998;
+}
+
+footer .newsletter .social_icons .social_object_3 i{
+  color: rgb(240, 240, 240);
+  transition: color 300ms;
+}
+
+footer .newsletter .social_icons .social_object_3 i:hover{
+  color: #4099FF;
+}
+
+footer .newsletter .social_icons .social_object_4 i{
+  color: rgb(240, 240, 240);
+  transition: color 300ms;
+}
+
+footer .newsletter .social_icons .social_object_4 i:hover{
+  color: #c08d64;
+}
+
+
+
+
+
+
 
 
 
