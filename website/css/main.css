@@ -97,7 +97,7 @@ footer .footer_flex ul li a:hover {
 }
 
 footer .newsletter {
-  width: 240px;
+
 }
 
 footer .newsletter tr:first-child {
@@ -120,6 +120,7 @@ footer .newsletter h4{
 footer .newsletter tbody tr td{
   display: block;
   padding-left: 10px;
+  padding-right: 0px;
 }
 
 footer .newsletter tbody tr .nlemail {
