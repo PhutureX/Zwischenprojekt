@@ -37,9 +37,43 @@ body main > section {
 /* #################### HEADER #################### */
 
 header{
-  background-color: rgb(34, 31, 31);
   width: auto;
 }
+
+header h1{
+
+}
+
+header img{
+  width: 420px;
+  height: 125px;
+  margin-left: 72px;
+}
+
+header nav {
+  float: left;
+}
+header nav ul {
+  margin: 0;
+}
+header nav ul li {
+  display: inline-block;
+  margin-left: 35px;
+}
+
+header nav ul li a{
+  font-size: 24px;
+  color: rgb(240, 240, 240);
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+header nav ul li a:hover{
+  color: rgb(179, 24, 25);
+}
+
+
+
 
 
 
@@ -63,7 +97,6 @@ footer .footer_flex{
   height: 324px;
 }
 
-
 footer .footer_flex .footer_space{
   display: block;
   width: 50px;
@@ -82,7 +115,6 @@ footer .footer_flex ul li{
   list-style-type: none;
   padding-top: 5px;
 }
-
 
 footer .footer_flex ul li a {
   font-size: 18px;
@@ -168,7 +200,7 @@ footer .newsletter tbody tr .nl_button{
   border: none;
   color: rgb(240, 240, 240);
   font-weight: bold;
-  transition: color 300ms;
+  transition: all 300ms;
   cursor: pointer;
 }
 
@@ -176,13 +208,10 @@ footer .newsletter tbody tr .nl_button:hover{
   width: 235px;
   height: 30px;
   margin-left: -10px;
-  background-color: rgb(240, 240, 240);
-  border: none;
-  color: rgb(179, 24, 25);
+  background-color: transparent;
+  border: solid 2px rgb(179, 24, 25);
   font-weight: bold;
 }
-
-
 
 footer .newsletter .social_icons .social_object_1{
   padding-left: 0px;
@@ -243,18 +272,6 @@ footer .newsletter .social_icons .social_object_4 i{
 footer .newsletter .social_icons .social_object_4 i:hover{
   color: #c08d64;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* #################### HELPERS #################### */
 
