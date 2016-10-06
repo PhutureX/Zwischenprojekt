@@ -25,7 +25,7 @@ main{
 }
 
 .wrapper {
-  width: 1440px;
+  width: 1080px;
   /*background-color: green;*/
   margin: auto;
 }
@@ -52,7 +52,7 @@ footer{
 }
 
 footer h3{
-  font-size: 32px;
+  font-size: 28px;
   color: rgb(179, 24, 25);
 }
 
@@ -94,18 +94,16 @@ footer .footer_flex ul li a {
 footer .footer_flex ul li a:hover {
   font-size: 18px;
   color: rgb(179, 24, 25);
-  text-decoration: none;
-  transition: color 300ms;
 }
 
 footer .newsletter {
-  width: 290px;
+  width: 240px;
 }
 
 footer .newsletter tr:first-child {
     background-color: rgb(179, 24, 25);
     width: 144px;
-    height: 85px;
+    height: 70px;
 }
 
 
@@ -114,7 +112,7 @@ footer .newsletter tr td .nl_button{
 }
 
 footer .newsletter h4{
-  font-size: 24px;
+  font-size: 18px;
   color: rgb(240, 240, 240);
   display: inline-block;
 }
@@ -125,15 +123,44 @@ footer .newsletter tbody tr td{
 }
 
 footer .newsletter tbody tr .nlemail {
-    height: 30px;
-    width: 94%;
+    height: 32px;
+    width: 130px;
+    border-radius: 5px;
+    border: none;
+    color: rgb(240, 240, 240);
+    background: rgb(56, 54, 54);
     padding-left: 5px;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 22px;
+    font-size: 16px;
+    transition: all 300ms;
+}
+
+footer .newsletter tbody tr .nlemail:hover {
+    height: 32px;
+    width: 210px;
+    border-radius: 5px;
+    border: none;
+    color: rgb(240, 240, 240);
+    background: rgb(56, 54, 54);
+    padding-left: 5px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+}
+
+footer .newsletter tbody tr .nlemail:focus {
+    height: 32px;
+    width: 210px;
+    border-radius: 5px;
+    border: none;
+    color: rgb(240, 240, 240);
+    background: rgb(56, 54, 54);
+    padding-left: 5px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
 }
 
 footer .newsletter tbody tr .nl_button{
-  width: 150px;
+  width: 235px;
   height: 30px;
   margin-left: -10px;
   background-color: rgb(179, 24, 25);
@@ -145,7 +172,7 @@ footer .newsletter tbody tr .nl_button{
 }
 
 footer .newsletter tbody tr .nl_button:hover{
-  width: 150px;
+  width: 235px;
   height: 30px;
   margin-left: -10px;
   background-color: rgb(240, 240, 240);
@@ -163,19 +190,19 @@ footer .newsletter .social_icons .social_object_1{
 }
 
 footer .newsletter .social_icons .social_object_2{
-  padding-left: 40px;
+  padding-left: 23px;
   padding-top: 30px;
   display: inline-block;
 }
 
 footer .newsletter .social_icons .social_object_3{
-  padding-left: 40px;
+  padding-left: 23px;
   padding-top: 30px;
   display: inline-block;
 }
 
 footer .newsletter .social_icons .social_object_4{
-  padding-left: 40px;
+  padding-left: 23px;
   padding-top: 30px;
   display: inline-block;
 }
