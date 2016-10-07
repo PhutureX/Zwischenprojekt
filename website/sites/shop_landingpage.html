@@ -15,15 +15,15 @@
     <header>
         <div class="wrapper clearfix">
             <h1>
-                <a href="index.html"><img src="../img/logos/headerlogo.png" alt="Red July Logo"></a>
+                <a href="../index.html"><img src="../img/logos/headerlogo.png" alt="Red July Logo"></a>
             </h1>
             <nav>
               <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="news.html">News</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="shop_landingpage.html">Store</a></li>
-                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="#">Tours</a></li>
+                <li><a href="shop_landingpage.html" class="activepage">Store</a></li>
+                <li><a href="#">About Us</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
               </ul>
             </nav>
@@ -34,10 +34,10 @@
 <!-- ##################################################### MAIN #####################################################-->
 
 
-    <main>
+    <main class="wrapper clearfix">
 
-      <div>
-          <h2>Red July Shop</h2>
+      <div class="shop_header">
+          <h2><a href="shop_landingpage.html"><span>Red July</span> Shop</a></h2>
 
               <!-- ############## SHOPPING CART ICON HERE #####################-->
               <div class=""></div>
@@ -57,33 +57,38 @@
       <!-- SLIDER PLACEHOLDER -->
 
       <div class="wrapper clearfix">
-        <figure>
-        <img class="" src="../img/news/summereuropesplash.jpg" width="1100" height="500" alt="Slider Image">
-        </figure>
-      </div>
+        <div class="slider">
+          <figure>
+          <img class="" src="../img/shop/landingpage.jpg" width="1080" height="600" alt="Slider Image">
+          </figure>
+        </div>
 
-      <div class="">
+      <div class="landingPage">
         <h2>Featured Products</h2>
         <figure>
-          <img src="../img/shop/cup1.png" alt="cup1" width="150" height="150"/>
-          <img src="../img/shop/bag1.png" alt="bag1" width="150" height="150"/>
-          <img src="../img/shop/mousepad1.png" alt="mousepad1" width="150" height="150"/>
-          <img src="../img/shop/notebook1.png" alt="notebook1" width="150" height="150"/>
+          <img src="../img/shop/cup1.png" alt="cup1" width="200" height="200"/>
+          <img src="../img/shop/bag1.png" alt="bag1" width="200" height="200"/>
+          <img src="../img/shop/mousepad1.png" alt="mousepad1" width="200" height="200"/>
+          <img src="../img/shop/notebook1.png" alt="notebook1" width="200" height="200"/>
         </figure>
 
       </div>
 
-      <div class="">
+      <div class="landingPage">
         <h2>Special Offers</h2>
         <figure>
-          <img src="../img/shop/shirt1.png" alt="Shirt 1" width="150" height="150"/>
-          <img src="../img/shop/shirt2.png" alt="Shirt 2" width="150" height="150"/>
-          <img src="../img/shop/shirt3.png" alt="Shirt 3" width="150" height="150"/>
-          <img src="../img/shop/shirt4.png" alt="Shirt 4" width="150" height="150"/>
+          <img src="../img/shop/shirt1.png" alt="Shirt 1" width="200" height="200"/>
+          <img src="../img/shop/shirt2.png" alt="Shirt 2" width="200" height="200"/>
+          <img src="../img/shop/shirt3.png" alt="Shirt 3" width="200" height="200"/>
+          <img src="../img/shop/shirt4.png" alt="Shirt 4" width="200" height="200"/>
         </figure>
       </div>
+      <div class="loadmore2">
+        <!-- Placeholder link zu teile des checkout process -->
+      <button onclick="window.location.href='shop_shipping.html';" type="button" name="button" value="Load more" >Load More</button>
+      </div>
 
-      <button type="button" name="button" value="Load more">Load More</button>
+    </main>
 
 
       <!-- ##################################################### FOOTER #####################################################-->
@@ -93,7 +98,7 @@
 
         <div class="wrapper clearfix footer_flex">
 
-          <a href="index.html"><img src="../img/logos/mainlogo.png" alt="Red July Logo"></a>
+          <a href="../index.html"><img src="../img/logos/mainlogo.png" alt="Red July Logo"></a>
 
           <table>
             <tbody>
@@ -101,8 +106,8 @@
                 <td class="footer_left">
                   <div><h3>Red July</h3></div>
                     <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">News</a></li>
+                      <li><a href="../index.html">Home</a></li>
+                      <li><a href="news.html">News</a></li>
                       <li><a href="#">Tours</a></li>
                       <li><a href="#">About Us</a></li>
                     </ul>
@@ -112,7 +117,7 @@
                 <td class="footer_middle">
                   <div><h3>Store</h3></div>
                     <ul>
-                      <li><a href="#">New Products</a></li>
+                      <li><a href="shop_landingpage.html">New Products</a></li>
                       <li><a href="#">Merch</a></li>
                       <li><a href="#">Albums</a></li>
                       <li><a href="#">Digital Downloads</a></li>
@@ -154,13 +159,7 @@
               </tr>
             </table>
           </div>
-
-
-
-        </div>
-
       </footer>
 
-
-  </body>
-</html>
+    </body>
+  </html>

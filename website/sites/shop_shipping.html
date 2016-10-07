@@ -15,15 +15,15 @@
     <header>
         <div class="wrapper clearfix">
             <h1>
-                <a href="index.html"><img src="../img/logos/headerlogo.png" alt="Red July Logo"></a>
+                <a href="../index.html"><img src="../img/logos/headerlogo.png" alt="Red July Logo"></a>
             </h1>
             <nav>
               <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="news.html">News</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="shop_landingpage.html">Store</a></li>
-                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="#">Tours</a></li>
+                <li><a href="shop_landingpage.html" class="activepage">Store</a></li>
+                <li><a href="#">About Us</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
               </ul>
             </nav>
@@ -34,10 +34,10 @@
 <!-- ##################################################### MAIN #####################################################-->
 
 
-    <main>
+    <main class="wrapper clearfix">
 
-      <div>
-          <h2>Red July Shop</h2>
+      <div class="shop_header">
+          <h2><a href="shop_landingpage.html"><span>Red July</span> Shop</a></h2>
 
               <!-- ############## SHOPPING CART ICON HERE #####################-->
               <div class=""></div>
@@ -56,7 +56,7 @@
 
       <!-- BREADCRUMBS -->
 
-      <div class="">
+      <div class="breadcrumbs">
         <table>
           <tr>
             <td><a href="shop_landingpage.html">Shop</a></td>
@@ -65,7 +65,7 @@
             <td><p>></p></td>
             <td><a href="shop_checkout.html">Customer Information</a></td>
             <td><p>></p></td>
-            <td><a href="shop_shipping.html">Shipping Method</a></td>
+            <td ><a href="shop_shipping.html">Shipping Method</a></td>
             <td><p>></p></td>
             <td><a href="shop_payment.html">Payment Method</a></td>
           </tr>
@@ -74,7 +74,7 @@
 
 
 <!-- ################################ FLOAT LEFT ################################### -->
-      <div>
+      <div class="shipping_adress">
         <h2>Shipping Adress</h2>
         <p>
           Jeffrey Hudson<br>
@@ -86,24 +86,24 @@
       </div>
 
 
-      <div class="">
+      <div class="shop_payment">
         <h2>Shipping Method</h2>
         <form class="" action="#" method="post">
-        <div class="">
-          <input type="radio" name="name" value="Normal Shipping">Normal Shipping
-          <p>&euro;4.99</p>
+        <div class="payment_method">
+          <input type="radio" name="shipping" value="Normal Shipping">Normal Shipping
+          <p class="normalship">&euro;4.99</p>
         </div>
-        <div class="">
-          <input type="radio" name="name" value="Express Shipping">Express Shipping
-          <p>&euro;9.99</p>
+        <div class="payment_method">
+          <input type="radio" name="shipping" value="Express Shipping">Express Shipping
+          <p class="expressship">&euro;9.99</p>
         </div>
-        <div class="">
-          <input type="radio" name="name" value="Premium Shipping">Premium Shipping
-          <a href="#">Get Premium</a>
+        <div class="payment_method">
+          <input type="radio" name="shipping" value="Premium Shipping">Premium Shipping
+          <a href="#" class="getpremium">get Premium</a>
         </div>
-        <div class="">
+        <div class="shop_payment_submit">
           <a href="shop_checkout.html">&lt; Return to Customer Information</a>
-          <input type="button" name="shippingGuest" value="Continue to Payment Method">
+          <input type="button" name="shippingGuest" value="Continue to Payment">
         </div>
 
 
@@ -111,54 +111,54 @@
 
 
 <!-- ###################################### RIGHT SIDE ############################-->
-    <div class="">
+    <div class="shop_overview">
       <h2>Order Overview</h2>
-      <table>
-        <tbody>
-        <tr>
-            <td><img src="../img/shop/shirt1.png" alt="shirt1" height="75" width="75"/></td>
+      <form action="#" method="post">
+        <table>
+          <tbody>
+          <tr>
+              <td><img src="../img/shop/shirt1.png" alt="shirt1" height="75" width="75"/></td>
+              <td>
+                <h3>2x Red July Shirt White</h3>
+                <p>Band T-Shirt Color White w/ Logo</p>
+              </td>
+              <td><span>&euro;29.99</span></td>
+          </tr>
+          <tr>
+            <td><img src="../img/shop/bag1.png" alt="bag1" height="75" width="75"/></td>
             <td>
-              <h3>2x Red July Shirt White<h3>
-              <p>Band T-Shirt Color White w/ Logo</p>
+              <h3>1x Red July Backpack</h3>
+              <p>High Sierra&copy; Impact Backback Black w/ Logo</p>
             </td>
-            <td>&euro;29.99</td>
-        </tr>
-        <tr>
-          <td><img src="../img/shop/bag1.png" alt="bag1" height="75" width="75"/></td>
-          <td>
-            <h3>1x Red July Backpack<h3>
-            <p>High Sierra&copy; Impact Backback w/ Logo Black</p>
-          </td>
-          <td>&euro;19.99</td>
-        </tr>
-        <tr>
-          <td><img src="../img/shop/cup1.png" alt="cup1" height="75" width="75"/></td>
-          <td>
-            <h3>1x Red July Cup<h3>
-            <p>Coffee Cup w/ Logo Purple</p>
-          </td>
-          <td>&euro;4.99</td>
-        </tr>
-        <tr>
-          <form class="" action="#" method="post">
-            <td><input type="text" name="name" value="" placeholder="Discount Code"></td>
-            <td><input type="button" name="applyDiscount" value="Apply"></td>
-          </form>
-        </tr>
-        <tr>
-          <td>Subtotal</td>
-          <td>&euro;54.96</td>
-        </tr>
-        <tr>
-          <td>Shipping</td>
-          <td>&euro;4.99</td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td>&euro;59.95</td>
-        </tr>
-        </tbody>
-      </table>
+            <td><span>&euro;19.99</span></td>
+          </tr>
+          <tr>
+            <td><img src="../img/shop/cup1.png" alt="cup1" height="75" width="75"/></td>
+            <td>
+              <h3>1x Red July Cup</h3>
+              <p>Coffee Cup Purple w/ Logo</p>
+            </td>
+            <td><span>&euro;4.99</span></td>
+          </tr>
+            <tr class="shop_code">
+              <td colspan="2"><input type="text" class="shop_code_input" name="name" value="" placeholder="Discount Code"></td>
+              <td><input type="button" class="shop_code_apply" name="applyDiscount" value="Apply"></td>
+            </tr>
+            <tr class="shop_overview_subtotal">
+              <td colspan="2">Subtotal</td>
+              <td>&euro;54.96</td>
+            </tr>
+            <tr class="shop_overview_shipping">
+              <td colspan="2">Shipping</td>
+              <td>&euro;4.99</td>
+            </tr>
+          <tr class="shop_overview_total">
+            <td colspan="2">Total</td>
+            <td>&euro;59.95</td>
+          </tr>
+          </tbody>
+        </table>
+      </form>
     </div>
 
     </main>
@@ -171,7 +171,7 @@
 
       <div class="wrapper clearfix footer_flex">
 
-        <a href="index.html"><img src="../img/logos/mainlogo.png" alt="Red July Logo"></a>
+        <a href="../index.html"><img src="../img/logos/mainlogo.png" alt="Red July Logo"></a>
 
         <table>
           <tbody>
@@ -179,8 +179,8 @@
               <td class="footer_left">
                 <div><h3>Red July</h3></div>
                   <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">News</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
                     <li><a href="#">Tours</a></li>
                     <li><a href="#">About Us</a></li>
                   </ul>
@@ -190,7 +190,7 @@
               <td class="footer_middle">
                 <div><h3>Store</h3></div>
                   <ul>
-                    <li><a href="#">New Products</a></li>
+                    <li><a href="shop_landingpage.html">New Products</a></li>
                     <li><a href="#">Merch</a></li>
                     <li><a href="#">Albums</a></li>
                     <li><a href="#">Digital Downloads</a></li>
