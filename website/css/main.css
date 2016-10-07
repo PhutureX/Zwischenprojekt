@@ -20,11 +20,17 @@ a{
   font-family: 'Titilium Web', sans-serif;
 }
 
+td{
+  font-family: 'Titilium Web', sans-serif;
+}
+
 main{
   /*background-color: fuchsia;*/
 }
 
 .wrapper {
+  min-height:100%;
+  position: relative;
   width: 1080px;
   /*background-color: green;*/
   margin: auto;
@@ -124,6 +130,221 @@ main section .article_preview a{
   background-color: transparent;
 }
 
+/* #################### SHOP HEADER #################### */
+
+.shop_header h2{
+  font-size: 48px;
+  margin-left: 74px;
+  margin-top: 10px;
+}
+
+.shop_header h2 span{
+  color: rgb(179, 24, 25);
+}
+
+.shop_header h2 a{
+  text-decoration: none;
+  color: rgb(240, 240, 240);
+}
+
+.shop_header nav{
+  margin-left: 100px;
+}
+
+.shop_header nav ul{
+  margin: 0px;
+}
+
+.shop_header nav ul li {
+  display: inline-block;
+  margin-left: 35px;
+}
+
+.shop_header nav ul li a{
+  font-size: 18px;
+  color: rgb(240, 240, 240);
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+.shop_header nav ul li a:hover{
+  color: rgb(179, 24, 25);
+}
+
+/* #################### BREADCRUMBS #################### */
+
+.breadcrumbs table{
+  margin-left: 74px;
+}
+
+.breadcrumbs table tr td a{
+  font-size: 13px;
+  color: rgb(240, 240, 240);
+  text-decoration: none;
+}
+.breadcrumbs table tr td p{
+  color: rgb(240, 240, 240);
+}
+
+/* #################### SHOP PAYMENT #################### */
+
+.shop_payment{
+  float: left;
+}
+
+.shop_payment p{
+  color: rgb(240, 240, 240);
+}
+
+.shop_payment .payment_method{
+  background-color: rgb(240, 240, 240);
+  font-family: 'Titilium Web', sans-serif;
+  font-size: 18px;
+  width: 420px;
+  height: 90px;
+  margin-top: 10px;
+}
+
+.shop_payment .payment_method span{
+  margin-left: 25px;
+}
+
+.shop_payment .payment_method input{
+  cursor: pointer;
+  margin-top: 36px;
+  margin-left: 40px;
+  width: 16px;
+  height: 16px;
+}
+
+.shop_payment h2{
+  font-size: 36px;
+  color: rgb(179, 24, 25);
+}
+
+.shop_payment_submit{
+  margin-top: 32px;
+  margin-bottom: 220px;
+}
+
+.shop_payment_submit a{
+  color: rgb(179, 24, 25);
+}
+
+.shop_payment_submit input{
+  float: right;
+  font-size: 12px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(179, 24, 25);
+  width: 140px;
+  height: 40px;
+  border: solid 2px rgb(179, 24, 25);
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.shop_payment_submit input:hover{
+  background-color: transparent;
+}
+
+/* #################### SHOP ORDER OVERVIEW #################### */
+
+.shop_overview{
+  float: right;
+}
+
+.shop_overview h2{
+  font-size: 36px;
+  color: rgb(179, 24, 25);
+}
+
+.shop_overview table tbody tr td h3{
+  margin-left: 5px;
+  color: rgb(240, 240, 240);
+}
+
+.shop_overview table tbody tr td p{
+  margin-left: 5px;
+  width: 300px;
+  color: rgb(240, 240, 240);
+  font-size: 14px;
+}
+
+.shop_overview table tbody tr td span{
+  font-family: 'Titilium Web', sans-serif;
+  color: rgb(240, 240, 240);
+  font-weight: bold;
+  margin-left: 42px;
+}
+
+.shop_overview table{
+  border-collapse: collapse;
+}
+
+.shop_overview table tbody .shop_code{
+  height: 70px;
+  margin-top: 10px;
+  border-top: solid 1px rgb(240, 240, 240);
+}
+
+.shop_overview table tbody .shop_code .shop_code_input{
+  width: 378px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.shop_overview table tbody .shop_code .shop_code_apply{
+  float: right;
+  width: 90px;
+  height: 36px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(179, 24, 25);
+  border: solid 2px rgb(179, 24, 25);
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.shop_overview table tbody .shop_code .shop_code_apply:hover{
+  background-color: transparent;
+}
+
+.shop_overview table tbody .shop_overview_subtotal{
+  border-top: solid 1px rgb(240, 240, 240);
+}
+
+.shop_overview table tbody .shop_overview_subtotal td{
+  color: rgb(240, 240, 240);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.shop_overview table tbody .shop_overview_subtotal td:nth-child(2){
+  float: right;
+}
+
+.shop_overview table tbody .shop_overview_shipping td{
+  color: rgb(240, 240, 240);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.shop_overview table tbody .shop_overview_shipping td:nth-child(2){
+  float: right;
+}
+
+.shop_overview table tbody .shop_overview_total{
+  border-top: solid 1px rgb(240, 240, 240);
+}
+
+.shop_overview table tbody .shop_overview_total td{
+  color: rgb(240, 240, 240);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.shop_overview table tbody .shop_overview_total td:nth-child(2){
+  float: right;
+}
 
 
 

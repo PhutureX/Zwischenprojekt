@@ -34,10 +34,10 @@
 <!-- ##################################################### MAIN #####################################################-->
 
 
-    <main>
+    <main class="wrapper clearfix">
 
-      <div>
-          <h2>Red July Shop</h2>
+      <div class="shop_header">
+          <h2><a href="#"><span>Red July</span> Shop</a></h2>
 
               <!-- ############## SHOPPING CART ICON HERE #####################-->
               <div class=""></div>
@@ -56,7 +56,7 @@
 
       <!-- BREADCRUMBS -->
 
-      <div class="">
+      <div class="breadcrumbs">
         <table>
           <tr>
             <td><a href="shop_landingpage.html">Shop</a></td>
@@ -75,77 +75,75 @@
 
 <!-- ################################ FLOAT LEFT ################################### -->
 
-      <div class="">
+      <div class="shop_payment">
         <h2>Payment Method</h2>
         <p>You will be linked to the payment site of your option.</p>
         <form class="" action="#" method="post">
-        <div class="">
-          <input type="radio" name="name" value="Credit Card">Credit Card
-        </div>
-        <div class="">
-          <input type="radio" name="name" value="Debit Card">Debit Card
-        </div>
-        <div class="">
-          <input type="radio" name="name" value="Paypal">Paypal
-        </div>
-        <div class="">
-          <a href="shop_shipping.html">&lt; Return to Shipping Information</a>
-          <input type="button" name="shippingGuest" value="Continue to Payment">
-        </div>
-
-
+          <div class="payment_method">
+            <input type="radio" name="payment_creditcard" value="Credit Card"><span>Credit Card</span>
+          </div>
+          <div class="payment_method">
+            <input type="radio" name="payment_debitcard" value="Debit Card"><span>Debit Card</span>
+          </div>
+          <div class="payment_method">
+            <input type="radio" name="payment_paypal" value="Paypal"><span>Paypal</span>
+          </div>
+          <div class="shop_payment_submit">
+            <a href="shop_shipping.html">&lt; Return to Shipping Information</a>
+            <input type="button" name="shippingGuest" value="Complete Order">
+          </div>
+        </form>
       </div>
 
-
 <!-- ###################################### RIGHT SIDE ############################-->
-    <div class="">
+    <div class="shop_overview">
       <h2>Order Overview</h2>
-      <table>
-        <tbody>
-        <tr>
-            <td><img src="../img/shop/shirt1.png" alt="shirt1" height="75" width="75"/></td>
+      <form action="#" method="post">
+        <table>
+          <tbody>
+          <tr>
+              <td><img src="../img/shop/shirt1.png" alt="shirt1" height="75" width="75"/></td>
+              <td>
+                <h3>2x Red July Shirt White</h3>
+                <p>Band T-Shirt Color White w/ Logo</p>
+              </td>
+              <td><span>&euro;29.99</span></td>
+          </tr>
+          <tr>
+            <td><img src="../img/shop/bag1.png" alt="bag1" height="75" width="75"/></td>
             <td>
-              <h3>2x Red July Shirt White<h3>
-              <p>Band T-Shirt Color White w/ Logo</p>
+              <h3>1x Red July Backpack</h3>
+              <p>High Sierra&copy; Impact Backback w/ Logo Black</p>
             </td>
-            <td>&euro;29.99</td>
-        </tr>
-        <tr>
-          <td><img src="../img/shop/bag1.png" alt="bag1" height="75" width="75"/></td>
-          <td>
-            <h3>1x Red July Backpack<h3>
-            <p>High Sierra&copy; Impact Backback w/ Logo Black</p>
-          </td>
-          <td>&euro;19.99</td>
-        </tr>
-        <tr>
-          <td><img src="../img/shop/cup1.png" alt="cup1" height="75" width="75"/></td>
-          <td>
-            <h3>1x Red July Cup<h3>
-            <p>Coffee Cup w/ Logo Purple</p>
-          </td>
-          <td>&euro;4.99</td>
-        </tr>
-        <tr>
-          <form class="" action="#" method="post">
-            <td><input type="text" name="name" value="" placeholder="Discount Code"></td>
-            <td><input type="button" name="applyDiscount" value="Apply"></td>
-          </form>
-        </tr>
-        <tr>
-          <td>Subtotal</td>
-          <td>&euro;54.96</td>
-        </tr>
-        <tr>
-          <td>Shipping</td>
-          <td>&euro;4.99</td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td>&euro;59.95</td>
-        </tr>
-        </tbody>
-      </table>
+            <td><span>&euro;19.99</span></td>
+          </tr>
+          <tr>
+            <td><img src="../img/shop/cup1.png" alt="cup1" height="75" width="75"/></td>
+            <td>
+              <h3>1x Red July Cup</h3>
+              <p>Coffee Cup w/ Logo Purple</p>
+            </td>
+            <td><span>&euro;4.99</span></td>
+          </tr>
+            <tr class="shop_code">
+              <td colspan="2"><input type="text" class="shop_code_input" name="name" value="" placeholder="Discount Code"></td>
+              <td><input type="button" class="shop_code_apply" name="applyDiscount" value="Apply"></td>
+            </tr>
+            <tr class="shop_overview_subtotal">
+              <td colspan="2">Subtotal</td>
+              <td>&euro;54.96</td>
+            </tr>
+            <tr class="shop_overview_shipping">
+              <td colspan="2">Shipping</td>
+              <td>&euro;4.99</td>
+            </tr>
+          <tr class="shop_overview_total">
+            <td colspan="2">Total</td>
+            <td>&euro;59.95</td>
+          </tr>
+          </tbody>
+        </table>
+      </form>
     </div>
 
     </main>
@@ -219,11 +217,6 @@
             </tr>
           </table>
         </div>
-
-
-
-      </div>
-
     </footer>
 
   </body>
