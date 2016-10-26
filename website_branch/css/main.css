@@ -26,6 +26,8 @@ a{
   font-family: 'Titilium Web', sans-serif;
 }
 
+/* #################### HEADER #################### */
+
 header{
   height: 100%;
 }
@@ -136,11 +138,42 @@ header .headercontent .headerbtn2:hover{
   border: solid 1px rgb(186, 41, 42);
 }
 
-.slider{
-  height:1000px;
-  background-color:red;
-  font-size:36px
+/* #################### SLIDER TEST#################### */
+
+main {
+  height: calc(100% - 70px);
 }
+
+main .index_slider{
+  height: 100%;
+}
+
+main .index_slider .slider_1{
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/news/18hoursmakingof1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .index_slider .slider_2{
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/news/18hoursmakingof2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main .index_slider .slider_3{
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/news/18hoursmakingof3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* #################### Bottom #################### */
 
 .newsimg{
   display: flex;
