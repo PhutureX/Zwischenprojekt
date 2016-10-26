@@ -1,0 +1,157 @@
+/* #################### IMPORTS #################### */
+@import url ("normalize.css");
+@import 'https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,700,700i&subset=latin-ext';
+
+/* #################### GENERAL #################### */
+html{
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body{
+  background-color: rgb(26, 26, 26);
+  height: 100%;
+  margin: 0px;
+}
+
+p{
+  font-family: 'Titilium Web', sans-serif;
+}
+
+a{
+  font-family: 'Titilium Web', sans-serif;
+}
+
+header{
+  height: 100%;
+}
+
+
+header img{
+  width: 420px;
+  height: 125px;
+}
+
+header nav {
+  position: fixed;
+  text-align: center;
+  float: left;
+  width: 100%;
+  height: 85px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+header nav ul {
+  padding: 0px;
+  margin-top: 0px;
+}
+header nav ul li {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+header nav ul li a{
+  display: inline-block;
+  line-height: 85px;
+  height: 85px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+  text-shadow: 2px 2px 4px #000000;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+header nav ul li a:hover{
+  color: rgb(179, 24, 25);
+}
+
+header .headerimg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/news/titleimage.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .headercontent{
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+header h2{
+  font-size: 72px;
+  color: rgb(179, 24, 25);
+  text-shadow: 2px 2px 4px #000000;
+}
+
+header p{
+  color: rgb(240, 240, 240);
+  text-shadow: 2px 2px 4px #000000;
+}
+
+header .headercontent .headerbtn1{
+  display: inline-block;
+  line-height: 45px;
+  width: 225px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+  border: solid 1px rgb(240, 240, 240);
+  transition: all 300ms;
+}
+
+header .headercontent .headerbtn1:hover{
+  color: black;
+  background-color: rgb(240, 240, 240);
+}
+
+header .headercontent .headerbtn2{
+  display: inline-block;
+  line-height: 45px;
+  width: 225px;
+  margin: 32px 0px 0px 32px;
+  text-decoration: none;
+  color: rgb(240, 240, 240);
+  background-color: rgb(179, 24, 25);
+  border: solid 1px rgb(179, 24, 25);
+  transition: all 300ms;
+}
+
+header .headercontent .headerbtn2:hover{
+  background-color: rgb(186, 41, 42);
+  border: solid 1px rgb(186, 41, 42);
+}
+
+.slider{
+  height:1000px;
+  background-color:red;
+  font-size:36px
+}
+
+.newsimg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/news/viperroom.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}

@@ -610,6 +610,17 @@ footer .newsletter .social_icons .social_object_4 i:hover{
   color: #c08d64;
 }
 
+/* #################### Paralax Effect Test #################### */
+
+header .headerimg{
+  background-image: url("img/news/titleimage.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* #################### HELPERS #################### */
 
 .clearfix:after {
