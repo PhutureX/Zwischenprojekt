@@ -1,5 +1,6 @@
 /* #################### IMPORTS #################### */
 @import url ("normalize.css");
+@import url ("libaries/flexslider/flexslider.css");
 @import 'https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,700,700i&subset=latin-ext';
 
 /* #################### GENERAL #################### */
@@ -26,6 +27,7 @@ a{
   font-family: 'Titilium Web', sans-serif;
 }
 
+
 /* #################### HEADER #################### */
 
 header{
@@ -44,17 +46,21 @@ header nav {
   float: left;
   width: 100%;
   height: 85px;
+  z-index: 999;
   background-color: rgba(0, 0, 0, 0.2);
 }
+
 header nav ul {
   padding: 0px;
   margin-top: 0px;
 }
+
 header nav ul li {
   display: inline-block;
   padding-left: 15px;
   padding-right: 15px;
 }
+
 
 header nav ul li a{
   display: inline-block;
@@ -140,38 +146,11 @@ header .headercontent .headerbtn2:hover{
 
 /* #################### SLIDER TEST#################### */
 
-main {
-  height: calc(100% - 70px);
+.flexslider h3{
+  font-size: 38px;
+  color: rgb(240, 240, 240);
+  background-color: rgba(0, 0, 0, 0.9);
 }
-
-main .index_slider{
-  height: 100%;
-}
-
-main .index_slider .slider_1{
-  height: 100%;
-  width: 100%;
-  background-image: url("../img/news/18hoursmakingof1.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-main .index_slider .slider_2{
-  height: 100%;
-  width: 100%;
-  background-image: url("../img/news/18hoursmakingof2.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-main .index_slider .slider_3{
-  height: 100%;
-  width: 100%;
-  background-image: url("../img/news/18hoursmakingof3.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
 
 /* #################### Bottom #################### */
 

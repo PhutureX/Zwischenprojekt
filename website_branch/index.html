@@ -3,6 +3,17 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="libaries/flexslider/flexslider.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="libaries/flexslider/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+      animation: "slide"
+      });
+    });
+</script>
   </head>
   <body>
     <header>
@@ -10,9 +21,9 @@
             <ul>
               <li><a href="index.html" class="activepage">Home</a></li>
               <li><a href="sites/news.html">News</a></li>
-              <li><a href="#">Tours</a></li>
+              <li><a href="sites/tours.html">Tours</a></li>
               <li><a href="sites/shop_landingpage.html">Store</a></li>
-              <li><a href="#">About Us</a></li>
+              <li><a href="sites/about_us.html">About Us</a></li>
               <li><a href="sites/contact_us.html">Contact Us</a></li>
             </ul>
           </nav>
@@ -31,11 +42,21 @@
         </div>
     </header>
     <main>
-      <div class="index_slider">
-        <div class="slider_3">
-          <a href="#"><</a>
-          <a href="#">></a>
-        </div>
+      <div class="flexslider">
+        <ul class="slides" >
+          <li>
+            <h3>Headline 1</h3>
+            <img src="img/news/18hoursmakingof1.jpg" />
+          </li>
+          <li>
+            <h3>Headline 2</h3>
+            <img src="img/news/18hoursmakingof2.jpg" />
+          </li>
+          <li>
+            <h3>Headline 3</h3>
+            <img src="img/news/18hoursmakingof3.jpg" />
+          </li>
+        </ul>
       </div>
     </main>
     <div class="newsimg">
