@@ -78,6 +78,8 @@ html[xmlns] .flexslider .slides {
 .flexslider {
   background: #fff;
   position: relative;
+  left: 5%;
+  width: 90%;
   zoom: 1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
