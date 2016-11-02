@@ -199,7 +199,7 @@ header .headercontent .headerbtn2:hover{
 }
 
 
-/* #################### INDEX ARTICLE PREVIEW #################### */
+/* #################### NEWS ARTICLE PREVIEW #################### */
 
 main .news-articlelist{
   display: flex;
@@ -209,7 +209,7 @@ main .news-articlelist{
 }
 
 main .news-articlelist>section{
-  width: 40%;
+  width: 50%;
 }
 
 main section .article_preview {
