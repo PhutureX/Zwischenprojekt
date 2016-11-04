@@ -35,7 +35,9 @@ header{
   width: 100%;
   height: 68px;
   position: fixed;
+  background-color: black;
   border-bottom: solid 5px rgb(179, 24, 25);
+  z-index: 999;
 }
 
 header .shop-header-logo{
@@ -123,13 +125,21 @@ header .shop-nav-list ul li a:hover{
 /* #################### MAIN #################### */
 main{
   padding-top: 73px;
+  height: 100%;
+  width: 100%;
 }
 
 main .spotlight{
+  overflow: hidden;
   height: calc(100vh - 173px);
 }
 
 main .spotlight .spotlight-top{
+  overflow: hidden;
+  height: 50%;
+}
+
+main .spotlight .spotlight-bottom{
   overflow: hidden;
   height: 50%;
 }
@@ -146,26 +156,6 @@ main .spotlight .spotlight-top h2{
 
 main .spotlight .spotlight-top h3{
   font-size: 32px;
-  color: rgb(240, 240, 240);
-  text-shadow: 0 0 5px black;
-  position: absolute;
-  left: 58px;
-  bottom: 8px;
-  width: 100%;
-}
-
-main .spotlight .spotlight-bottom h2{
-  font-size: 38px;
-  color: rgb(240, 240, 240);
-  text-shadow: 0 0 5px black;
-  position: absolute;
-  left: 58px;
-  bottom: 42px;
-  width: 100%;
-}
-
-main .spotlight .spotlight-bottom h3{
-  font-size: 24px;
   color: rgb(240, 240, 240);
   text-shadow: 0 0 5px black;
   position: absolute;
@@ -224,109 +214,130 @@ main .spotlight .spotlight-top .spotlight-top-product-2 .spotlight-top-product-2
   background-size: 105%;
 }
 
-main .spotlight .spotlight-bottom{
-  height: 50%;
-}
-
-main .spotlight .spotlight-bottom .spotlight-bottom-product-1{
+main .spotlight .spotlight-bottom .spotlight-bottom-row{
   height: 100%;
   width: 25%;
-  float: left;
-  cursor: pointer;
   overflow: hidden;
+  float: left;
 }
 
-main .spotlight .spotlight-bottom .spotlight-bottom-product-1 .spotlight-bottom-product-1-bg{
+main .spotlight .spotlight-bottom h2{
+  font-size: 38px;
+  color: rgb(240, 240, 240);
+  text-shadow: 0 0 5px black;
+  font-weight: bold;
+}
+
+main .spotlight .spotlight-bottom h3{
+  font-size: 28px;
+  color: rgb(240, 240, 240);
+  text-shadow: 0 0 5px black;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper{
+  width: calc(100% + 1px);
   height: 100%;
-  width: 100%;
+  padding: 40px;
   position: relative;
-  overflow: hidden;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-inner{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-inner .spotlight-bottom-row-inner-heading{
+  position: absolute;
+  left: 0;
+  bottom: 55px;
+  width: 100%;
+  z-index: 1001;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-1{
   background-image: url("../img/shop/mousepad1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all 400ms ease;
-  background-size: 100%;
-  transition: background-size 200ms ease;
-}
-
-main .spotlight .spotlight-bottom .spotlight-bottom-product-1 .spotlight-bottom-product-1-bg:hover{
-  background-size: 105%;
-}
-
-main .spotlight .spotlight-bottom .spotlight-bottom-product-2{
-  height: 100%;
-  width: 25%;
-  float: left;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-main .spotlight .spotlight-bottom .spotlight-bottom-product-2 .spotlight-bottom-product-2-bg{
-  height: 100%;
+  position: absolute;
   width: 100%;
-  position: relative;
-  background-image: url("../img/shop/shirt2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all 400ms ease;
-  background-size: 100%;
-  transition: background-size 200ms ease;
-}
-
-main .spotlight .spotlight-bottom .spotlight-bottom-product-2 .spotlight-bottom-product-2-bg:hover{
-  background-size: 105%;
-}
-
-main .spotlight .spotlight-bottom .spotlight-bottom-product-3{
   height: 100%;
-  width: 25%;
-  float: left;
-  cursor: pointer;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
-}
-
-main .spotlight .spotlight-bottom .spotlight-bottom-product-3 .spotlight-bottom-product-3-bg{
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background-image: url("../img/shop/shirt2.png");
   background-repeat: no-repeat;
+  background-position: 50%;
   background-size: cover;
-  transition: all 400ms ease;
-  background-size: 100%;
-  transition: background-size 200ms ease;
+  transition: all 200ms ease;
 }
 
-main .spotlight .spotlight-bottom .spotlight-bottom-product-3 .spotlight-bottom-product-3-bg:hover{
-  background-size: 105%;
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-1:hover{
+  transition: all 200ms ease;
+  height: 105%;
 }
 
-main .spotlight .spotlight-bottom .spotlight-bottom-product-4{
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-2{
+  background-image: url("../img/shop/notebook1.png");
+  position: absolute;
+  width: 100%;
   height: 100%;
-  width: 25%;
-  float: left;
-  cursor: pointer;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
-}
-
-main .spotlight .spotlight-bottom .spotlight-bottom-product-4 .spotlight-bottom-product-4-bg{
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background-image: url("../img/shop/shirt2.png");
   background-repeat: no-repeat;
+  background-position: 50%;
   background-size: cover;
-  transition: all 400ms ease;
-  background-size: 100%;
-  transition: background-size 200ms ease;
+  transition: all 200ms ease;
 }
 
-main .spotlight .spotlight-bottom .spotlight-bottom-product-4 .spotlight-bottom-product-4-bg:hover{
-  background-size: 105%;
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-2:hover{
+  transition: all 200ms ease;
+  height: 105%;
 }
 
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-3{
+  background-image: url("../img/shop/shirt3.png");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  transition: all 200ms ease;
+}
 
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-3:hover{
+  transition: all 200ms ease;
+  height: 105%;
+}
 
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-4{
+  background-image: url("../img/shop/shirt4.png");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  transition: all 200ms ease;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-4:hover{
+  transition: all 200ms ease;
+  height: 105%;
+}
 
 /* #################### HELPERS #################### */
 
