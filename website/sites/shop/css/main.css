@@ -8,7 +8,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Titillium Web', sans-serif;
 }
 
+html{
+  width: 100%;
+  height: 100%;
+}
+
 body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
   background-color: rgb(26, 26, 26);
 }
 
@@ -18,529 +26,307 @@ p{
 
 a{
   font-family: 'Titilium Web', sans-serif;
-}
-
-td{
-  font-family: 'Titilium Web', sans-serif;
-}
-
-main{
-  /*background-color: fuchsia;*/
-}
-
-.wrapper {
-  min-height:100%;
-  position: relative;
-  width: 1080px;
-  /*background-color: green;*/
-  margin: auto;
-}
-
-body main > section {
-  /*background-color: orange;*/
+  text-decoration: none;
 }
 
 /* #################### HEADER #################### */
 
 header{
-  width: auto;
+  width: 100%;
+  height: 68px;
+  position: fixed;
+  border-bottom: solid 5px rgb(179, 24, 25);
 }
 
-header h1{
-
+header .shop-header-logo{
+  float: left;
+  margin-top: 2px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-header img{
-  width: 420px;
-  height: 125px;
-  margin-left: 72px;
+header .shop-header-logo  h1{
+  font-size: 38px;
+  color: rgb(179, 24, 25);
 }
 
-header nav {
+header .shop-header-logo h1 span{
+  color: rgb(240, 240, 240);
+}
+
+header .shop-nav{
   float: left;
 }
-header nav ul {
-  margin: 0;
-}
-header nav ul li {
-  display: inline-block;
-  margin-left: 35px;
-}
 
-header nav ul li a{
-  font-size: 24px;
-  color: rgb(240, 240, 240);
-  text-decoration: none;
-  transition: all 300ms;
-}
-
-header nav ul li a:hover{
-  color: rgb(179, 24, 25);
-}
-
-/* #################### INDEX ARTICLE PREVIEW #################### */
-
-main section .article_preview {
-  display: flex;
-  align-items: center;
-  background-color: rgb(26, 26, 26);
-  transition: all 300ms;
-}
-
-main section .article_preview:hover{
-  background-color: rgb(40, 40, 40);
-}
-
-
-main section .article_preview h2{
-  font-size: 36px;
-  color: rgb(179, 24, 25);
-}
-
-main section .article_preview p {
-  font-size: 18px;
-  color: rgb(240, 240, 240);
-  word-spacing: 3px;
-}
-main section .article_preview a{
-  float: right;
-  font-size: 18px;
-  color: rgb(179, 24, 25);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* #################### LOAD MORE BUTTON #################### */
-
-.loadmore button {
-  margin-left: 540px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 175px;
-  height: 35px;
-  background-color: rgb(179, 24, 25);
-  color: rgb(240, 240, 240);
-  font-size: 16px;
-  border: solid 2px rgb(179, 24, 25);
-  cursor: pointer;
-  transition: all 300ms;
-}
-
-.loadmore button:hover{
-  background-color: transparent;
-}
-
-/* #################### SHOP HEADER #################### */
-
-.shop_header h2{
-  font-size: 48px;
-  margin-left: 74px;
-  margin-top: 10px;
-}
-
-.shop_header h2 span{
-  color: rgb(179, 24, 25);
-}
-
-.shop_header h2 a{
-  text-decoration: none;
-  color: rgb(240, 240, 240);
-}
-
-.shop_header nav{
-  margin-left: 100px;
-}
-
-.shop_header nav ul{
+header .shop-nav ul{
+  padding: 0px;
   margin: 0px;
 }
 
-.shop_header nav ul li {
-  display: inline-block;
-  margin-left: 35px;
+header .shop-nav ul li{
+height: 100%;
+display: block;
+float: left;
 }
 
-.shop_header nav ul li a{
-  font-size: 18px;
-  color: rgb(240, 240, 240);
-  text-decoration: none;
-  transition: all 300ms;
+header .shop-nav ul li a{
+display: block;
+padding: 24px 22px;
+height: 100%;
+line-height: 20px;
+font-size: 1.2rem;
+color: rgb(138, 138, 138);
+font-weight: bold;
+position: relative;
+transition: all 400ms ease;
 }
 
-.shop_header nav ul li a:hover{
+header .shop-nav ul li a:hover{
+  transition: all 400ms ease;
+  background-color: black;
   color: rgb(179, 24, 25);
 }
 
-/* #################### BREADCRUMBS #################### */
 
-.breadcrumbs table{
-  margin-left: 74px;
+header .shop-nav-list{
+  float: right;
 }
 
-.breadcrumbs table tr td a{
-  font-size: 13px;
+header .shop-nav-list ul{
+  padding: 0px;
+  margin: 0px;
+}
+
+header .shop-nav-list ul li{
+  height: 100%;
+  display: block;
+  float: right;
+}
+
+header .shop-nav-list ul li a{
+  display: block;
+  padding: 24px 22px;
+  height: 100%;
+  line-height: 20px;
+  font-size: 1.4rem;
+  color: rgb(138, 138, 138);
+  font-weight: bold;
+  position: relative;
+  transition: all 400ms ease;
+}
+
+header .shop-nav-list ul li a:hover{
+  transition: all 400ms ease;
+  color: rgb(179, 24, 25);
+}
+
+/* #################### MAIN #################### */
+main{
+  padding-top: 73px;
+}
+
+main .spotlight{
+  height: calc(100vh - 173px);
+}
+
+main .spotlight .spotlight-top{
+  overflow: hidden;
+  height: 50%;
+}
+
+main .spotlight .spotlight-top h2{
+  font-size: 48px;
   color: rgb(240, 240, 240);
-  text-decoration: none;
-}
-.breadcrumbs table tr td p{
-  color: rgb(240, 240, 240);
-}
-
-/* #################### SHOP PAYMENT #################### */
-
-.shop_payment{
-  float: left;
-}
-
-.shop_payment p{
-  color: rgb(240, 240, 240);
-}
-
-.shop_payment .normalship{
-  color: rgb(26, 26, 26);
+  text-shadow: 0 0 5px black;
   position: absolute;
-  bottom: 484px;
-  right: 700px;
+  left: 58px;
+  bottom: 42px;
+  width: 100%;
 }
 
-.shop_payment .expressship{
-  color: rgb(26, 26, 26);
+main .spotlight .spotlight-top h3{
+  font-size: 32px;
+  color: rgb(240, 240, 240);
+  text-shadow: 0 0 5px black;
   position: absolute;
-  bottom: 384px;
-  right: 700px;
+  left: 58px;
+  bottom: 8px;
+  width: 100%;
 }
 
-.shop_payment .getpremium{
-  color: rgb(179, 24, 25);
+main .spotlight .spotlight-bottom h2{
+  font-size: 38px;
+  color: rgb(240, 240, 240);
+  text-shadow: 0 0 5px black;
   position: absolute;
-  bottom: 304px;
-  right: 700px;
-  text-decoration: none;
+  left: 58px;
+  bottom: 42px;
+  width: 100%;
 }
 
-.shop_payment .payment_method{
-  background-color: rgb(240, 240, 240);
-  font-family: 'Titilium Web', sans-serif;
-  font-size: 18px;
-  width: 420px;
-  height: 90px;
-  margin-top: 10px;
-}
-
-.shop_payment .payment_method span{
-  margin-left: 25px;
-}
-
-.shop_payment .payment_method input{
-  cursor: pointer;
-  margin-top: 36px;
-  margin-left: 40px;
-  width: 16px;
-  height: 16px;
-  margin-right: 30px;
-}
-
-.shop_payment h2{
-  font-size: 36px;
-  color: rgb(179, 24, 25);
-}
-
-.shop_payment_submit{
-  margin-top: 32px;
-  margin-bottom: 220px;
-}
-
-.shop_payment_submit a{
-  color: rgb(179, 24, 25);
-}
-
-.shop_payment_submit input{
-  float: right;
-  font-size: 12px;
-  color: rgb(240, 240, 240);
-  background-color: rgb(179, 24, 25);
-  width: 140px;
-  height: 40px;
-  border: solid 2px rgb(179, 24, 25);
-  cursor: pointer;
-  transition: all 300ms;
-}
-
-.shop_payment_submit input:hover{
-  background-color: transparent;
-}
-
-/* #################### SHOP ORDER OVERVIEW #################### */
-
-.shop_overview{
-  float: right;
-}
-
-.shop_overview h2{
-  font-size: 36px;
-  color: rgb(179, 24, 25);
-}
-
-.shop_overview table tbody tr td h3{
-  margin-left: 5px;
-  color: rgb(240, 240, 240);
-}
-
-.shop_overview table tbody tr td p{
-  margin-left: 5px;
-  width: 300px;
-  color: rgb(240, 240, 240);
-  font-size: 14px;
-}
-
-.shop_overview table tbody tr td span{
-  font-family: 'Titilium Web', sans-serif;
-  color: rgb(240, 240, 240);
-  font-weight: bold;
-  margin-left: 42px;
-}
-
-.shop_overview table{
-  border-collapse: collapse;
-}
-
-.shop_overview table tbody .shop_code{
-  height: 70px;
-  margin-top: 10px;
-  border-top: solid 1px rgb(240, 240, 240);
-}
-
-.shop_overview table tbody .shop_code .shop_code_input{
-  width: 378px;
-  height: 30px;
-  font-size: 16px;
-}
-
-.shop_overview table tbody .shop_code .shop_code_apply{
-  float: right;
-  width: 90px;
-  height: 36px;
-  color: rgb(240, 240, 240);
-  background-color: rgb(179, 24, 25);
-  border: solid 2px rgb(179, 24, 25);
-  cursor: pointer;
-  transition: all 300ms;
-}
-
-.shop_overview table tbody .shop_code .shop_code_apply:hover{
-  background-color: transparent;
-}
-
-.shop_overview table tbody .shop_overview_subtotal{
-  border-top: solid 1px rgb(240, 240, 240);
-}
-
-.shop_overview table tbody .shop_overview_subtotal td{
-  color: rgb(240, 240, 240);
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.shop_overview table tbody .shop_overview_subtotal td:nth-child(2){
-  float: right;
-}
-
-.shop_overview table tbody .shop_overview_shipping td{
-  color: rgb(240, 240, 240);
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.shop_overview table tbody .shop_overview_shipping td:nth-child(2){
-  float: right;
-}
-
-.shop_overview table tbody .shop_overview_total{
-  border-top: solid 1px rgb(240, 240, 240);
-}
-
-.shop_overview table tbody .shop_overview_total td{
-  color: rgb(240, 240, 240);
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.shop_overview table tbody .shop_overview_total td:nth-child(2){
-  float: right;
-}
-
-/* #################### SHOP ORDER OVERVIEW #################### */
-
-.shipping_adress h2{
-  font-size: 36px;
-  margin-top: 10px;
-  color: rgb(179, 24, 25);
-}
-
-.shipping_adress p{
-  margin-top: 10px;
-  color: rgb(240, 240, 240);
-}
-
-.shipping_adress a{
-  color: rgb(179, 24, 25);
-}
-
-/* #################### SHOP LANDINGPAGE #################### */
-
-.landingPage h2{
-  font-size: 36px;
-  color: rgb(179, 24, 25);
-  text-align: center;
-}
-
-.landingPage figure img{
-  margin-left: 40px;
-
-}
-
-.loadmore2 button {
-  margin-left: 455px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 175px;
-  height: 35px;
-  background-color: rgb(179, 24, 25);
-  color: rgb(240, 240, 240);
-  font-size: 16px;
-  border: solid 2px rgb(179, 24, 25);
-  cursor: pointer;
-  transition: all 300ms;
-}
-
-.loadmore2 button:hover{
-  background-color: transparent;
-}
-
-
-
-
-/* #################### Footer #################### */
-
-footer{
-  margin: auto;
-  height: 325px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(56, 54, 54);
-}
-
-
-footer .footer-row{
-  display: inline-block;
-}
-
-footer .footer-row h3{
-  font-size: 36px;
-  color: rgb(179, 24, 25);
-  padding-left: 40px;
-}
-
-footer ul li{
-  list-style-type: none;
-  padding-top: 10px;
-}
-
-footer ul li a{
+main .spotlight .spotlight-bottom h3{
   font-size: 24px;
   color: rgb(240, 240, 240);
-  text-decoration: none;
-}
-
-footer ul li a:hover{
-  text-decoration: underline;
-}
-
-footer .footer-right{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-footer .footer-nl{
-  margin-left: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: rgb(179, 24, 25);
-}
-
-footer .footer-nl input{
+  text-shadow: 0 0 5px black;
+  position: absolute;
+  left: 58px;
+  bottom: 8px;
   width: 100%;
-  height: 30px;
-  border: none;
-  background-color: rgb(56, 54, 54);
-  color: rgb(240, 240, 240);
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 16px
 }
 
-footer .footer-nl input:last-child{
-  background-color: transparent;
-  font-weight: bold;
-  border: 2px solid rgb(56, 54, 54);
-  background-color: rgb(56, 54, 54);
-  display: block;
-  margin: 10px 0px 10px 0px;
-  cursor: pointer;
-}
-
-footer .footer-nl input:last-child:hover{
-  transition: all 400ms ease;
-  background-color: rgb(75, 73, 73);
-  border: 2px solid rgb(75, 73, 73);
-}
-
-footer .footer-nl h3{
-  font-size: 18px;
-  color: rgb(240, 240, 240);
-}
-
-footer .footer-social ul{
-  padding-left: 10px;
-}
-
-footer .footer-social ul li{
-  display: inline-block;
-  padding-left: 20px;
-}
-
-footer .footer-social ul li:nth-child(1) a:hover{
-  transition: all 400ms ease;
-  color: #bb0000;
-}
-
-footer .footer-social ul li:nth-child(2) a:hover{
-  transition: all 400ms ease;
-  color: #3b5998;
-}
-
-footer .footer-social ul li:nth-child(3) a:hover{
-  transition: all 400ms ease;
-  color: #4099FF;
-}
-
-footer .footer-social ul li:nth-child(4) a:hover{
-  transition: all 400ms ease;
-  color: #c08d64;;
-}
-
-
-/* #################### Paralax Effect Test #################### */
-
-header .headerimg{
-  background-image: url("img/news/titleimage.jpg");
+main .spotlight .spotlight-top .spotlight-top-product-1{
   height: 100%;
-  background-attachment: fixed;
+  width: 50%;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+main .spotlight .spotlight-top .spotlight-top-product-1 .spotlight-top-product-1-bg{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-image: url("../img/shop/shirt1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 400ms ease;
+  background-size: 100%;
+  transition: background-size 200ms ease;
 }
+
+main .spotlight .spotlight-top .spotlight-top-product-1 .spotlight-top-product-1-bg:hover{
+  background-size: 105%;
+}
+
+main .spotlight .spotlight-top .spotlight-top-product-2{
+  height: 100%;
+  width: 50%;
+  float: right;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+main .spotlight .spotlight-top .spotlight-top-product-2 .spotlight-top-product-2-bg{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-image: url("../img/shop/cup1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 400ms ease;
+  background-size: 100%;
+  transition: background-size 200ms ease;
+}
+
+main .spotlight .spotlight-top .spotlight-top-product-2 .spotlight-top-product-2-bg:hover{
+  background-size: 105%;
+}
+
+main .spotlight .spotlight-bottom{
+  height: 50%;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-1{
+  height: 100%;
+  width: 25%;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-1 .spotlight-bottom-product-1-bg{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../img/shop/mousepad1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 400ms ease;
+  background-size: 100%;
+  transition: background-size 200ms ease;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-1 .spotlight-bottom-product-1-bg:hover{
+  background-size: 105%;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-2{
+  height: 100%;
+  width: 25%;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-2 .spotlight-bottom-product-2-bg{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-image: url("../img/shop/shirt2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 400ms ease;
+  background-size: 100%;
+  transition: background-size 200ms ease;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-2 .spotlight-bottom-product-2-bg:hover{
+  background-size: 105%;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-3{
+  height: 100%;
+  width: 25%;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-3 .spotlight-bottom-product-3-bg{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-image: url("../img/shop/shirt2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 400ms ease;
+  background-size: 100%;
+  transition: background-size 200ms ease;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-3 .spotlight-bottom-product-3-bg:hover{
+  background-size: 105%;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-4{
+  height: 100%;
+  width: 25%;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-4 .spotlight-bottom-product-4-bg{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-image: url("../img/shop/shirt2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 400ms ease;
+  background-size: 100%;
+  transition: background-size 200ms ease;
+}
+
+main .spotlight .spotlight-bottom .spotlight-bottom-product-4 .spotlight-bottom-product-4-bg:hover{
+  background-size: 105%;
+}
+
+
+
 
 /* #################### HELPERS #################### */
 
@@ -548,12 +334,4 @@ header .headerimg{
   content: "";
   display: block;
   clear: both;
-}
-
-.activepage {
-  color: rgb(179, 24, 25);
-}
-
-.fixer1 {
-  margin-top: 50px;
 }
