@@ -5,6 +5,7 @@
     <title>Red July</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <script language="JavaScript" type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
   </head>
   <body>
     <header>
@@ -22,10 +23,17 @@
       </nav>
       <nav class="shop-nav-list">
         <ul>
-          <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"><div class="cart-count">12</div></i></a></li>
           <li><a href="#"><i class="fa fa-eur" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+          <li><a id="shop-nav-search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+            <div id="shop-nav-searchbar">
+              <form class="shop-nav-searchbar-form" action="#" method="post">
+                <input type="search" class="shop-nav-searchbar-form-search" name="shop-nav-searchbar-form-search" placeholder="Search...">
+                <button type="submit" class="shop-nav-searchbar-form-submit" name="shop-nav-searchbar-form-submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </form>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
@@ -106,5 +114,56 @@
           </div>
         </section>
       </main>
+<!-- Footer -->
+    <footer>
+      <div class="footer-left">
+        <img src="img/logos/mainlogo.png" alt="mainlogo" />
+      </div>
+        <div class="footer-row">
+          <h3>Red July</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sites/news.html">News</a></li>
+            <li><a href="#">Tours</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-row">
+          <h3>Store</h3>
+          <ul>
+            <li><a href="sites/shop_landingpage.html">New Products</a></li>
+            <li><a href="#">Merch</a></li>
+            <li><a href="#">Albums</a></li>
+            <li><a href="#">Digital Downloads</a></li>
+          </ul>
+        </div>
+        <div class="footer-row">
+          <h3>Need Help?</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping & Policies</a></li>
+            <li><a href="#">Returns & Replacements</a></li>
+            <li><a href="#">Jobs</a></li>
+          </ul>
+        </div>
+      <div class="footer-right">
+        <div class="footer-nl">
+          <h3>Newsletter</h3>
+          <form class="newsletter" action="#" method="post">
+            <input type="text" name="nlemail" id="nlemail" value="">
+            <input type="button" name="nl-button" id="nl-button" value="Submit">
+          </form>
+        </div>
+        <div class="footer-social">
+          <ul>
+            <li><a href="#"><i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../../js/shop.js"></script>
   </body>
 </html>
