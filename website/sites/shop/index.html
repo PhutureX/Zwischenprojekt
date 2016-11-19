@@ -5,7 +5,11 @@
     <title>Red July</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="../../css/font-awesome.min.css">
-    <script language="JavaScript" type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <!-- Slider Libary -->
+    <link rel="stylesheet" type="text/css" href="libaries/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="libaries/slick/slick-theme.css"/>
+    <!-- -->
+    <script language="JavaScript" type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
   </head>
   <body>
     <header>
@@ -58,7 +62,6 @@
             </div>
           </a>
         </section>
-
         <section class="spotlight-bottom">
           <div class="spotlight-bottom-row">
             <div class="spotlight-bottom-row-wrapper">
@@ -113,7 +116,18 @@
             </div>
           </div>
         </section>
-      </main>
+      </section>
+      <section class="shop-slider-box">
+        <h2>Featured Products</h2>
+        <div class="shop-slider">
+          <div class="shop-slider-slide"></div>
+          <div class="shop-slider-slide"></div>
+          <div class="shop-slider-slide"></div>
+          <div class="shop-slider-slide"></div>
+          <div class="shop-slider-slide"></div>
+        </div>
+      </section>
+    </main>
 <!-- Footer -->
     <footer>
       <div class="footer-left">
@@ -164,6 +178,15 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="libaries/slick/slick.min.js"></script>
     <script src="../../js/shop.js"></script>
+    <script>
+    $('.shop-slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4500,
+    });
+    </script>
   </body>
 </html>

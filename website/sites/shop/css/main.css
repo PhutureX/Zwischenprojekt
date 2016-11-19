@@ -15,7 +15,6 @@ html{
 
 body{
   width: 100%;
-  height: 100%;
   margin: 0;
   background-color: rgb(26, 26, 26);
 }
@@ -197,7 +196,7 @@ main{
 
 main .spotlight{
   overflow: hidden;
-  height: calc(100vh - 173px);
+  height: calc(100vh - 73px);
 }
 
 main .spotlight .spotlight-top{
@@ -318,7 +317,7 @@ main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wr
   left: 0;
   bottom: 55px;
   width: 100%;
-  z-index: 1001;
+  z-index: 201;
 }
 
 main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-1{
@@ -405,6 +404,34 @@ main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wr
   height: 105%;
 }
 
+main .shop-slider-box{
+  margin-top: 5%;
+  height: 100%;
+  width:100%;
+}
+
+main .shop-slider-box h2{
+  color: rgb(179, 24, 25);
+  font-size: 32px;
+  text-align: center;
+}
+
+main .shop-slider-box .shop-slider{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+}
+
+main .shop-slider-box .shop-slider .shop-slider-slide{
+  background-image: url("../img/shop/bag1.png");
+  height: 350px;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
 
 /* #################### Footer #################### */
 
