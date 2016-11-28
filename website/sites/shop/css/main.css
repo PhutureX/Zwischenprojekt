@@ -146,25 +146,6 @@ header .shop-nav-list ul li a:hover .cart-count{
 }
 
 
-header .shop-nav-list ul li #shop-nav-searchbar{
-  display: none;
-  position: absolute;
-  right: 194px;
-  top: 0px;
-  background-color: rgb(10, 10, 10);
-  transition: all 400ms ease;
-}
-
-header .shop-nav-list ul li #shop-nav-searchbar .shop-nav-searchbar-form-search{
-  background-color: rgb(10, 10, 10);
-  border: none;
-  font-size: 20px;
-  color: rgb(138, 138, 138);
-  height: 65px;
-  padding-left: 10px;
-}
-
-
 header .shop-nav-list ul li #shop-nav-searchbar .shop-nav-searchbar-form-submit{
   background-color: rgb(10, 10, 10);
   border: none;
@@ -177,7 +158,7 @@ header .shop-nav-list ul li #shop-nav-searchbar .shop-nav-searchbar-form-submit{
   transition: all 400ms ease;
 }
 
-header .shop-nav-list ul li #shop-nav-searchbar .shop-nav-searchbar-form-submit:hover{
+header .shop-nav-list ul li .shop-nav-searchbar-form-submit:hover{
   transition: all 400ms ease;
   color: rgb(179, 24, 25);
 }
@@ -433,6 +414,63 @@ main .shop-slider-box .shop-slider .shop-slider-slide{
   background-size: cover;
 }
 
+main .shop-info{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .shop-info .shop-info-shipping{
+  border: solid 1px rgb(35, 35, 35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(33vw - 10%);
+  height: 68px;
+}
+
+main .shop-info .shop-info-shipping i{
+  color: rgb(179, 24, 25);
+}
+
+main .shop-info .shop-info-payment{
+  border: solid 1px rgb(35, 35, 35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(33vw - 10%);
+  height: 68px;
+}
+
+main .shop-info .shop-info-payment i{
+  padding-left: 15px;
+  color: rgb(240, 240, 240);
+}
+
+
+main .shop-info .shop-info-support{
+  border: solid 1px rgb(35, 35, 35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(33vw - 10%);
+  height: 68px;
+}
+
+main .shop-info .shop-info-support i{
+  color: rgb(179, 24, 25);
+}
+
+
+
+main .shop-info h2{
+  color: rgb(240, 240, 240);
+  font-size: 22px;
+  padding-left: 15px;
+}
+
 /* #################### Footer #################### */
 
 footer{
@@ -521,6 +559,10 @@ footer .footer-social ul{
 footer .footer-social ul li{
   display: inline-block;
   padding-left: 20px;
+}
+
+footer .footer-social ul li a{
+  transition: all 800ms ease;
 }
 
 footer .footer-social ul li:nth-child(1) a:hover{

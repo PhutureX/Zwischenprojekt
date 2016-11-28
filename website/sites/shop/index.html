@@ -30,14 +30,7 @@
           <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"><div class="cart-count">12</div></i></a></li>
           <li><a href="#"><i class="fa fa-eur" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-          <li><a id="shop-nav-search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-            <div id="shop-nav-searchbar">
-              <form class="shop-nav-searchbar-form" action="#" method="post">
-                <input type="search" class="shop-nav-searchbar-form-search" name="shop-nav-searchbar-form-search" placeholder="Search...">
-                <button type="submit" class="shop-nav-searchbar-form-submit" name="shop-nav-searchbar-form-submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-              </form>
-            </div>
-          </li>
+          <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
     </header>
@@ -120,11 +113,27 @@
       <section class="shop-slider-box">
         <h2>Featured Products</h2>
         <div class="shop-slider">
-          <div class="shop-slider-slide"></div>
-          <div class="shop-slider-slide"></div>
-          <div class="shop-slider-slide"></div>
-          <div class="shop-slider-slide"></div>
-          <div class="shop-slider-slide"></div>
+          <a href="#" class="shop-slider-slide"></a>
+          <a href="#" class="shop-slider-slide"></a>
+          <a href="#" class="shop-slider-slide"></a>
+          <a href="#" class="shop-slider-slide"></a>
+          <a href="#" class="shop-slider-slide"></a>
+        </div>
+      </section>
+      <section class="shop-info">
+        <div class="shop-info-shipping">
+          <i class="fa fa-truck fa-3x" aria-hidden="true"></i>
+          <h2>Free Shipping, when you spend 60€ or more!</h2>
+        </div>
+        <div class="shop-info-payment">
+          <i class="fa fa-cc-paypal fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-cc-visa fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-cc-mastercard fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-credit-card-alt fa-3x" aria-hidden="true"></i>
+        </div>
+        <div class="shop-info-support">
+          <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+          <h2>24/7 Support</h2>
         </div>
       </section>
     </main>
@@ -179,13 +188,12 @@
       </div>
     </footer>
     <script type="text/javascript" src="libaries/slick/slick.min.js"></script>
-    <script src="../../js/shop.js"></script>
     <script>
     $('.shop-slider').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 4500,
+      autoplaySpeed: 5000,
     });
     </script>
   </body>
