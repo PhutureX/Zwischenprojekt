@@ -145,7 +145,7 @@ header .shop-nav-list ul li a:hover .cart-count{
   color: rgb(138, 138, 138);
 }
 
-input[type="text"] {
+input[id="header-search"] {
   height: 68px;
   font-size: 1.3rem;
   font-family: 'Titilium Web', sans-serif;
@@ -163,13 +163,13 @@ input[type="text"] {
   cursor: pointer;
 }
 
-input[type="text"]:focus {
+input[id="header-search"]:focus {
   width: calc(100vw - 1325px);
   color: rgb(138, 138, 138);
   z-index: 1;
   cursor: text;
 }
-input[type="submit"] {
+input[id="header-search-submit"] {
   height: 67px;
   width: 63px;
   display: inline-block;
@@ -559,6 +559,7 @@ footer .footer-nl input:last-child{
   display: block;
   margin: 10px 0px 10px 0px;
   cursor: pointer;
+  transition: all 400ms ease;
 }
 
 footer .footer-nl input:last-child:hover{
