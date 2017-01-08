@@ -93,6 +93,24 @@ header .shop-nav ul li a:hover{
   color: rgb(179, 24, 25);
 }
 
+header .shop-nav ul ul{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 224;
+  padding: 0;
+}
+
+header .shop-nav ul ul li{
+  float: none;
+  background-color: rgb(30, 30, 30);
+  width: 100%;
+}
+
+header .shop-nav ul li:hover > ul{
+  display: block;
+}
+
 
 header .shop-nav-list{
   height: 68px;
@@ -164,7 +182,7 @@ input[id="header-search"] {
 }
 
 input[id="header-search"]:focus {
-  width: calc(100vw - 1325px);
+  width: calc(100vw - 1370px);
   color: rgb(138, 138, 138);
   z-index: 1;
   cursor: text;
