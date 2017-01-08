@@ -145,29 +145,6 @@ header .shop-nav-list ul li a:hover .cart-count{
   color: rgb(138, 138, 138);
 }
 
-
-header .shop-nav-list ul li #shop-nav-searchbar .shop-nav-searchbar-form-submit{
-  background-color: rgb(10, 10, 10);
-  border: none;
-  font-size: 22px;
-  color: rgb(138, 138, 138);
-  height: 67px;
-  cursor: pointer;
-  transition: all 400ms ease;
-  padding: 4px 10px 0 10px;
-  transition: all 400ms ease;
-}
-
-header .shop-nav-list ul li .shop-nav-searchbar-form-submit:hover{
-  transition: all 400ms ease;
-  color: rgb(179, 24, 25);
-}
-
-
-
-
-
-
 /* #################### MAIN #################### */
 main{
   padding-top: 73px;
@@ -395,6 +372,7 @@ main .shop-slider-box h2{
   color: rgb(179, 24, 25);
   font-size: 32px;
   text-align: center;
+  margin-bottom: 32px;
 }
 
 main .shop-slider-box .shop-slider{
