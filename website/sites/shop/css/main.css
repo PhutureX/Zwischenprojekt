@@ -16,6 +16,7 @@ html{
 
 body{
   width: 100%;
+  min-width: 1700px;
   margin: 0;
   background-color: rgb(26, 26, 26);
 }
@@ -37,6 +38,7 @@ input{
 
 header{
   width: 100%;
+  min-width: 1700px;
   height: 68px;
   position: fixed;
   background-color: rgb(30, 30, 30);
@@ -252,6 +254,8 @@ main{
 main .spotlight{
   overflow: hidden;
   height: calc(100vh - 225px);
+  min-height: 900px;
+
 }
 
 main .spotlight .spotlight-top{

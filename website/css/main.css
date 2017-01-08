@@ -5,7 +5,9 @@
 /* #################### GENERAL #################### */
 html{
   height: 100%;
+  min-height: 500px;
   width: 100%;
+  min-width: 500px;
 }
 
 h1, h2, h3, h4, h5, h6 {
