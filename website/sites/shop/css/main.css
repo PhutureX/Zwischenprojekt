@@ -39,7 +39,7 @@ input{
 
 header{
   width: 100%;
-  min-width: 1400px;
+  min-width: 1440px;
   height: 68px;
   position: fixed;
   background-color: rgb(30, 30, 30);
@@ -681,7 +681,7 @@ ol.breadcrumbs li a{
 
 #shop-cart .shop-cart-checkout h3{
   color: rgb(240, 240, 240);
-  font-size: 0.9em;
+  font-size: 0.87em;
   margin-left: 75%;
   margin-top: 12px;
 }
