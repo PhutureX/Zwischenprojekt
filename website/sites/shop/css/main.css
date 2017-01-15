@@ -558,12 +558,13 @@ main .shop-info h2{
   padding-left: 15px;
 }
 
-/* #################### Cart #################### */
-
-#shop-cart{
+.shop-wrapper{
   margin: 1.5em auto;
   max-width: 1400px;
+  height: 75vh;
 }
+
+/* #################### Cart #################### */
 
 ol.breadcrumbs{
   padding: 0px;
@@ -682,6 +683,7 @@ ol.breadcrumbs li a{
 #shop-cart .shop-cart-checkout h3{
   color: rgb(240, 240, 240);
   font-size: 0.87em;
+  width: 349px;
   margin-left: 75%;
   margin-top: 12px;
 }
@@ -697,19 +699,257 @@ ol.breadcrumbs li a{
   text-transform: uppercase;
   display: inline-block;
   font-size: 1.1em;
-  transition: all 400ms ease;
+  transition: all 200ms ease;
 }
 
 #shop-cart .shop-cart-checkout a:hover{
-  transition: all 400ms ease;
+  transition: all 200ms ease;
   background-color: transparent;
 }
+
+/* #################### Checkout #################### */
+
+#shop-checkout {
+  margin: 1.5em auto;
+  max-width: 1400px;
+}
+
+#shop-checkout h2{
+  font-size: 3em;
+  color: rgb(179, 24, 25);
+}
+
+#shop-checkout h3{
+  color: rgb(240, 240, 240);
+  font-size: 1.6em;
+}
+
+#shop-checkout p{
+  font-size: 1.1em;
+  color: rgb(240, 240, 240);
+  margin-top: 8px;
+}
+
+#shop-checkout p a{
+  color:rgb(179, 24, 25);
+}
+
+#shop-checkout .shop-checkout-box{
+  display: flex;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left{
+  width: 50%;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form{
+  width: 66%;
+  height: auto;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .shop-checkout-form-email{
+  width: 96%;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .shop-checkout-form-email:focus{
+  transition: all 200ms ease;
+  border: 2px solid red;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .shop-checkout-form-50{
+  width: 46%;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  margin: 2px 0px 2px 0px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .shop-checkout-form-50:focus{
+  transition: all 200ms ease;
+  border: 2px solid red;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .shop-checkout-form-100{
+  width: 96%;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  margin: 2px 0px 2px 0px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .shop-checkout-form-100:focus{
+  transition: all 200ms ease;
+  border: 2px solid red;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .shop-checkout-form-postal{
+  margin-left: 14px;
+}
+
+.shop-checkout-continue{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 457px;
+  margin-top: 12px;
+}
+
+.shop-checkout-continue .shop-checkout-return{
+  color: rgb(179, 24, 25);
+}
+
+.shop-checkout-continue .shop-checkout-return span{
+  transition: all 200ms ease;
+}
+
+.shop-checkout-continue .shop-checkout-return:hover span{
+  transition: all 200ms ease;
+  padding-right: 5px;
+}
+
+.shop-checkout-continue .shop-checkout-btn{
+  background-color: rgb(179, 24, 25);
+  border: 2px solid rgb(179, 24, 25);
+  border-radius: 5px;
+  color: rgb(240, 240, 240);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: all 200ms ease;
+}
+
+.shop-checkout-continue .shop-checkout-btn:hover{
+  transition: all 200ms ease;
+  background-color: transparent;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right{
+  width: 50%;
+}
+
+
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right table{
+  border-collapse: collapse;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right table tr{
+  border-bottom: 1px solid grey;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right table img{
+  width: 100px;
+  border-radius: 5px;
+  padding-right: 25px;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right table td{
+  padding: 12px 0px;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right table td:nth-child(2){
+  width: 100%;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-code{
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-code input{
+  width: 81.499996%;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  margin: 15px 0px 15px 0px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-code input:focus{
+  transition: all 200ms ease;
+  border: 2px solid red;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-code a{
+  background-color: rgb(179, 24, 25);
+  border: 2px solid rgb(179, 24, 25);
+  border-radius: 5px;
+  color: rgb(240, 240, 240);
+  padding: 13px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: all 200ms ease;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-code a:hover{
+  transition: all 200ms ease;
+  background-color: transparent;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  height: 94px;
+  border-bottom: 1px solid grey;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-price .shop-checkout-price-val h3:last-child{
+  float: right;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-total h4{
+  color: rgb(240, 240, 240);
+  font-size: 2.8em;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-total h4:first-child{
+  float: left;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-total h4:last-child{
+  float: right;
+}
+
+
+
+
+
 
 
 /* #################### Footer #################### */
 
 footer{
-  margin: auto;
   height: 325px;
   display: flex;
   justify-content: space-around;
