@@ -561,7 +561,6 @@ main .shop-info h2{
 .shop-wrapper{
   margin: 1.5em auto;
   max-width: 1400px;
-  height: 75vh;
 }
 
 /* #################### Cart #################### */
@@ -880,7 +879,7 @@ ol.breadcrumbs li a{
 }
 
 #shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-code input{
-  width: 81.499996%;
+  width: 81%;
   height: 45px;
   font-size: 1.2em;
   padding-left: 10px;
