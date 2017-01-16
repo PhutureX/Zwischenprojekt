@@ -7,199 +7,209 @@
     <link rel="stylesheet" href="../../../css/font-awesome.min.css">
   </head>
   <body>
-
-
-    <!-- ##################################################### HEADER #####################################################-->
-
-
     <header>
-        <div class="wrapper clearfix">
-            <h1>
-                <a href="../index.html"><img src="../img/logos/headerlogo.png" alt="Red July Logo"></a>
-            </h1>
-            <nav>
-              <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="#">Tours</a></li>
-                <li><a href="shop_landingpage.html" class="activepage">Store</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
-              </ul>
-            </nav>
+        <div class="shop-header-logo">
+            <a href="../index.html"><h1>Red July <span>Shop</span></h1></a>
         </div>
-    </header>
-
-
-<!-- ##################################################### MAIN #####################################################-->
-
-
-    <main class="wrapper clearfix">
-
-      <div class="shop_header">
-          <h2><a href="shop_landingpage.html"><span>Red July</span> Shop</a></h2>
-
-              <!-- ############## SHOPPING CART ICON HERE #####################-->
-              <div class=""></div>
-              <!-- ############## SHOPPING CART ICON END ######################-->
-
-          <nav>
-          <ul>
-            <li><a href="#">Merch</a></li>
-            <li><a href="#">Albums</a></li>
-            <li><a href="#">Digital Downloads</a></li>
-            <li><a href="#">New Products</a></li>
-            <li><a href="#">Special Offers</a></li>
-          </ul>
+        <nav class="shop-nav">
+            <ul>
+                <li><a href="#">Merch &#9662;</a>
+                    <ul>
+                        <li><a href="#">Shirts<span>&#10143;</span></a></li>
+                        <li><a href="#">Hoodies<span>&#10143;</span></a></li>
+                        <li><a href="#">Hats<span>&#10143;</span></a></li>
+                        <li><a href="#">Backpacks<span>&#10143;</span></a></li>
+                        <li><a href="#">Cups<span>&#10143;</span></a></li>
+                        <li><a href="#">Other<span>&#10143;</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Albums &#9662;</a>
+                    <ul>
+                        <li><a href="#">Album 1<span>&#10143;</span></a></li>
+                        <li><a href="#">Album 2<span>&#10143;</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Digital Downloads</a></li>
+                <li><a href="#">New Products</a></li>
+                <li><a href="#">Special Offers</a></li>
+            </ul>
         </nav>
-      </div>
-
-      <!-- BREADCRUMBS -->
-
-      <div class="breadcrumbs">
-        <table>
-          <tr>
-            <td><a href="shop_landingpage.html">Shop</a></td>
-            <td><p>></p></td>
-            <td><a href="shop_cart.html">Cart</a></td>
-            <td><p>></p></td>
-            <td><a href="shop_checkout.html">Customer Information</a></td>
-            <td><p>></p></td>
-            <td><a href="shop_shipping.html">Shipping Method</a></td>
-            <td><p>></p></td>
-            <td><a href="shop_payment.html">Payment Method</a></td>
-          </tr>
-        </table>
-      </div>
-
-
-<!-- ################################ FLOAT LEFT ################################### -->
-
-      <div class="shop_payment">
-        <h2>Payment Method</h2>
-        <p>You will be linked to the payment site of your option.</p>
-        <form class="" action="#" method="post">
-          <div class="payment_method">
-            <input type="radio" name="payment" value="Credit Card">Credit Card
+        <nav class="shop-nav-list">
+            <ul>
+                <li><a href="shop_cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"><div class="cart-count">12</div></i></a></li>
+                <li><a href="#"><i class="fa fa-eur" aria-hidden="true"></i></a>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-usd" aria-hidden="true"></i> USD</a></li>
+                        <li><a href="#"><i class="fa fa-gbp" aria-hidden="true"></i> GBP</a></li>
+                        <li><a href="#"><i class="fa fa-jpy" aria-hidden="true"></i> YPN</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <ul>
+                        <li><a href="#">Login<span>&#10143;</span></a></li>
+                        <!-- <li><a href="#">Settings<span>&#10143;</span></a></li>
+                        <li><a href="#">Logout<span>&#10143;</span></a></li> -->
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-search" aria-hidden="true">
+                <form action="#">
+                  <input id="header-search" name="search" type="text" placeholder="Search...">
+                  <input id="header-search-submit" type="submit">
+                </form>
+              </i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <div id="shop-checkout" class="shop-wrapper">
+          <ol class="breadcrumbs">
+              <li><a href="../index.html">Shop</a></li>
+              <li><a href="shop_cart.html">Cart</a></li>
+              <li><a href="shop_checkout.html">Customer Information</a></li>
+              <li><a href="shop_shipping.html">Shipping</a></li>
+              <li><a href="shop_payment.html">Payment</a></li>
+          </ol>
+          <div class="shop-checkout-box">
+            <div class="shop-checkout-box-left">
+              <form class="shop-checkout-form" action="#" method="post">
+                <h2>Payment Method</h2>
+                <ul class="checkout-options">
+                  <li class="checkout-options-element">
+                    <input type="radio" id="payment-option-1" name="payment-option" checked>
+                    <label for="payment-option-1">Credit Card
+                      <p>
+                        <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                        <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                        <i class="fa fa-cc-amex" aria-hidden="true"></i>
+                      </p>
+                    </label>
+                    <form class="" action="index.html" method="post">
+                      <input type="text" placeholder="Card number" class="shop-payment-form-1">
+                      <input type="text" placeholder="Name on card" class="shop-payment-form-2">
+                      <input type="text" placeholder="MM/YY" class="shop-payment-form-3">
+                      <input type="text" placeholder="CVV" class="shop-payment-form-3">
+                    </form>
+                  </li>
+                  <li class="checkout-options-element">
+                    <input type="radio" id="payment-option-2" name="payment-option">
+                    <label for="payment-option-2"><img src="../img/shop-payment/PayPal.png" alt="PayPal"></label>
+                  </li>
+                  <li class="checkout-options-element">
+                    <input type="radio" id="payment-option-3" name="payment-option">
+                    <label for="payment-option-3"><img src="../img/shop-payment/sofort.png" alt="Sofort"></label>
+                  </li>
+                </ul>
+                <div class="shop-checkout-continue">
+                  <a href="shop_shipping.html" class="shop-checkout-return"><span>&larr;</span> Return</a>
+                  <a href="shop_completed.html" class="shop-checkout-btn">Complete Order</a>
+                </div>
+              </form>
+            </div>
+            <div class="shop-checkout-box-right">
+              <h2>Order Overview</h2>
+              <table class="shop-checkout-cart">
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="../img/shop/shirt1.png" alt="Product 1">
+                    </td>
+                    <td>
+                      <h3>Shirt 1</h3>
+                      <p>Additional Information</p>
+                    </td>
+                    <td>
+                      <h3>€11.99</h3>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="../img/shop/bag1.png" alt="Product 1">
+                    </td>
+                    <td>
+                      <h3>Bag 1</h3>
+                      <p>Additional Information</p>
+                    </td>
+                    <td>
+                      <h3>€11.99</h3>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="shop-checkout-code">
+                <input type="text" name="" placeholder="Discount Code">
+                <a href="#">Apply</a>
+              </div>
+              <div class="shop-checkout-price">
+                <div class="shop-checkout-price-txt">
+                  <h3>Subtotal</h3>
+                  <h3>Shipping</h3>
+                </div>
+                <div class="shop-checkout-price-val">
+                  <h3>€11.99</h3>
+                  <h3>€4.99</h3>
+                </div>
+              </div>
+              <div class="shop-checkout-total">
+                <h4>Total</h4>
+                <h4>€16.98</h4>
+              </div>
+            </div>
           </div>
-          <div class="payment_method">
-            <input type="radio" name="payment" value="Debit Card">Debit Card
-          </div>
-          <div class="payment_method">
-            <input type="radio" name="payment" value="Paypal">Paypal
-          </div>
-          <div class="shop_payment_submit">
-            <a href="shop_shipping.html">&lt; Return to Shipping Information</a>
-            <input type="button" name="shippingGuest" value="Complete Order">
-          </div>
-        </form>
-      </div>
-
-<!-- ###################################### RIGHT SIDE ############################-->
-    <div class="shop_overview">
-      <h2>Order Overview</h2>
-      <form action="#" method="post">
-        <table>
-          <tbody>
-          <tr>
-              <td><img src="../img/shop/shirt1.png" alt="shirt1" height="75" width="75"/></td>
-              <td>
-                <h3>2x Red July Shirt White</h3>
-                <p>Band T-Shirt Color White w/ Logo</p>
-              </td>
-              <td><span>&euro;29.99</span></td>
-          </tr>
-          <tr>
-            <td><img src="../img/shop/bag1.png" alt="bag1" height="75" width="75"/></td>
-            <td>
-              <h3>1x Red July Backpack</h3>
-              <p>High Sierra&copy; Impact Backback Black w/ Logo</p>
-            </td>
-            <td><span>&euro;19.99</span></td>
-          </tr>
-          <tr>
-            <td><img src="../img/shop/cup1.png" alt="cup1" height="75" width="75"/></td>
-            <td>
-              <h3>1x Red July Cup</h3>
-              <p>Coffee Cup Purple w/ Logo</p>
-            </td>
-            <td><span>&euro;4.99</span></td>
-          </tr>
-            <tr class="shop_code">
-              <td colspan="2"><input type="text" class="shop_code_input" name="name" value="" placeholder="Discount Code"></td>
-              <td><input type="button" class="shop_code_apply" name="applyDiscount" value="Apply"></td>
-            </tr>
-            <tr class="shop_overview_subtotal">
-              <td colspan="2">Subtotal</td>
-              <td>&euro;54.96</td>
-            </tr>
-            <tr class="shop_overview_shipping">
-              <td colspan="2">Shipping</td>
-              <td>&euro;4.99</td>
-            </tr>
-          <tr class="shop_overview_total">
-            <td colspan="2">Total</td>
-            <td>&euro;59.95</td>
-          </tr>
-          </tbody>
-        </table>
-      </form>
-    </div>
-
-    </main>
-
-
+        </div>
+      </main>
     <!-- Footer -->
-
-        <footer>
-          <div class="footer-left">
+    <footer>
+        <div class="footer-left">
             <img src="../img/logos/mainlogo.png" alt="mainlogo" />
-          </div>
-            <div class="footer-row">
-              <h3>Red July</h3>
-              <ul>
+        </div>
+        <div class="footer-row">
+            <h3>Red July</h3>
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sites/news.html">News</a></li>
                 <li><a href="#">Tours</a></li>
                 <li><a href="#">About Us</a></li>
-              </ul>
-            </div>
-            <div class="footer-row">
-              <h3>Store</h3>
-              <ul>
+            </ul>
+        </div>
+        <div class="footer-row">
+            <h3>Store</h3>
+            <ul>
                 <li><a href="sites/shop_landingpage.html">New Products</a></li>
                 <li><a href="#">Merch</a></li>
                 <li><a href="#">Albums</a></li>
                 <li><a href="#">Digital Downloads</a></li>
-              </ul>
-            </div>
-            <div class="footer-row">
-              <h3>Need Help?</h3>
-              <ul>
+            </ul>
+        </div>
+        <div class="footer-row">
+            <h3>Need Help?</h3>
+            <ul>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Shipping & Policies</a></li>
                 <li><a href="#">Returns & Replacements</a></li>
                 <li><a href="#">Jobs</a></li>
-              </ul>
-            </div>
-          <div class="footer-right">
+            </ul>
+        </div>
+        <div class="footer-right">
             <div class="footer-nl">
-              <h3>Newsletter</h3>
-              <form class="newsletter" action="#" method="post">
-                <input type="text" name="nlemail" id="nlemail" value="">
-                <input type="button" name="nl-button" id="nl-button" value="Submit">
-              </form>
+                <h3>Newsletter</h3>
+                <form class="newsletter" action="#" method="post">
+                    <input type="text" name="nlemail" id="nlemail" placeholder="E-Mail...">
+                    <input type="button" name="nl-button" id="nl-button" value="Submit">
+                </form>
             </div>
             <div class="footer-social">
-              <ul>
-                <li><a href="#"><i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li>
-              </ul>
+                <ul>
+                    <li><a href="#"><i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
-          </div>
-        </footer>
-
+        </div>
+    </footer>
   </body>
 </html>

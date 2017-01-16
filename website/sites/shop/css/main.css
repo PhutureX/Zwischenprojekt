@@ -561,6 +561,7 @@ main .shop-info h2{
 .shop-wrapper{
   margin: 1.5em auto;
   max-width: 1400px;
+  min-height: 920px;
 }
 
 /* #################### Cart #################### */
@@ -588,7 +589,6 @@ ol.breadcrumbs li a{
 #shop-cart h2{
   font-size: 3em;
   color: rgb(179, 24, 25);
-
 }
 
 #shop-cart  h3{
@@ -691,6 +691,7 @@ ol.breadcrumbs li a{
   margin-left: 80%;
   background-color: rgb(179, 24, 25);
   border: 2px solid rgb(179, 24, 25);
+  border-radius: 5px;
   color: rgb(240, 240, 240);
   padding: 15px 32px;
   text-align: center;
@@ -727,6 +728,7 @@ ol.breadcrumbs li a{
   font-size: 1.1em;
   color: rgb(240, 240, 240);
   margin-top: 8px;
+  margin-bottom: 4px;
 }
 
 #shop-checkout p a{
@@ -845,11 +847,118 @@ ol.breadcrumbs li a{
   background-color: transparent;
 }
 
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options{
+  padding: 0;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element{
+  border: 2px solid black;
+  display: block;
+  width: 98%;
+  margin: 5px 0px;
+  background-color: rgb(56, 54, 54);
+  transition: all 200ms ease;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element .shop-payment-form-1{
+  width: 92.5%;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  margin: 2px 0px 2px 10px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element .shop-payment-form-1:focus{
+  transition: all 200ms ease;
+  border: 2px solid red;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element .shop-payment-form-2{
+  width: 46.35%;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  margin: 2px 0px 2px 10px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element .shop-payment-form-2:focus{
+  transition: all 200ms ease;
+  border: 2px solid red;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element .shop-payment-form-3{
+  width: 19.125%;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  margin: 2px 0px 8px 0px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element .shop-payment-form-3:focus{
+  transition: all 200ms ease;
+  border: 2px solid red;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element input[type="radio"]{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  margin-top: 38.5px;
+  margin-left: 28px;
+  padding: 0px;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element label{
+  color: rgb(240, 240, 240);
+  font-weight: 300;
+  display: block;
+  position: relative;
+  font-size: 1.2em;
+  padding: 25px 25px 25px 80px;
+  margin: 10px auto;
+  height: 30px;
+  cursor: pointer;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element label img{
+  width: 45%;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element:hover{
+  transition: all 200ms ease;
+  border: 2px solid red;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element label p{
+  margin: 0px;
+  float: right;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-left .shop-checkout-form .checkout-options .checkout-options-element label p i{
+  font-size: 1.6em;
+}
+
 #shop-checkout .shop-checkout-box .shop-checkout-box-right{
   width: 50%;
 }
-
-
 
 #shop-checkout .shop-checkout-box .shop-checkout-box-right table{
   border-collapse: collapse;
@@ -939,6 +1048,41 @@ ol.breadcrumbs li a{
 #shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-total h4:last-child{
   float: right;
 }
+
+#shop-checkout-completed{
+  margin: 1.5em auto;
+  max-width: 1440px;
+}
+
+#shop-checkout-completed h2{
+  font-size: 3em;
+  color: rgb(179, 24, 25);
+  text-align: center;
+}
+
+#shop-checkout-completed .shop-completed-btn{
+  display: block;
+  margin: 45px auto 65vh auto;
+  width: 32%;
+  background-color: rgb(179, 24, 25);
+  border: 2px solid rgb(179, 24, 25);
+  border-radius: 5px;
+  color: rgb(240, 240, 240);
+  padding: 13px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: all 200ms ease;
+}
+
+#shop-checkout-completed .shop-completed-btn:hover{
+  transition: all 200ms ease;
+  background-color: transparent;
+}
+
+
+
+
 
 
 
