@@ -53,7 +53,7 @@
                     echo '"href="index.php?page=login">Login</a></li>';
 
                 } ?>
-              <li><a class="<?php if($page !== 'home'){ echo 'transform-menu';} ?>" href="http://localhost/Zwischenprojekt/website/sites/shop/index.php">Shop</a></li>
+              <li><a class="<?php if($page !== 'home'){ echo 'transform-menu';} ?>" href="sites/shop/index.php">Shop</a></li>
               </ul>
           </nav>
           <?php

@@ -19,7 +19,7 @@
       </div>
       <nav class="shop-nav">
         <ul>
-          <li><a href="#">Merch &#9662;</a>
+          <li><a href="index.php?page=productlist">Merch &#9662;</a>
             <ul>
               <li><a href="index.php?page=productlist">Shirts<span>&#10143;</span></a></li>
               <li><a href="index.php?page=productlist">Hoodies<span>&#10143;</span></a></li>
@@ -55,10 +55,10 @@
               <?php
 
                 if( $_SESSION['login'] == 1){
-                  echo '<li><a href="user_settings.php">Settings<span>&#10143;</span></a></li>';
+                  echo '<li><a href="index.php?page=settings.php">Settings<span>&#10143;</span></a></li>';
                   echo '<li><a href="logout.php">Logout<span>&#10143;</span></a></li>';
                 }else{
-                  echo '<li><a href="http://localhost/Zwischenprojekt/website/index.php?page=login">Login<span>&#10143;</span></a></li>';
+                  echo '<li><a href="../../index.php?page=login">Login<span>&#10143;</span></a></li>';
                 }
 
                ?>

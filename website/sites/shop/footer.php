@@ -2,7 +2,7 @@
 <!-- Footer -->
     <footer>
       <div class="footer-left">
-        <a href="../../../index.html"><img src="img/logos/mainlogo.png" alt="mainlogo" /></a>
+        <a href='../../index.php?page=home'><img src="img/logos/mainlogo.png" alt="mainlogo" /></a>
       </div>
         <div class="footer-row">
           <h3>Red July</h3>
