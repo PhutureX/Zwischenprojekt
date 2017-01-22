@@ -60,7 +60,7 @@ if( isset($_POST['register']) ){
         array_push($errorsMsg, "Please enter a valid city.");
     }
 
-    if( strlen($_POST['zip']) < 11 && ! is_numeric($_POST['zip']) ){
+    if( strlen($_POST['phone']) < 11 && ! is_numeric($_POST['phone']) ){
         $errors = true;
         array_push($errorsMsg, "Please enter a valid Phonenumber.");
     }
