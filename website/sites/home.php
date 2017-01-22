@@ -1,6 +1,6 @@
+<main class="wrapper">
 <div class="news_site">
 <h2>SLIDER</h2>
-
 </div>
 
 <div class="news-articlelist">
