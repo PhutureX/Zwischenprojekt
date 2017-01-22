@@ -523,6 +523,11 @@ font-family: 'Titillium Web', sans-serif;
 
 }
 
+.login_site a{
+  text-decoration: none;
+  color: rgb(179, 24, 25);
+}
+
 .login_box {
   width: 40%;
   height: 35%;
