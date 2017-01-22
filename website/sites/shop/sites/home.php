@@ -1,4 +1,3 @@
-<main>
   <section class="spotlight">
     <section class="spotlight-top">
       <a href="#">
@@ -99,4 +98,3 @@
       <h2>24/7 Support</h2>
     </div>
   </section>
-</main>

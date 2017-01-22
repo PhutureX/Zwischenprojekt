@@ -1,6 +1,4 @@
-
-    <main>
-        <div id="shop-list" class="shop-wrapper">
+<div id="shop-list" class="shop-wrapper">
             <ol class="breadcrumbs">
                 <li><a href="index.php?page=home">Shop</a></li>
                 <li><a href="#">Merch</a></li>
@@ -41,4 +39,3 @@
                 </div>
               </div>
           </div>
-    </main>

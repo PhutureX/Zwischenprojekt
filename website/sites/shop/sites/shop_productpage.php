@@ -1,6 +1,4 @@
-
-    <main>
-        <div id="shop-product" class="shop-wrapper">
+<div id="shop-product" class="shop-wrapper">
             <ol class="breadcrumbs">
                 <li><a href="../index.html">Shop</a></li>
                 <li><a href="shop_list.html">Merch</a></li>
@@ -53,7 +51,6 @@
               </div>
             </div>
         </div>
-    </main>
     <script type="text/javascript">
       function changeImage(a) {
       document.getElementById("shop-product-mainimg").src=a;

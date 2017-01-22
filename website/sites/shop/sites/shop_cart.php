@@ -1,5 +1,4 @@
-  <main>
-        <div id="shop-cart" class="shop-wrapper">
+<div id="shop-cart" class="shop-wrapper">
             <ol class="breadcrumbs">
                 <li><a href="../index.html">Shop</a></li>
                 <li><a href="shop_cart.html">Cart</a></li>
@@ -66,4 +65,3 @@
                 <a href="index.php?page=checkout">Checkout</a>
             </div>
         </div>
-    </main>

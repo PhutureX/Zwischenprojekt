@@ -10,6 +10,10 @@ html{
   min-width: 500px;
 }
 
+form {
+  margin-bottom: 0em;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: 'Titillium Web', sans-serif;
@@ -221,8 +225,13 @@ main .news-articlelist{
   margin-top: 100px;
 }
 
-main .news-articlelist>section{
-  width: 75%;
+a.article_preview {
+  text-decoration: none;
+}
+.news_site h2{
+  font-size: 3em;
+  color: rgb(179, 24, 25);
+  text-align: center;
 }
 
 main section .article_preview {
@@ -247,7 +256,7 @@ main section .article_preview p {
   color: rgb(240, 240, 240);
   word-spacing: 3px;
 }
-main section .article_preview a{
+.read_more{
   float: right;
   font-size: 18px;
   color: rgb(179, 24, 25);
@@ -349,7 +358,7 @@ display: flex;
   color: rgb(179, 24, 25);
   text-align: center;
 }
-.register p{
+.register_description p{
   font-size: 1.1em;
   color: rgb(240, 240, 240);
   width: 100%;
@@ -365,7 +374,8 @@ display: flex;
 }
 
 .register_left {
-  width:50%;
+  width: 50%;
+  height:100%;
   margin: 0% 25% 0% 25%;
 
 }
@@ -386,7 +396,7 @@ transition: all 200ms ease;
 }
 
 .contact_us_half_form, .register_half_form{
-  width: 46.75%;
+  width: 46.25%;
   height: 45px;
   font-size: 1.2em;
   padding-left: 10px;
@@ -400,7 +410,11 @@ transition: all 200ms ease;
 }
 
 .contact_us_postal_fix, .register_postal_fix{
-  margin-left: 2%;
+  margin-left: 3%;
+}
+
+.split {
+  margin-top: 5%;
 }
 
 .contact_us_right, .register_right{
@@ -443,10 +457,22 @@ font-family: 'Titillium Web', sans-serif;
   background-color: transparent;
 }
 
-.contact_us_complete, .register_complete{
+.contact_us_complete, .register_complete, .message_404 {
     text-align: center;
     font-size: 2em;
     color: rgb(179, 24, 25);
+}
+
+.message_404 p{
+  font-size: 1em;
+  color: rgb(240, 240, 240);
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.message_404 a{
+  text-decoration: none;
+  color: rgb(179, 24, 25);
 }
 
 .contact_us_complete_send, .register_complete_send{
@@ -468,6 +494,17 @@ font-family: 'Titillium Web', sans-serif;
 .contact_us_complete_send:hover, .register_complete_send:hover{
   transition: all 200ms ease;
   background-color: transparent;
+}
+
+.errors {
+  background-color: transparent;
+  color: rgb(179, 24, 25);
+  border: solid 1px rgb(179, 24, 25);
+  border-radius: 5px;
+  transition: all 200ms;
+  width: 35%;
+  margin: 0% 32.5% 0% 32.5%;
+  text-align: center;
 }
 
 /*############################################################################ LOGIN ################################################### */
