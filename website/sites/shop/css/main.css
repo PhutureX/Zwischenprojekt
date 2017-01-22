@@ -1247,6 +1247,27 @@ ol.breadcrumbs li a{
   cursor: pointer;
 }
 
+#shop-404 img{
+  display: block;
+  margin: 0 auto;
+}
+
+#shop-404 h2{
+  color: rgb(179, 24, 25);
+  font-size: 3em;
+  text-align: center;
+}
+
+#shop-404 h3{
+  color: rgb(240, 240, 240);
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#shop-404 h3 a{
+  color: rgb(179, 24, 25);
+}
+
 
 
 
