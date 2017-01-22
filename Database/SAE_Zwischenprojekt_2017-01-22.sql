@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.1.13-MariaDB)
 # Database: SAE_Zwischenprojekt
-# Generation Time: 2017-01-22 09:34:48 +0000
+# Generation Time: 2017-01-22 20:58:35 +0000
 # ************************************************************
 
 
@@ -48,6 +48,18 @@ CREATE TABLE `nav` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `nav` WRITE;
+/*!40000 ALTER TABLE `nav` DISABLE KEYS */;
+
+INSERT INTO `nav` (`id`, `name`, `link`, `position`)
+VALUES
+	(1,'Home','home',1),
+	(2,'News','news',2),
+	(3,'Tours','tours',3),
+	(4,'Contact Us','contact_us',4);
+
+/*!40000 ALTER TABLE `nav` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table news
@@ -222,13 +234,25 @@ CREATE TABLE `users` (
   `last_name` varchar(50) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `street` varchar(50) DEFAULT NULL,
+  `adress` varchar(50) DEFAULT NULL,
   `zip` int(10) DEFAULT NULL,
   `city` varchar(100) DEFAULT NULL,
+  `phone` int(11) DEFAULT NULL,
+  `is_admin` int(11) DEFAULT NULL,
+  `is_premium` int(11) DEFAULT NULL,
   `rank` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+
+INSERT INTO `users` (`id`, `uname`, `first_name`, `last_name`, `password`, `email`, `adress`, `zip`, `city`, `phone`, `is_admin`, `is_premium`, `rank`)
+VALUES
+	(1,'OfficialxSmoker','Patrick','Gomez','2f2a515f52a607e82988aa8dbadb96ad283b85d1:41543','red-july@hotmail.com','Seuttergasse 10/15',1130,'Vienna',2147483647,1,NULL,NULL);
+
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 
