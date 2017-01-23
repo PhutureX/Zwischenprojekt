@@ -1290,7 +1290,7 @@ footer .footer-row{
 }
 
 footer .footer-row h3{
-  font-size: 36px;
+  font-size: 2em;
   color: rgb(179, 24, 25);
   padding-left: 40px;
 }
@@ -1301,7 +1301,7 @@ footer ul li{
 }
 
 footer ul li a{
-  font-size: 24px;
+  font-size: 1.2em;
   color: rgb(240, 240, 240);
   text-decoration: none;
 }

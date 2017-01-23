@@ -188,10 +188,20 @@ header .headercontent .headerbtn2:hover{
   border: solid 1px rgb(186, 41, 42);
 }
 
-.breadcrumbs>a,.breadcrumbs>p{
+.breadcrumbs>a {
 text-decoration: none;
 font-weight: bold;
 color: rgb(186, 41, 42);
+display: inline-block;
+margin: 10px;
+margin-top: 30px;
+margin-bottom: 50px;
+}
+
+.breadcrumbs>p {
+text-decoration: none;
+font-weight: bold;
+color: rgb(240, 240, 240);
 display: inline-block;
 margin: 10px;
 margin-top: 30px;
@@ -228,6 +238,7 @@ main .news-articlelist{
 a.article_preview {
   text-decoration: none;
 }
+
 .news_site h2{
   font-size: 3em;
   color: rgb(179, 24, 25);
@@ -259,6 +270,13 @@ main section .article_preview p {
 .read_more{
   float: right;
   font-size: 18px;
+  color: rgb(179, 24, 25);
+  text-decoration: none;
+  font-weight: bold;
+}
+.timestamp {
+  float: right;
+  font-size: 0.7em;
   color: rgb(179, 24, 25);
   text-decoration: none;
   font-weight: bold;
@@ -507,6 +525,15 @@ font-family: 'Titillium Web', sans-serif;
   text-align: center;
 }
 
+.success {
+  background-color: transparent;
+  color: rgb(34,139,34);
+  transition: all 200ms;
+  width: 35%;
+  margin: 0% 32.5% 0% 32.5%;
+  text-align: center;
+}
+
 /*############################################################################ LOGIN ################################################### */
 .login_site h2{
   font-size: 3em;
@@ -591,18 +618,125 @@ font-family: 'Titillium Web', sans-serif;
   border: solid 1px rgb(186, 41, 42);
 }
 
-/* #################### LOAD MORE BUTTON #################### */
+/*############################################################################ COMMENTS ################################################### */
 
-.loadmore button {
-  margin: 20px 0px 20px 50%;
-  width: 175px;
-  height: 35px;
+/*.comments {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}*/
+
+.comments_box {
+  width:60%;
+  margin: 0% 15% 5% 15%;
+  background-color: rgb(56, 54, 54);
+  padding: 3% 5% 5% 5%;
+  border: 2px solid black;
+  border-top: none;
+  border-radius: 5px;
+}
+
+/*.comment_form {
+  height: 250px;
+}*/
+
+.comment_form form{
+  height: 200px;
+  margin: 0% 15% 5% 15%;
+  background-color: rgb(56, 54, 54);
+  padding: 3% 5% 8% 5%;
+  border: 2px solid black;
+  border-top: none;
+  border-radius: 5px;
+}
+
+.comments_title{
+  width:60%;
+  font-size: 2em;
+  color: rgb(240, 240, 240);
+  background-color: rgb(179, 24, 25);
+  text-align: center;
+  margin: 10% 15% 0% 15%;
+  padding: 2% 5% 2% 5%;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.comment {
+  padding: 2%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(26, 26, 26);
+}
+
+
+.comment h4{
+  font-size: 1em;
+  color: rgb(179, 24, 25);
+}
+
+.comment p {
+  font-size: 1em;
+  color: rgb(240, 240, 240);
+  word-spacing: 3px;
+}
+
+.comment_form_title {
+  width:60%;
+  font-size: 1.5em;
+  color: rgb(240, 240, 240);
+  background-color: rgb(179, 24, 25);
+  text-align: center;
+  margin: 10% 15% 0% 15%;
+  padding: 1% 5% 1% 5%;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+
+.comment_text{
+width: 98.7%;
+height: 100%;
+font-size: 1em;
+padding-left: 10px;
+margin: 2px 0px 2px 0px;
+color: rgb(240, 240, 240);
+background-color: rgb(26, 26, 26);
+outline: none;
+border: 2px solid black;
+border-radius: 5px;
+transition: all 200ms ease;
+resize:none;
+font-family: 'Titillium Web', sans-serif;
+}
+
+.comment_button button {
+  margin: 1% 0% 1% 80%;
+  width: 20%;
+  height: 10%;
   background-color: rgb(179, 24, 25);
   color: rgb(240, 240, 240);
-  font-size: 16px;
+  font-size: 1em;
   border: solid 2px rgb(179, 24, 25);
   cursor: pointer;
   transition: all 300ms;
+  padding:1%;
+}
+
+/* #################### LOAD MORE BUTTON #################### */
+
+.loadmore button {
+  margin: 5% 40% 5% 40%;
+  width: 20%;
+  height: 10%;
+  background-color: rgb(179, 24, 25);
+  color: rgb(240, 240, 240);
+  font-size: 1.5em;
+  border: solid 2px rgb(179, 24, 25);
+  cursor: pointer;
+  transition: all 300ms;
+  padding:1%;
 }
 
 .loadmore button:hover{
@@ -627,7 +761,7 @@ footer .footer-row{
 }
 
 footer .footer-row h3{
-  font-size: 36px;
+  font-size: 2em;
   color: rgb(179, 24, 25);
   padding-left: 40px;
 }
@@ -638,7 +772,7 @@ footer ul li{
 }
 
 footer ul li a{
-  font-size: 24px;
+  font-size: 1.2em;
   color: rgb(240, 240, 240);
   text-decoration: none;
 }

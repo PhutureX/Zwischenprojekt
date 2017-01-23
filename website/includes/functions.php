@@ -1,6 +1,7 @@
 <?php
 $errors = false;
 $errorsMsg = array();
+$success = false;
 
 
 // ###################### REGISTER ########################### //
@@ -104,6 +105,7 @@ if( isset($_POST['login']) ){
         if( sha1($_POST['password'] . $pwHash[1]) == $pwHash[0] ){
 
             $_SESSION['login'] = 1;
+            $_SESSION['uid'] = $row['id'];
             $_SESSION['uname'] = $_POST['uname'];
             $_SESSION['email'] = $row['email'];
             $_SESSION['isadmin'] = $row['is_admin'];
@@ -128,6 +130,33 @@ if( isset($_POST['login']) ){
         $_SESSION['logintimeout'] = time();
     }
 }
+
+
+// ###################### COMMENTS ########################### //
+
+if( isset($_POST['insertcomment']) ){
+
+    if( strlen($_POST['comment']) < 5 ){
+        $errors = true;
+        array_push($errorsMsg, "Your comment is too short.");
+    }
+
+    if( $errors === false ){
+        $comment = cleanString($dblink, $_POST['comment']);
+        $created_at = time();
+        $news_id = $_GET['id'];
+        $author_id = $_SESSION['uid'];
+
+        $sql = "INSERT INTO comments
+                (news_id, author_id, comment, created_at)
+            VALUES
+                ('$news_id', '$author_id', '$comment', '$created_at')";
+
+        mysqli_query($dblink, $sql);
+        $success = true;
+    }
+}
+
 
 // ###################### HELP ########################### //
 
