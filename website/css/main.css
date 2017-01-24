@@ -37,7 +37,6 @@ a{
   min-height:100%;
   position: relative;
   width: 75%;
-  /*background-color: green;*/
   margin: auto;
 }
 
@@ -45,45 +44,46 @@ a{
 /* #################### HEADER #################### */
 
 header{
-  height: 100%;
+  height: auto;
   min-height: 65px;
 }
 
-.normal-header{
-  height: auto;
+.home-header{
+  height: 100%;
 }
 
-header nav img{
-  display: none;
+header nav img {
   float: left;
   width: auto;
   height: 55px;
   margin-top: 5px;
   margin-left: 5px;
   transition: all 400ms ease;
+  display: block;
 }
 
 header nav img.showimg{
-  display: block;
+  display: none;
 }
 
 header nav {
   position: fixed;
-  text-align: center;
   float: left;
   width: 100%;
-  height: 85px;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.2);
   transition: all 400ms ease;
-}
-
-header nav.transform-bg{
   top: 0px;
   text-align: left;
   background-color: rgb(26, 26, 26);
   height: 65px;
   border-bottom: solid 1px black;
+}
+
+header nav.transform-bg {
+  text-align: center;
+  height: 85px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: none;
 }
 
 header nav ul {
@@ -99,22 +99,22 @@ header nav ul li {
 
 
 header nav ul li a{
-  display: inline-block;
-  line-height: 85px;
-  height: 85px;
-  font-size: 18px;
-  font-weight: bold;
-  color: rgb(240, 240, 240);
-  text-shadow: 2px 2px 4px #000000;
-  text-decoration: none;
-  transition: all 400ms ease;
-}
-
-header nav ul li a.transform-menu{
   height: 65px;
   line-height: 65px;
   font-size: 16px;
   text-shadow: none;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+  transition: all 400ms ease;
+  display: inline-block;
+}
+
+header nav ul li a.transform-menu{
+  line-height: 85px;
+  height: 85px;
+  font-size: 18px;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 header nav ul li a:hover{
@@ -166,8 +166,7 @@ header .headercontent .headerbtn1{
 }
 
 header .headercontent .headerbtn1:hover{
-  color: black;
-  background-color: rgb(240, 240, 240);
+  background-color: rgba(240, 240, 240, 0.05);
 }
 
 header .headercontent .headerbtn2{

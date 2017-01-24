@@ -1,0 +1,304 @@
+/* #################### IMPORTS #################### */
+@import url ("normalize.css");
+@import 'https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,700,700i&subset=latin-ext';
+
+/* #################### GENERAL #################### */
+html{
+  min-height: 500px;
+  width: 100%;
+  min-width: 500px;
+  height: 100%;
+}
+
+form {
+  margin-bottom: 0em;
+  color: rgb (240, 240, 240);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body{
+  background-color: rgb(26, 26, 26);
+  height: 100%;
+  margin: 0px;
+}
+
+p{
+  font-family: 'Titilium Web', sans-serif;
+  color: rgb (240, 240, 240);
+}
+
+a{
+  font-family: 'Titilium Web', sans-serif;
+}
+
+.wrapper {
+  min-height:100%;
+  position: relative;
+  width: 75%;
+  margin: auto;
+}
+
+
+/* #################### HEADER #################### */
+
+header{
+  height: auto;
+  min-height: 65px;
+}
+
+.home-header{
+  height: 100%;
+}
+
+
+
+header nav img {
+  float: left;
+  width: auto;
+  height: 55px;
+  margin-top: 5px;
+  margin-left: 5px;
+  transition: all 400ms ease;
+  display: block;
+}
+
+header nav img.showimg{
+  display: none;
+}
+
+
+
+header nav{
+  position: fixed;
+  float: left;
+  width: 100%;
+  z-index: 999;
+  transition: all 400ms ease;
+  top: 0px;
+  text-align: left;
+  background-color: rgb(26, 26, 26);
+  height: 65px;
+  border-bottom: solid 1px black;
+}
+
+header nav.transform-bg {
+  text-align: center;
+  height: 85px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+header nav ul {
+  padding: 0px;
+  margin-top: 0px;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+
+header nav ul li a{
+  height: 65px;
+  line-height: 65px;
+  font-size: 16px;
+  text-shadow: none;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+  transition: all 400ms ease;
+  display: inline-block;
+}
+
+header nav ul li a.transform-menu{
+  line-height: 85px;
+  height: 85px;
+  font-size: 18px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+header nav ul li a:hover{
+  color: rgb(179, 24, 25);
+}
+
+header .headerimg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../img/news/titleimage.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .headercontent{
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+header h2{
+  font-size: 72px;
+  color: rgb(179, 24, 25);
+  text-shadow: 2px 2px 4px #000000;
+}
+
+header p{
+  color: rgb(240, 240, 240);
+  text-shadow: 2px 2px 4px #000000;
+}
+
+header .headercontent .headerbtn1{
+  display: inline-block;
+  line-height: 45px;
+  width: 225px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+  border: solid 1px rgb(240, 240, 240);
+  transition: all 300ms;
+}
+
+header .headercontent .headerbtn1:hover{
+  color: black;
+  background-color: rgb(240, 240, 240);
+}
+
+header .headercontent .headerbtn2{
+  display: inline-block;
+  line-height: 45px;
+  width: 225px;
+  margin: 32px 0px 0px 32px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+  background-color: rgb(179, 24, 25);
+  border: solid 1px rgb(179, 24, 25);
+  transition: all 300ms;
+}
+
+header .headercontent .headerbtn2:hover{
+  background-color: rgb(186, 41, 42);
+  border: solid 1px rgb(186, 41, 42);
+}
+
+.breadcrumbs>a {
+text-decoration: none;
+font-weight: bold;
+color: rgb(186, 41, 42);
+display: inline-block;
+margin: 10px;
+margin-top: 30px;
+margin-bottom: 50px;
+}
+
+.breadcrumbs>p {
+text-decoration: none;
+font-weight: bold;
+color: rgb(240, 240, 240);
+display: inline-block;
+margin: 10px;
+margin-top: 30px;
+margin-bottom: 50px;
+}
+
+.message_404 {
+    text-align: center;
+    font-size: 2em;
+    color: rgb(179, 24, 25);
+}
+
+.message_404 p{
+  font-size: 1em;
+  color: rgb(240, 240, 240);
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.message_404 a{
+  text-decoration: none;
+  color: rgb(179, 24, 25);
+}
+
+
+
+
+/* #################### FOOTER #################### */
+
+footer{
+  height: 25px;
+  background-color: rgb(56, 54, 54);
+}
+
+ .footer_wrapper {
+   width: 80%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+ }
+
+.backend_footer_links {
+  display:flex;
+  padding-left: 20px;
+}
+
+.backend_footer_links a{
+  text-decoration: none;
+  color: rgb(240, 240, 240);
+  font-size: 1em;
+}
+
+footer ul li{
+  list-style-type: none;
+}
+
+footer ul li a{
+  font-size: 0.5em;
+  color: rgb(240, 240, 240);
+  text-decoration: none;
+}
+
+.footer-social{
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.footer-social li + li {
+  margin-left: 1em;
+}
+
+footer .footer-social li:nth-child(1) a:hover{
+  transition: all 400ms ease;
+  color: #bb0000;
+}
+
+footer .footer-social li:nth-child(2) a:hover{
+  transition: all 400ms ease;
+  color: #3b5998;
+}
+
+footer .footer-social li:nth-child(3) a:hover{
+  transition: all 400ms ease;
+  color: #4099FF;
+}
+
+footer .footer-social li:nth-child(4) a:hover{
+  transition: all 400ms ease;
+  color: #c08d64;;
+}

@@ -24,10 +24,10 @@
     $sql = "SELECT * FROM nav ORDER BY position";
     $res = mysqli_query($dblink, $sql);
     ?>
-    <header class="<?php if($page !== 'home'){ echo 'normal-header';} ?>">
+    <header>
 
-          <nav class="<?php if($page !== 'home'){ echo 'transform-bg';} ?>">
-            <a href="index.html"><img src="img/logos/headerlogo.png" alt="Logo" class="<?php if($page !== 'home'){ echo 'showimg';} ?>" /></a>
+          <nav>
+            <a href="index.html"><img src="img/logos/headerlogo.png" alt="Logo"/></a>
               <ul>
                 <?php
 
@@ -35,40 +35,40 @@
                 while($row = mysqli_fetch_assoc($res)){
                   ?>
 
-                <li><a class="<?php if($page !== 'home'){ echo 'transform-menu';} ?>" href="index.php?page=<?php echo $row['link']; ?>"><?php echo $row['name']; ?></a></li>
-              <?php }
+                <li><a href="index.php?page=<?php echo $row['link']; ?>"><?php echo $row['name']; ?></a></li>
+              <?php } ?>
+              <li><a href="sites/shop/index.php">Shop</a></li>
+              <?php
               if( $_SESSION['login'] == 1){
-                    echo '<li><a class="';
-                    if($page !== 'home'){ echo 'transform-menu';}
-                    echo '"href="logout.php">Logout</a></li>';
-                    echo '<li><a class="';
-                    if($page !== 'home'){ echo 'transform-menu';}
-                    echo '"href="index.php?page=dashboard">Dashboard</a></li>';
+                    echo '<li><a href="logout.php">Logout</a></li>';
+                    echo '<li><a href="index.php?page=dashboard">Dashboard</a></li>';
+                    if($_SESSION['isadmin'] == 1){
+                    echo '<li><a href="sites/backend/index.php">Backend</a></li>';}
                 }else{
-                    echo '<li><a class="';
-                    if($page !== 'home'){ echo 'transform-menu';}
-                    echo '"href="index.php?page=register">Register</a></li>';
-                    echo '<li><a class="';
-                    if($page !== 'home'){ echo 'transform-menu';}
-                    echo '"href="index.php?page=login">Login</a></li>';
+                    echo '<li><a href="index.php?page=register">Register</a></li>';
+                    echo '<li><a href="index.php?page=login">Login</a></li>';
 
                 } ?>
-              <li><a class="<?php if($page !== 'home'){ echo 'transform-menu';} ?>" href="sites/shop/index.php">Shop</a></li>
               </ul>
           </nav>
           <?php
           if($page === "home"){?>
             <script>
+            $('header').addClass("home-header");
+            $('header nav').addClass("transform-bg");
+            $('header nav img').addClass("showimg");
+            $('header nav ul li a').addClass("transform-menu");
+            
             $(window).scroll(function() {
             if ($(this).scrollTop() > 1){
-                $('header nav').addClass("transform-bg");
-                $('header nav img').addClass("showimg");
-                $('header nav ul li a').addClass("transform-menu");
-              }
-              else{
                 $('header nav').removeClass("transform-bg");
                 $('header nav img').removeClass("showimg");
                 $('header nav ul li a').removeClass("transform-menu");
+              }
+              else{
+                $('header nav').addClass("transform-bg");
+                $('header nav img').addClass("showimg");
+                $('header nav ul li a').addClass("transform-menu");
               }
             });
             </script>
@@ -80,7 +80,7 @@
             </p>
             <div>
               <a class="headerbtn1" href="#">About Us</a>
-              <a class="headerbtn2" href="#">Store</a>
+              <a class="headerbtn2" href="sites/shop/index.php">Shop</a>
             </div>
           </div>
         </div>
