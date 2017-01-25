@@ -2,6 +2,10 @@
 
 session_start();
 
+if( ! isset($_SESSION['checkoutstep']) ){
+    $_SESSION['checkoutstep'] = 1;
+}
+
 if ( ! isset($_SESSION['login']) ){
   $_SESSION['login'] = 0;
 }
@@ -36,6 +40,8 @@ if($page == "home"){
     $site = "sites/shop_list.php";
 }elseif($page == "productpage"){
     $site = "sites/shop_productpage.php";
+}elseif($page == "checkout"){
+      $site = "sites/checkout.php";
 }else{
     $site = "sites/404.php";
 }
