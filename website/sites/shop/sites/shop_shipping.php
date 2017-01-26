@@ -30,27 +30,27 @@
             <div class="shop-checkout-box-left">
               <form class="shop-checkout-form" action="#" method="post">
                 <h2>Shipping Address</h2>
-                <p><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></p>
-                <p><?php echo $row['address']; ?></p>
-                <p><?php echo $row['zip']; ?> <?php echo $row['city']; ?></p>
-                <p><?php echo $row['country']; ?></p>
+                <p><?php if( $_SESSION['login'] == 1){ echo $row['first_name']; }else{ echo $_SESSION['guest_fname'];}?> <?php if( $_SESSION['login'] == 1){ echo $row['last_name']; }else{ echo $_SESSION['guest_lname'];}?></p>
+                <p><?php if( $_SESSION['login'] == 1){ echo $row['address']; }else{ echo $_SESSION['guest_address'];}?></p>
+                <p><?php if( $_SESSION['login'] == 1){ echo $row['zip']; }else{ echo $_SESSION['guest_zip'];}?> <?php if( $_SESSION['login'] == 1){ echo $row['city']; }else{ echo $_SESSION['guest_city'];}?></p>
+                <p><?php if( $_SESSION['login'] == 1){ echo $row['country']; }else{ echo $_SESSION['guest_country'];}?></p>
                 <p><a href="#">Edit Shipping Address</a></p>
                 <h2>Shipping Method</h2>
                 <ul class="checkout-options" id="shipping-option">
                   <li class="checkout-options-element">
-                    <input type="radio" id="shipping-option-1" name="shipping-option" checked>
+                    <input type="radio" id="shipping-option-1" value="Shipping Method 1" name="shipping-option" checked>
                     <label for="shipping-option-1">Shipping Method 1
                       <p>€ 4.99</p>
                     </label>
                   </li>
                   <li class="checkout-options-element">
-                    <input type="radio" id="shipping-option-2" name="shipping-option">
+                    <input type="radio" id="shipping-option-2" value="Shipping Method 2" name="shipping-option">
                     <label for="shipping-option-2">Shipping Method 2
                       <p>€ 9.99</p>
                     </label>
                   </li>
                   <li class="checkout-options-element">
-                    <input type="radio" id="shipping-option-3" name="shipping-option">
+                    <input type="radio" id="shipping-option-3" value="Shipping Method 3" name="shipping-option">
                     <label for="shipping-option-3">Shipping Method 3
                       <p>€ 12.99</p>
                     </label>

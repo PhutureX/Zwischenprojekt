@@ -32,7 +32,7 @@
                 <h2>Payment Method</h2>
                 <ul class="checkout-options" id="payment-option">
                   <li class="checkout-options-element">
-                    <input type="radio" id="payment-option-1" name="payment-option" checked>
+                    <input type="radio" id="payment-option-1" value="" name="payment-option" checked>
                     <label for="payment-option-1">Credit Card
                       <p>
                         <i class="fa fa-cc-visa" aria-hidden="true"></i>
@@ -46,11 +46,11 @@
                       <input type="text" placeholder="CVV" class="shop-payment-form-3">
                   </li>
                   <li class="checkout-options-element">
-                    <input type="radio" id="payment-option-2" name="payment-option">
+                    <input type="radio" id="payment-option-2" value="PayPal" name="payment-option">
                     <label for="payment-option-2"><img src="img/shop-payment/PayPal.png" alt="PayPal"></label>
                   </li>
                   <li class="checkout-options-element">
-                    <input type="radio" id="payment-option-3" name="payment-option">
+                    <input type="radio" id="payment-option-3" value="Sofort" name="payment-option">
                     <label for="payment-option-3"><img src="img/shop-payment/sofort.png" alt="Sofort"></label>
                   </li>
                 </ul>

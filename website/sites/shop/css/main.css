@@ -262,8 +262,7 @@ main{
 main .spotlight{
   overflow: hidden;
   height: calc(100vh - 225px);
-  min-height: 900px;
-
+  min-height: 500px;
 }
 
 main .spotlight .spotlight-top{

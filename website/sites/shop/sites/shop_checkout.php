@@ -41,12 +41,13 @@
                   <input type="text" placeholder="Last Name" class="shop-checkout-form-50" name="lname" value="<?php if( $_SESSION['login'] == 1){ echo $row['last_name']; }?>">
                   <input type="text" placeholder="Address" class="shop-checkout-form-100" name="address" value="<?php if( $_SESSION['login'] == 1){ echo $row['address']; }?>">
                   <input type="text" placeholder="City" class="shop-checkout-form-100" name="city" value="<?php if( $_SESSION['login'] == 1){ echo $row['city']; }?>">
-                  <select class="shop-checkout-form-50">
-                    <option value="">Austria</option>
-                    <option value="">Germany</option>
-                    <option value="">Japan</option>
-                    <option value="">United Kingdom</option>
-                    <option value="">United States</option>
+                  <select class="shop-checkout-form-50" name="country">
+                    <option value="Austria">Austria</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Japan">Japan</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="Canada">Canada</option>
                   </select>
                   <input type="text" placeholder="Postal Code" class="shop-checkout-form-50 shop-checkout-form-postal" name="zip" value="<?php if( $_SESSION['login'] == 1){ echo $row['zip']; }?>">
                   <input type="tel" placeholder="Phone (optional)" class="shop-checkout-form-100" name="tel" value="<?php if( $_SESSION['login'] == 1){ echo $row['phone']; }?>">

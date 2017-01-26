@@ -8,6 +8,7 @@ if( isset($_POST['checkout_step1']) ){
   $last_name = cleanString($dblink, $_POST['lname']);
   $address = cleanString($dblink, $_POST['address']);
   $city = cleanString($dblink, $_POST['city']);
+  $country = cleanString($dblink, $_POST['country']);
   $zip = cleanString($dblink, $_POST['zip']);
   $phone = cleanString($dblink, $_POST['tel']);
 
@@ -54,6 +55,14 @@ if( isset($_POST['checkout_step1']) ){
 
   if( $shop_errors === false ){
     $_SESSION['checkoutstep'] = 2;
+    $_SESSION['guest_email'] = $email;
+    $_SESSION['guest_fname'] = $first_name;
+    $_SESSION['guest_lname'] = $last_name;
+    $_SESSION['guest_address'] = $address;
+    $_SESSION['guest_city'] = $city;
+    $_SESSION['guest_country'] = $country;
+    $_SESSION['guest_zip'] = $zip;
+    $_SESSION['guest_tel'] = $phone;
   }
 }
 
@@ -65,6 +74,7 @@ if( isset($_POST['checkout_step2']) ){
 
   if( $shop_errors === false ){
     $_SESSION['checkoutstep'] = 3;
+    $_SESSION['guest_shipping'] = $_POST['shipping-option'];
   }
 }
 
@@ -76,6 +86,7 @@ if( isset($_POST['checkout_step3']) ){
 
   if( $shop_errors === false ){
     $_SESSION['checkoutstep'] = 4;
+    $_SESSION['guest_payment'] = $_POST['payment-option'];
   }
 }
 
