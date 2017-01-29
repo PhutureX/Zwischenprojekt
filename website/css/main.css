@@ -31,6 +31,7 @@ p{
 
 a{
   font-family: 'Titilium Web', sans-serif;
+  text-decoration: none;
 }
 
 .wrapper {
@@ -207,6 +208,46 @@ margin-top: 30px;
 margin-bottom: 50px;
 }
 
+.btn {
+  margin: 2em auto;
+  width: 50%;
+  text-align: center;
+
+}
+
+
+.btn a{
+  background-color: rgb(179, 24, 25);
+  color: rgb(240, 240, 240);
+  font-size: 1em;
+  border: solid 2px rgb(179, 24, 25);
+  cursor: pointer;
+  transition: all 300ms;
+  padding:1em;
+  text-shadow: 2px 2px 4px #000000;
+
+}
+
+.btn:hover{
+  background-color: transparent;
+}
+
+.btn input{
+  background-color: rgb(179, 24, 25);
+  color: rgb(240, 240, 240);
+  font-size: 1em;
+  border: solid 2px rgb(179, 24, 25);
+  cursor: pointer;
+  transition: all 300ms;
+  padding: 1em;
+  text-shadow: 2px 2px 4px #000000;
+
+}
+
+.btn input:hover{
+  background-color: transparent;
+}
+
 
 /* #################### SLIDER #################### */
 
@@ -321,17 +362,14 @@ main section .article p {
 .article_figure {
   margin: auto;
   margin-top: 50px;
-  width: 1150px;
   height: 320px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
 }
 
 .article_figure img{
-width:380px;
-height: 300px;
-margin-left: auto;
-margin-right: auto;
-display: inline-block;
-
+  width: 33%;
 }
 
 .newsbutton {
@@ -390,15 +428,46 @@ display: flex;
   width: 50%;
 }
 
-.register_left {
-  width: 50%;
-  height:100%;
-  margin: 0% 25% 0% 25%;
+.register_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  flex-flow: wrap;
+}
 
+.register_full_form {
+  flex: 2 100%;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  margin: 0.1em 0;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+.register_half_form{
+  flex: 1;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  margin: 0.1em 0;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
 }
 
 
-.contact_us_full_form, .register_full_form {
+.contact_us_full_form {
 width: 96%;
 height: 45px;
 font-size: 1.2em;
@@ -412,7 +481,9 @@ border-radius: 5px;
 transition: all 200ms ease;
 }
 
-.contact_us_half_form, .register_half_form{
+
+
+.contact_us_half_form {
   width: 46.25%;
   height: 45px;
   font-size: 1.2em;
@@ -426,19 +497,19 @@ transition: all 200ms ease;
   transition: all 200ms ease;
 }
 
+
+
 .contact_us_postal_fix, .register_postal_fix{
   margin-left: 3%;
 }
 
-.split {
-  margin-top: 5%;
-}
+
 
 .contact_us_right, .register_right{
   width: 50%;
 }
 
-.contact_us_text, .register_text {
+.contact_us_text {
 width: 96%;
 height: 60.8%;
 font-size: 1.2em;
@@ -556,21 +627,22 @@ font-family: 'Titillium Web', sans-serif;
 
 .login_box {
   width: 40%;
-  height: 35%;
-  min-height: 320px;
-  margin: 0% 30% 10% 30%;
+  margin: 0 auto;
+  padding-top: 1.5em;
   color: rgb(240, 240, 240);
   background-color: rgb(56, 54, 54);
-  /*outline: none;*/
   border: 2px solid black;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.login_name {
-  width: 60%;
+.login_field {
+  margin-top:  0.5em;
   height: 45px;
   font-size: 1.2em;
-  margin: 5% 20% 2% 20%;
   color: rgb(240, 240, 240);
   background-color: rgb(56, 54, 54);
   outline: none;
@@ -578,45 +650,7 @@ font-family: 'Titillium Web', sans-serif;
   border: 2px solid black;
   border-radius: 5px;
   transition: all 200ms ease;
-  display: block;
 }
-
-.login_password{
-  width: 60%;
-  height: 45px;
-  font-size: 1.2em;
-  margin: 2% 20% 10% 20%;
-  color: rgb(240, 240, 240);
-  background-color: rgb(56, 54, 54);
-  outline: none;
-  padding-left: 4%;
-  border: 2px solid black;
-  border-radius: 5px;
-  transition: all 200ms ease;
-  display: block;
-}
-
-.login_button{
-  text-align: center;
-  line-height: 45px;
-  width: 65%;
-  margin: 2% 20% 2% 20%;
-  text-decoration: none;
-  font-weight: bold;
-  color: rgb(240, 240, 240);
-  background-color: rgb(179, 24, 25);
-  border: solid 1px rgb(179, 24, 25);
-  border-radius: 5px;
-  transition: all 200ms;
-  display: block;
-}
-
-.login_button:hover{
-  transition: all 200ms ease;
-  background-color: rgb(186, 41, 42);
-  border: solid 1px rgb(186, 41, 42);
-}
-
 /*############################################################################ COMMENTS ################################################### */
 
 /*.comments {
@@ -742,6 +776,10 @@ font-family: 'Titillium Web', sans-serif;
   background-color: transparent;
 }
 
+
+.split {
+  margin-top: 1rem;
+}
 
 /* #################### Footer #################### */
 

@@ -5,4 +5,6 @@
     <div class="register_complete">
     <h2>Thank you for your registration!</h2>
 
-          <a href="index.php?page=login" name="home_button" class="register_complete_send">go to Login</a>
+      <div class="btn">
+          <a href="index.php?page=login" name="home_button">go to Login</a>
+      </div>

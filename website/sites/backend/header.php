@@ -14,20 +14,19 @@
       animation: "slide"
       });
     });
-</script>
-
-<!-- Header -->
-
+    </script>
   </head>
+  <!-- Body -->
   <body>
+    <!-- Header -->
     <header>
 
           <nav >
-            <a href="index.html"><img src="../../img/logos/headerlogo_backend.png" alt="Logo"  /></a>
+            <a href="index.php"><img src="../../img/logos/headerlogo_backend.png" alt="Logo"  /></a>
               <ul>
                 <li><a href="index.php?page=user">User</a></li>
                 <li><a href="index.php?page=news">News</a></li>
-                <li><a href="sites/shop/index.php">Shop</a></li>
+                <li><a href="index.php?page=shop">Shop</a></li>
               </ul>
           </nav>
     </header>

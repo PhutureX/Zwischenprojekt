@@ -22,6 +22,6 @@
     </a>
   </section>
 
-      <div class="loadmore wrapper">
-        <button onclick="window.location.href='news.html'" type="button" name="button" value="Load more">Load More</button>
+      <div class="btn">
+        <a href="index.php?page=news" type="button" name="button" value="Load more">More News</a>
       </div>

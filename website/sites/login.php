@@ -25,13 +25,13 @@
 
                 ?>
 
-    <form action ="" method="post">
-      <div class="login_box">
-          <input type="text" placeholder="Enter Username" class="login_name" name="uname" id="uname">
-          <input type="password" placeholder="Password" class="login_password" name="password" id="password">
+    <form action ="" method="post" class="login_box">
+          <input type="text" placeholder="Enter Username" class="login_field" name="uname" id="uname">
+          <input type="password" placeholder="Password" class="login_field" name="password" id="password">
 
-          <input type="submit" class="login_button" name="login" id="login" value="Login" >
-      </div>
+          <div class="btn">
+            <input type="submit" name="login" id="login" value="Login" >
+          </div>
 
     </form>
     <?php

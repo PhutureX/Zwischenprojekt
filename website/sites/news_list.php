@@ -37,6 +37,3 @@
         <?php } ?>
 
       </div>
-      <div class="loadmore">
-        <button name="button" value="Load more">Load More</button>
-      </div>

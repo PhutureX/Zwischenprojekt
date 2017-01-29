@@ -72,7 +72,7 @@ if( isset($_POST['register']) ){
         $fname = cleanString($dblink, $_POST['fname']);
         $lname = cleanString($dblink, $_POST['lname']);
         $email = cleanString($dblink, $_POST['email']);
-        $adress = cleanString($dblink, $_POST['adress']);
+        $adress = cleanString($dblink, $_POST['address']);
         $zip = cleanString($dblink, $_POST['zip']);
         $city = cleanString($dblink, $_POST['city']);
         $phone = cleanString($dblink, $_POST['phone']);
@@ -82,7 +82,7 @@ if( isset($_POST['register']) ){
         $salt = rand(10000, 99999);
         $password = sha1($_POST['password'] . $salt) . ':' . $salt;
 
-        $sql = "INSERT INTO users (uname, first_name, last_name, password, email, adress, zip, city, phone) VALUES ('$uname', '$fname', '$lname', '$password', '$email', '$adress', '$zip', '$city', '$phone')";
+        $sql = "INSERT INTO users (uname, first_name, last_name, password, email, address, zip, city, country, phone) VALUES ('$uname', '$fname', '$lname', '$password', '$email', '$adress', '$zip', '$city', '{$_POST['country']}' '$phone')";
         mysqli_query($dblink, $sql);
 
         header('Location: index.php?page=register_success');
@@ -108,7 +108,7 @@ if( isset($_POST['login']) ){
             $_SESSION['uid'] = $row['id'];
             $_SESSION['uname'] = $_POST['uname'];
             $_SESSION['email'] = $row['email'];
-            $_SESSION['isadmin'] = $row['is_admin'];
+            $_SESSION['is_admin'] = $row['is_admin'];
 
             header('Location: index.php?page=dashboard');
 
@@ -147,7 +147,7 @@ if( isset($_POST['insertcomment']) ){
         $news_id = $_GET['id'];
         $author_id = $_SESSION['uid'];
 
-        $sql = "INSERT INTO comments
+        $sql = "INSERT INTO news_comments
                 (news_id, author_id, comment, created_at)
             VALUES
                 ('$news_id', '$author_id', '$comment', '$created_at')";

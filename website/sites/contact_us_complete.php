@@ -5,5 +5,7 @@
     <div class="contact_us_complete">
     <h2>Your Message has been sent!</h2>
 
-          <a href="../index.html" name="home_button" class="contact_us_complete_send">Done</a>
+    <div class="btn">    
+      <a href="../index.html" name="home_button" class="contact_us_complete_send">Done</a>
+    <div>
     </div>

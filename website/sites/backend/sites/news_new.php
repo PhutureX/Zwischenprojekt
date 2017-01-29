@@ -1,18 +1,28 @@
-<h2>Neue News verfassen</h2>
+<h3>Create News</h3>
 
-<form action="" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data" class="newsform">
 
-    <label for="title">Titel der News</label>
-    <input type="text" name="title" id="title">
+    <input type="text" name="title" id="title" class="full_form" placeholder="Title">
 
-    <label for="preview">Preview der News</label>
-    <textarea name="preview" id="preview"></textarea>
+    <textarea name="preview" id="preview" placeholder="Preview..." class="form_text_preview"></textarea>
 
-    <label for="content">Content der News</label>
-    <textarea name="content" id="content"></textarea>
+    <textarea name="content" id="content" placeholder="Newscontent..." class="form_text"></textarea>
 
-    <input type="file" name="newsimg">
-    <br><br>
-    <input type="submit" name="insertnews" value="Neue News jetzt erstellen">
+    <h4>Headerimg</h4>
+    <input type="file" name="headerimg" >
+
+    <h4>Img1</h4>
+    <input type="file" name="img1" >
+
+    <h4>Img2</h4>
+    <input type="file" name="img2" >
+
+    <h4>Img3</h4>
+    <input type="file" name="img3" >
+
+
+    <div class="btn">
+    <input type="submit" name="insertnews" value="Create Now!">
+  </div>
 
 </form>

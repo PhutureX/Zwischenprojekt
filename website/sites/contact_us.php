@@ -45,6 +45,8 @@
 
       </div>
 
-          <a href="contact_us_complete.html" name="contact_us_send" class="contact_us_send" value="Send">Send</a>
+        <div class="btn">
+          <a href="contact_us_complete.html" name="contact_us_send"  value="Send">Send</a>
+        </div>
 
       </form>

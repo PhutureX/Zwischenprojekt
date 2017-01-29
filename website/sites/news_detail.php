@@ -42,12 +42,12 @@ if( mysqli_num_rows($res) < 1 ){
         <h2><?php echo $row['title']; ?></h2>
         <p><?php echo nl2br($row['content']); ?></p>
         <figure class="article_figure">
-          <img src="<?php echo $row['pic1']; ?>" alt="<?php echo $row['title']; ?> pic1" />
-          <img src="<?php echo $row['pic2']; ?>" alt="<?php echo $row['title']; ?> pic2"/>
-          <img src="<?php echo $row['pic3']; ?>" alt="<?php echo $row['title']; ?> pic3"/>
+          <img src="<?php echo $row['img1']; ?>" alt="<?php echo $row['title']; ?> pic1" />
+          <img src="<?php echo $row['img2']; ?>" alt="<?php echo $row['title']; ?> pic2"/>
+          <img src="<?php echo $row['img3']; ?>" alt="<?php echo $row['title']; ?> pic3"/>
         </figure>
-        <div class="loadmore">
-          <button href="#" >Load More</button>
+        <div class="btn">
+          <a href="index.php?page=news" >more News</a>
         </div>
     </div>
 
@@ -61,7 +61,7 @@ if( mysqli_num_rows($res) < 1 ){
 
 
               <?php
-              $sql = "SELECT comments.*, users.uname FROM comments LEFT JOIN users ON users.id = comments.author_id WHERE news_id = '{$_GET['id']}' ORDER BY id DESC";
+              $sql = "SELECT news_comments.*, users.uname FROM news_comments LEFT JOIN users ON users.id = news_comments.author_id WHERE news_id = '{$_GET['id']}' ORDER BY id DESC";
               $res = mysqli_query($dblink, $sql);
 
               while( $row = mysqli_fetch_assoc($res) ){

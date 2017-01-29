@@ -1,12 +1,11 @@
-<h2>Newsverwaltung</h2>
-<p>Hier kannst du alle News verwalten.</p>
+<h2>News</h2>
 
-<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<table cellspacing="0">
     <thead>
     <tr>
-        <th>Titel der News</th>
-        <th width="200px">Erstellungsdatum</th>
-        <th width="100px">Aktionen</th>
+        <th>Title</th>
+        <th width="30%">created at</th>
+        <th width="25%">Settings</th>
     </tr>
     </thead>
     <tbody>
@@ -17,9 +16,9 @@
     while($row = mysqli_fetch_assoc($res)){
         ?>
         <tr>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo date('d.m.Y', $row['created_at']); ?></td>
-            <td>
+            <td class="table_text"><?php echo $row['title']; ?></td>
+            <td class="table_center"><?php echo date('d.m.Y', $row['created_at']); ?></td>
+            <td class="table_center">
                 <a href="index.php?page=news&action=edit&id=<?php echo $row['id']; ?>">Edit</a> |
                 <a href="index.php?page=news&action=delete&id=<?php echo $row['id']; ?>">Delete</a>
             </td>
@@ -27,5 +26,6 @@
     <?php } ?>
     </tbody>
 </table>
-
-<a href="index.php?page=news&action=new" class="btn">Neue News verfassen</a>
+<div class="btn">
+<a href="index.php?page=news&action=new">Create News</a>
+</div>

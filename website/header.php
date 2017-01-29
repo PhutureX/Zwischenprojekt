@@ -42,7 +42,7 @@
               if( $_SESSION['login'] == 1){
                     echo '<li><a href="logout.php">Logout</a></li>';
                     echo '<li><a href="index.php?page=dashboard">Dashboard</a></li>';
-                    if($_SESSION['isadmin'] == 1){
+                    if($_SESSION['is_admin'] == 1){
                     echo '<li><a href="sites/backend/index.php">Backend</a></li>';}
                 }else{
                     echo '<li><a href="index.php?page=register">Register</a></li>';
@@ -58,7 +58,7 @@
             $('header nav').addClass("transform-bg");
             $('header nav img').addClass("showimg");
             $('header nav ul li a').addClass("transform-menu");
-            
+
             $(window).scroll(function() {
             if ($(this).scrollTop() > 1){
                 $('header nav').removeClass("transform-bg");

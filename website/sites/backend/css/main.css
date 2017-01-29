@@ -18,6 +18,24 @@ form {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: 'Titillium Web', sans-serif;
+  font-size: 72px;
+  color: rgb(179, 24, 25);
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h3 {
+  margin: 0.5em 0em;
+  text-align: center;
+  font-size: 3em;
+  color: rgb(179, 24, 25);
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h4, h5, h6 {
+  margin: 0;
+  font-size: 2em;
+  color: rgb(179, 24, 25);
+  text-shadow: 2px 2px 4px #000000;
 }
 
 body{
@@ -33,6 +51,8 @@ p{
 
 a{
   font-family: 'Titilium Web', sans-serif;
+  text-decoration: none;
+  color: rgb(240,240,240);
 }
 
 .wrapper {
@@ -234,7 +254,202 @@ margin-bottom: 50px;
   color: rgb(179, 24, 25);
 }
 
+.btn {
+  margin: 2em auto;
+  width: 50%;
+  text-align: center;
 
+}
+
+
+.btn a{
+  background-color: rgb(179, 24, 25);
+  color: rgb(240, 240, 240);
+  font-size: 1em;
+  border: solid 2px rgb(179, 24, 25);
+  cursor: pointer;
+  transition: all 300ms;
+  padding:1em;
+  text-shadow: 2px 2px 4px #000000;
+
+}
+
+.btn:hover{
+  background-color: transparent;
+}
+
+.btn input{
+  background-color: rgb(179, 24, 25);
+  color: rgb(240, 240, 240);
+  font-size: 1em;
+  border: solid 2px rgb(179, 24, 25);
+  cursor: pointer;
+  transition: all 300ms;
+  padding: 1em;
+  text-shadow: 2px 2px 4px #000000;
+
+}
+
+.btn input:hover{
+  background-color: transparent;
+}
+
+input[type=file] {
+  color: rgb(240, 240, 240);
+  font-size: 1em;
+  height: 3em;
+}
+
+
+
+
+/* #################### NEWS #################### */
+
+table {
+  width: 100%;
+
+}
+
+tbody {
+  background-color: rgb(56, 54, 54);
+}
+
+thead {
+  background-color: rgb(179, 24, 25);
+  border: 0px;
+}
+
+th {
+  color: rgb(240,240,240);
+  text-shadow: 2px 2px 4px #000000;
+  padding: 0.5em 0;
+  font-size: 1em;
+
+}
+
+td {
+  color: rgb(240,240,240);
+  font-size: 1em;
+  padding: 0.5em 0;
+}
+
+.table_text {
+  padding-left: 1em;
+}
+
+.table_center {
+  text-align: center;
+}
+
+
+.full_form {
+width: 100%;
+height: 45px;
+font-size: 1.2em;
+padding-left: 10px;
+margin: 2px 0px 2px 0px;
+color: rgb(240, 240, 240);
+background-color: rgb(56, 54, 54);
+outline: none;
+border: 2px solid black;
+border-radius: 5px;
+transition: all 200ms ease;
+}
+
+.form_text_preview {
+width: 100%;
+height: 30%;
+font-size: 1.2em;
+padding-left: 10px;
+margin: 2px 0px 2px 0px;
+color: rgb(240, 240, 240);
+background-color: rgb(56, 54, 54);
+outline: none;
+border: 2px solid black;
+border-radius: 5px;
+transition: all 200ms ease;
+resize:none;
+font-family: 'Titillium Web', sans-serif;
+}
+
+.form_text {
+width: 100%;
+min-height: 300px;
+height: 60.8%;
+font-size: 1.2em;
+padding-left: 10px;
+margin: 2px 0px 2px 0px;
+color: rgb(240, 240, 240);
+background-color: rgb(56, 54, 54);
+outline: none;
+border: 2px solid black;
+border-radius: 5px;
+transition: all 200ms ease;
+resize:none;
+font-family: 'Titillium Web', sans-serif;
+}
+
+.newsheader {
+  margin: auto;
+  width: 100%;
+  height: 50%;
+  max-height: 500px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.newsheader img{
+  height:100%;
+  width: 100%;
+  margin-top: -20%;
+}
+
+
+/* #################### USER #################### */
+
+
+.register_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  flex-flow: wrap;
+}
+
+.register_full_form {
+  flex: 2 100%;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  margin: 0.1em 0;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+.register_half_form{
+  flex: 1;
+  height: 45px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(56, 54, 54);
+  margin: 0.1em 0;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+
+.split {
+  margin-top: 1rem;
+}
 
 
 /* #################### FOOTER #################### */
