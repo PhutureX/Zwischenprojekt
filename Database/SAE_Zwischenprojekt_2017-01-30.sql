@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.1.13-MariaDB)
 # Database: SAE_Zwischenprojekt
-# Generation Time: 2017-01-30 00:39:02 +0000
+# Generation Time: 2017-01-30 05:47:11 +0000
 # ************************************************************
 
 
@@ -210,10 +210,29 @@ CREATE TABLE `product_imgs` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(11) DEFAULT NULL,
   `path` varchar(100) DEFAULT NULL,
-  `position` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `product_imgs` WRITE;
+/*!40000 ALTER TABLE `product_imgs` DISABLE KEYS */;
+
+INSERT INTO `product_imgs` (`id`, `product_id`, `path`)
+VALUES
+	(1,1,'img/shop/shirt1-1.png'),
+	(2,2,'img/shop/shirt2-1.png'),
+	(3,3,'img/shop/hoodie1.png'),
+	(4,4,'img/shop/hoodie2.png'),
+	(7,7,'img/shop/cup1.png'),
+	(8,8,'img/shop/cup1.png'),
+	(9,9,'img/shop/mousepad1.png'),
+	(10,10,'img/shop/bag1.png'),
+	(11,11,'img/shop/bag1.png'),
+	(12,1,'img/shop/shirt1-2.png'),
+	(13,2,'img/shop/shirt2-2.png'),
+	(14,12,'img/shop/notebook1.png');
+
+/*!40000 ALTER TABLE `product_imgs` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table products
@@ -230,6 +249,7 @@ CREATE TABLE `products` (
   `stock` int(11) DEFAULT NULL,
   `sale` int(11) DEFAULT NULL,
   `price_sale` decimal(11,0) DEFAULT NULL,
+  `type` int(11) DEFAULT NULL,
   `created_at` varchar(30) DEFAULT NULL,
   `updated_at` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -238,19 +258,19 @@ CREATE TABLE `products` (
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 
-INSERT INTO `products` (`id`, `category_id`, `name`, `price`, `description`, `stock`, `sale`, `price_sale`, `created_at`, `updated_at`)
+INSERT INTO `products` (`id`, `category_id`, `name`, `price`, `description`, `stock`, `sale`, `price_sale`, `type`, `created_at`, `updated_at`)
 VALUES
-	(1,1,'Red July Shirt 1',1299,NULL,20,0,NULL,NULL,NULL),
-	(2,1,'Red July Shirt 2',1299,NULL,15,1,999,NULL,NULL),
-	(3,2,'Red July Hoodie 1',2999,NULL,25,0,NULL,NULL,NULL),
-	(4,2,'Red July Hoodie 2',2999,NULL,30,1,2499,NULL,NULL),
-	(5,3,'Red July Cap',1999,NULL,12,0,NULL,NULL,NULL),
-	(6,3,'Red July Beanie',1499,NULL,18,0,NULL,NULL,NULL),
-	(7,5,'Red July Cup 1',999,NULL,20,1,499,NULL,NULL),
-	(8,5,'Red July Cup 2',999,NULL,12,0,NULL,NULL,NULL),
-	(9,99,'Red July Mousepad',1499,NULL,18,0,NULL,NULL,NULL),
-	(10,4,'Red July Backpack',3499,NULL,8,0,NULL,NULL,NULL),
-	(11,4,'Red July Bag',1599,NULL,12,0,NULL,NULL,NULL);
+	(1,1,'Red July Shirt 1',1299,NULL,20,0,NULL,0,NULL,NULL),
+	(2,1,'Red July Shirt 2',1299,NULL,15,1,999,0,NULL,NULL),
+	(3,2,'Red July Hoodie 1',2999,NULL,25,0,NULL,0,NULL,NULL),
+	(4,2,'Red July Hoodie 2',2999,NULL,30,1,2499,0,NULL,NULL),
+	(5,3,'Red July Cap',1999,NULL,12,0,NULL,1,NULL,NULL),
+	(6,3,'Red July Beanie',1499,NULL,18,0,NULL,1,NULL,NULL),
+	(7,5,'Red July Cup 1',999,NULL,20,1,499,1,NULL,NULL),
+	(8,5,'Red July Cup 2',999,NULL,12,0,NULL,1,NULL,NULL),
+	(9,99,'Red July Mousepad',1499,NULL,18,0,NULL,1,NULL,NULL),
+	(10,4,'Red July Backpack',3499,NULL,8,0,NULL,1,NULL,NULL),
+	(11,4,'Red July Bag',1599,NULL,12,0,NULL,1,NULL,NULL);
 
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
