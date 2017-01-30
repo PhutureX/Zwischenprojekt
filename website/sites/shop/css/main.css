@@ -1250,6 +1250,7 @@ ol.breadcrumbs li a{
 #shop-404 img{
   display: block;
   margin: 0 auto;
+  height: 50vh;
 }
 
 #shop-404 h2{

@@ -4,38 +4,33 @@
                 <li><a href="#">Merch</a></li>
             </ol>
             <h2>Merch</h2>
-              <div class="shop-list-box">
+            <div class="shop-list-box">
+              <?php
+                $sql = "SELECT products.id, name, price, sale, price_sale, min(product_imgs.path) AS path FROM products LEFT JOIN product_imgs ON products.id = product_imgs.product_id GROUP BY products.id";
+                $res = mysqli_query($dblink, $sql);
+
+                while($row = mysqli_fetch_assoc($res)){
+              ?>
                 <div class="shop-list-element">
-                  <a href="index.php?page=productpage">
-                    <img src="img/shop/shirt1.png" alt="Shirt1">
+                  <a href="index.php?page=productpage&id=<?php echo $row['id']; ?>">
+                    <img src="<?php echo $row['path']; ?>" alt="<?php echo $row['name']; ?>">
                     <span>View Product</span>
-                    <h3>Shirt 1</h3>
-                    <p>12.99€</p>
+                    <h3><?php echo $row['name']; ?></h3>
+                    <p>
+                      <?php
+                      $price = number_format($row['price'], 2);
+                      if( $row['sale'] == 1){
+                        $priceSale = number_format($row['price_sale'], 2);
+                        echo "<s>&euro; $price </s>&euro; $priceSale";
+                      }else{
+                        echo "&euro; " . $price;
+                      }
+                      ?>
+                   </p>
                   </a>
                 </div>
-                <div class="shop-list-element">
-                  <img src="img/shop/shirt1.png" alt="Shirt1">
-                  <a href="index.php?page=productpage"><span>View Product</span></a>
-                  <h3>Shirt 1</h3>
-                  <p>12.99€</p>
-                </div>
-                <div class="shop-list-element">
-                  <img src="img/shop/shirt1.png" alt="Shirt1">
-                  <a href="index.php?page=productpage"><span>View Product</span></a>
-                  <h3>Shirt 1</h3>
-                  <p>12.99€</p>
-                </div>
-                <div class="shop-list-element">
-                  <img src="img/shop/shirt1.png" alt="Shirt1">
-                  <a href="index.php?page=productpage"><span>View Product</span></a>
-                  <h3>Shirt 1</h3>
-                  <p>12.99€</p>
-                </div>
-                <div class="shop-list-element">
-                  <img src="img/shop/shirt1.png" alt="Shirt1">
-                  <a href="index.php?page=productpage"><span>View Product</span></a>
-                  <h3>Shirt 1</h3>
-                  <p>12.99€</p>
-                </div>
-              </div>
+              <?php
+                }
+              ?>
+            </div>
           </div>
