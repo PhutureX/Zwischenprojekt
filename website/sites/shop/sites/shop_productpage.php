@@ -6,7 +6,7 @@
 <div id="shop-product" class="shop-wrapper">
             <ol class="breadcrumbs">
                 <li><a href="index.php?page=home">Shop</a></li>
-                <li><a href="index.php?page=productlist"><?php echo $row['category']; ?></a></li>
+                <li><a href="index.php?page=<?php echo lcfirst($row['category']); ?>"><?php echo $row['category']; ?></a></li>
                 <li><a href="#"><?php echo $row['name']; ?></a></li>
             </ol>
             <div class="shop-product-page">
