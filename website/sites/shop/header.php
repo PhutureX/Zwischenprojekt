@@ -19,25 +19,25 @@
       </div>
       <nav class="shop-nav">
         <ul>
-          <li><a href="index.php?page=productlist">Merch &#9662;</a>
+          <li><a href="index.php?page=merch">Merch &#9662;</a>
             <ul>
-              <li><a href="index.php?page=productlist">Shirts<span>&#10143;</span></a></li>
-              <li><a href="index.php?page=productlist">Hoodies<span>&#10143;</span></a></li>
-              <li><a href="index.php?page=productlist">Hats<span>&#10143;</span></a></li>
-              <li><a href="index.php?page=productlist">Backpacks<span>&#10143;</span></a></li>
-              <li><a href="index.php?page=productlist">Cups<span>&#10143;</span></a></li>
-              <li><a href="index.php?page=productlist">Other<span>&#10143;</span></a></li>
+              <li><a href="index.php?page=shirts">Shirts<span>&#10143;</span></a></li>
+              <li><a href="index.php?page=hoodies">Hoodies<span>&#10143;</span></a></li>
+              <li><a href="index.php?page=hats">Hats<span>&#10143;</span></a></li>
+              <li><a href="index.php?page=backpacks">Backpacks<span>&#10143;</span></a></li>
+              <li><a href="index.php?page=tableware">Tableware<span>&#10143;</span></a></li>
+              <li><a href="index.php?page=other">Other<span>&#10143;</span></a></li>
             </ul>
           </li>
-          <li><a href="index.php?page=productlist">Albums &#9662;</a>
+          <li><a href="index.php?page=albums">Albums &#9662;</a>
             <ul>
-              <li><a href="index.php?page=productlist">Album 1<span>&#10143;</span></a></li>
-              <li><a href="index.php?page=productlist">Album 2<span>&#10143;</span></a></li>
+              <li><a href="index.php?page=productpage&id=14">Album 1<span>&#10143;</span></a></li>
+              <li><a href="index.php?page=productpage&id=15">Album 2<span>&#10143;</span></a></li>
             </ul>
           </li>
-          <li><a href="index.php?page=productlist">Digital Downloads</a></li>
-          <li><a href="index.php?page=productlist">New Products</a></li>
-          <li><a href="index.php?page=productlist">Special Offers</a></li>
+          <li><a href="index.php?page=downloads">Digital Downloads</a></li>
+          <li><a href="index.php?page=new">New Products</a></li>
+          <li><a href="index.php?page=offers">Special Offers</a></li>
         </ul>
       </nav>
       <nav class="shop-nav-list">

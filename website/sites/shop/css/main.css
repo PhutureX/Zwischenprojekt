@@ -307,7 +307,7 @@ main .spotlight .spotlight-top .spotlight-top-product-1 .spotlight-top-product-1
   height: 100%;
   width: 100%;
   position: relative;
-  background-image: url("../img/shop/shirt1.png");
+  background-image: url("../img/shop/shirt1-1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -332,7 +332,7 @@ main .spotlight .spotlight-top .spotlight-top-product-2 .spotlight-top-product-2
   height: 100%;
   width: 100%;
   position: relative;
-  background-image: url("../img/shop/cup1.png");
+  background-image: url("../img/shop/cup1-1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -387,7 +387,7 @@ main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wr
 }
 
 main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-1{
-  background-image: url("../img/shop/mousepad1.png");
+  background-image: url("../img/shop/mousepad1-1.png");
   position: absolute;
   width: 100%;
   height: 100%;
@@ -408,7 +408,7 @@ main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wr
 }
 
 main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-2{
-  background-image: url("../img/shop/notebook1.png");
+  background-image: url("../img/shop/notebook1-1.png");
   position: absolute;
   width: 100%;
   height: 100%;
@@ -429,7 +429,7 @@ main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wr
 }
 
 main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-3{
-  background-image: url("../img/shop/shirt3.png");
+  background-image: url("../img/shop/shirt2-1.png");
   position: absolute;
   width: 100%;
   height: 100%;
@@ -450,7 +450,7 @@ main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wr
 }
 
 main .spotlight .spotlight-bottom .spotlight-bottom-row .spotlight-bottom-row-wrapper .spotlight-bottom-row-bg-4{
-  background-image: url("../img/shop/shirt4.png");
+  background-image: url("../img/shop/backpack1-1.png");
   position: absolute;
   width: 100%;
   height: 100%;
@@ -492,7 +492,7 @@ main .shop-slider-box .shop-slider{
 }
 
 main .shop-slider-box .shop-slider .shop-slider-slide{
-  background-image: url("../img/shop/bag1.png");
+  background-image: url("../img/shop/backpack1-1.png");
   height: 350px;
   width: 350px;
   background-repeat: no-repeat;

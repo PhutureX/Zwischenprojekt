@@ -36,8 +36,28 @@ if($page == "home"){
     $site = "sites/home.php";
 }elseif($page == "cart"){
     $site = "sites/shop_cart.php";
-}elseif($page == "productlist"){
+}elseif($page == "merch"){
     $site = "sites/shop_list.php";
+}elseif($page == "shirts"){
+    $site = "sites/shop_list_shirts.php";
+}elseif($page == "hoodies"){
+    $site = "sites/shop_list_hoodies.php";
+}elseif($page == "hats"){
+    $site = "sites/shop_list_hats.php";
+}elseif($page == "backpacks"){
+    $site = "sites/shop_list_backpacks.php";
+}elseif($page == "tableware"){
+    $site = "sites/shop_list_tableware.php";
+}elseif($page == "other"){
+    $site = "sites/shop_list_other.php";
+}elseif($page == "albums"){
+    $site = "sites/shop_list_albums.php";
+}elseif($page == "downloads"){
+    $site = "sites/shop_list_downloads.php";
+}elseif($page == "new"){
+    $site = "sites/shop_list_newproducts.php";
+}elseif($page == "offers"){
+    $site = "sites/shop_list_special.php";
 }elseif($page == "productpage"){
     $site = "sites/shop_productpage.php";
 }elseif($page == "checkout"){
