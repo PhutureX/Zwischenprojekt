@@ -32,6 +32,7 @@ p{
 a{
   font-family: 'Titilium Web', sans-serif;
   text-decoration: none;
+  color: rgb(240,240,240);
 }
 
 .wrapper {
@@ -246,6 +247,42 @@ margin-bottom: 50px;
 
 .btn input:hover{
   background-color: transparent;
+}
+
+table {
+  width: 100%;
+
+}
+
+tbody {
+  background-color: rgb(56, 54, 54);
+}
+
+thead {
+  background-color: rgb(179, 24, 25);
+  border: 0px;
+}
+
+th {
+  color: rgb(240,240,240);
+  text-shadow: 2px 2px 4px #000000;
+  padding: 0.5em 0;
+  font-size: 1em;
+
+}
+
+td {
+  color: rgb(240,240,240);
+  font-size: 1em;
+  padding: 0.5em 0;
+}
+
+.table_text {
+  padding-left: 1em;
+}
+
+.table_center {
+  text-align: center;
 }
 
 

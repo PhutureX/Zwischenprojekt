@@ -26,6 +26,7 @@
               <ul>
                 <li><a href="index.php?page=user">User</a></li>
                 <li><a href="index.php?page=news">News</a></li>
+                <li><a href="index.php?page=tours">Tours</a></li>
                 <li><a href="index.php?page=shop">Shop</a></li>
               </ul>
           </nav>

@@ -63,7 +63,7 @@ if( isset($_POST['insertuser']) ){
 
     $sql = "INSERT INTO users (uname, first_name, last_name, password, email, address, zip, city, country, phone) VALUES
     ('{$_POST['uname']}', '{$_POST['fname']}', '{$_POST['lname']}', '$password', '{$_POST['email']}', '{$_POST['address']}', '{$_POST['zip']}',
-    '{$_POST['city']}', '{$_POST['country']}', '{$_POST['phone']}' )";
+      '{$_POST['city']}', '{$_POST['country']}', '{$_POST['phone']}' )";
 
     mysqli_query($dblink, $sql);
 
@@ -89,3 +89,19 @@ if( isset($_POST['updateuser']) ){
     mysqli_query($dblink, $sql);
   }
     }
+
+if( isset($_POST['inserttour']) ){
+
+    $sql = "INSERT INTO tours (title, feat, location, city, country, tourday, ticketlink) VALUES ( '{$_POST['tourtitle']}', '{$_POST['tourfeat']}', '{$_POST['tourlocation']}', '{$_POST['tourcity']}', '{$_POST['tourcountry']}', '{$_POST['tourday']}')";
+
+    mysqli_query($dblink, $sql);
+
+    header('Location: index.php?page=tours');
+    }
+
+if( isset($_POST['updatetour']) ){
+    $sql = "UPDATE tours
+    SET title = '{$_POST['tourtitle']}', feat = '{$_POST['tourfeat']}', location = '{$_POST['tourlocation']}', city = '{$_POST['tourcity']}', country = '{$_POST['tourcountry']}', tourday = '{$_POST['tourday']}'
+    WHERE id = '{$_GET['id']}'";
+    mysqli_query($dblink, $sql);
+}

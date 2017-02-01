@@ -79,7 +79,7 @@
               Welcome to the official Red July homepage where you can find the latest news, tourdates and the bands history. Make sure to check out our music and merchandise in our store!
             </p>
             <div>
-              <a class="headerbtn1" href="#">About Us</a>
+              <a class="headerbtn1" href="index.php?page=tours">Tours</a>
               <a class="headerbtn2" href="sites/shop/index.php">Shop</a>
             </div>
           </div>

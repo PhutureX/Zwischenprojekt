@@ -1,5 +1,5 @@
 <div class="breadcrumbs">
-        <a href="../index.html">Home</a><p>></p><a href="contact_us.html">Contact Us</a>
+        <a href="index.php">Home</a><p>></p><a href="register.php">Register</a><p>></p><a href="login.php">Login</a>
       </div>
 
     <div class="register_complete">

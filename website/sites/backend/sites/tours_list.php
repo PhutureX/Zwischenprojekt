@@ -1,13 +1,4 @@
-<div class="breadcrumbs">
-        <a href="index.php">Home</a><p>></p><a href="index.php?page=tours">Tours</a>
-      </div>
-
-    <div class="contact_us">
-    <h2>Tours</h2>
-
-    <div>
-      <p>All our current Tourdates are listed here.</p>
-    </div>
+<h2>Tours</h2>
 
 <table cellspacing="0">
     <thead>
@@ -42,3 +33,6 @@
     <?php } ?>
     </tbody>
 </table>
+<div class="btn">
+<a href="index.php?page=tours&action=new">Create Tourday</a>
+</div>

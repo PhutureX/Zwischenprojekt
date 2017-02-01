@@ -1,27 +1,41 @@
+
+
 <div class="news_site">
-<h2>SLIDER</h2>
+<h2>News</h2>
+
 </div>
 
+
 <div class="news-articlelist">
-  <!-- ARTIKEL 1 -->
+<?php
+$sql = "SELECT news.*, users.uname FROM news LEFT JOIN users ON news.author_id = users.id ORDER BY id DESC LIMIT 10";
+$res = mysqli_query($dblink, $sql);
+
+while( $row = mysqli_fetch_assoc($res) ){
+  ?>
+  <!-- ARTIKEL -->
   <section>
-    <a class="article_preview" href="#">
+    <a class="article_preview" href="index.php?page=news&id=<?php echo $row['id']; ?>" >
       <figure>
-        <img src="img/news/viperroom.png" alt="Awesome Night at Viper Room" width="300" height="300" />
+        <img src="<?php echo $row['headerimg']; ?>" alt="<?php echo $row['title']; ?>" width="300px" height="300px"/>
       </figure>
-        <div class="article_preview_content">
-          <h2>Awesome Night at Viper Room</h2>
+
+        <article>
+          <div class="timestamp" >published on <?php echo date('d.m.Y', $row['created_at']); ?></div>
+
+          <h2><?php echo $row['title']; ?></h2>
           <p>
-            Adwords Keyword research for beginners When you embark on your first PPC journey, you need to keep a
-            small number of keywords at first. Keyword lists that are thousands of words long should be left to the more
-            experienced PPC marketer. Ideally, a beginner should use around 100 targeted keywords, anything more will
-            probably prove too cumbersome for you to manipulate. If you can’t harness the power of large keyword
+            <?php echo $row['preview']; ?>
           </p>
-          <div class="read_more" >Read more...</div>
-      </div>
+          <div class="read_more" >by <?php echo $row['uname']; ?></div>
+      </article>
     </a>
   </section>
 
-      <div class="btn">
-        <a href="index.php?page=news" type="button" name="button" value="Load more">More News</a>
-      </div>
+  <?php } ?>
+
+</div>
+
+<div class="btn">
+  <a href="index.php?page=news">More News!</a>
+</div>

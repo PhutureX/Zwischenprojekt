@@ -19,6 +19,8 @@ if( $_SESSION['login'] != 1 || $_SESSION['is_admin'] != 1 ){
     $site = "sites/news.php";
   }elseif( $page == "user"){
     $site = "sites/user.php";
+  }elseif( $page == "tours"){
+    $site = "sites/tours.php";
   }else{
     $site = "sites/404.php";
   }
