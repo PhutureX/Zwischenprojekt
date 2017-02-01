@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 31. Jan 2017 um 02:56
+-- Erstellungszeit: 01. Feb 2017 um 05:46
 -- Server-Version: 10.1.19-MariaDB
 -- PHP-Version: 5.6.28
 
@@ -30,8 +30,18 @@ CREATE TABLE `currencies` (
   `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(100) DEFAULT NULL,
   `short` varchar(10) DEFAULT NULL,
-  `factor` int(11) DEFAULT NULL
+  `factor` decimal(11,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `currencies`
+--
+
+INSERT INTO `currencies` (`id`, `name`, `short`, `factor`) VALUES
+(1, 'Euro', 'EUR', '1.00'),
+(2, 'US Dollar', 'USD', '1.08'),
+(3, 'Pound', 'GBP', '0.86'),
+(4, 'Japanese Yen', 'YPN', '122.00');
 
 -- --------------------------------------------------------
 
@@ -183,25 +193,27 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `name`, `price`, `description`, `stock`, `stock_s`, `stock_m`, `stock_l`, `stock_xl`, `stock_2xl`, `stock_3xl`, `sale`, `price_sale`, `product_type`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Red July Shirt 1', '12.99', 'Dank shirt, made from dank materials in a dank country.', 0, 5, 5, 5, 5, 5, 5, 0, NULL, 0, '1485827060', NULL),
-(2, 1, 'Red July Shirt 2', '12.99', 'Another dank shirt, made from dank materials in a dank country and this time on sale PogChamp .', 0, 5, 5, 10, 10, 5, 2, 1, '9.99', 0, '1485827052', NULL),
-(3, 2, 'Red July Hoodie 1', '29.99', NULL, 25, 10, 10, 15, 10, 5, 5, 0, NULL, 0, '1485827060', NULL),
-(4, 2, 'Red July Hoodie 2', '29.99', NULL, 30, 5, 5, 10, 15, 5, 8, 1, '24.99', 0, '1485827052', NULL),
+(1, 1, 'Red July Shirt 1', '12.99', 'Dank shirt, made from dank materials in a dank country.', 30, 5, 5, 5, 5, 5, 5, 0, NULL, 0, '1485827060', NULL),
+(2, 1, 'Red July Shirt 2', '12.99', 'Another dank shirt, made from dank materials in a dank country and this time on sale PogChamp .', 32, 5, 5, 10, 10, 5, 2, 1, '9.99', 0, '1485827052', NULL),
+(3, 2, 'Red July Hoodie 1', '29.99', NULL, 1, 1, 0, 0, 0, 0, 0, 0, NULL, 0, '1485827060', NULL),
+(4, 2, 'Red July Hoodie 2', '29.99', NULL, 48, 5, 5, 10, 15, 5, 8, 1, '24.99', 0, '1485827052', NULL),
 (5, 3, 'Red July Cap', '19.99', NULL, 12, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
 (6, 3, 'Red July Beanie', '14.99', NULL, 18, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
 (7, 5, 'Red July Cup 1', '9.99', NULL, 20, 0, 0, 0, 0, 0, 0, 1, '4.99', 1, '1485827060', NULL),
 (8, 5, 'Red July Cup 2', '9.99', NULL, 12, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(9, 99, 'Red July Mousepad', '14.99', NULL, 18, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
+(9, 99, 'Red July Mousepad', '14.99', NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
 (10, 4, 'Red July Backpack', '34.99', NULL, 8, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
 (11, 4, 'Red July Bag', '15.99', NULL, 12, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
 (12, 99, 'Red July Notebook', '1.99', NULL, 50, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
 (13, 99, 'Red July Notebook 2', '2.99', NULL, 50, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
 (14, 6, 'Red July Album 1', '14.99', NULL, 100, 0, 0, 0, 0, 0, 0, 1, '9.99', 1, '1485827052', NULL),
 (15, 6, 'Red July Album 2', '19.99', NULL, 100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1485827060', NULL),
-(16, 7, 'Song 1', '0.99', 'duDudu', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
-(17, 7, 'Song 2', '0.99', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
-(18, 7, 'Song 3', '0.99', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827052', NULL),
-(19, 7, 'Song 4', '0.99', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '1485827052', NULL);
+(16, 7, 'Song 1', '0.99', 'Songname?', -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
+(17, 7, 'Song 2', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
+(18, 7, 'Song 3', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827052', NULL),
+(19, 7, 'Song 4', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827052', NULL),
+(20, 7, 'Album 1 - Digital Download', '14.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, 1, '9.99', 2, NULL, NULL),
+(21, 7, 'Album 2 - Digital Download', '19.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -247,16 +259,16 @@ CREATE TABLE `product_imgs` (
 INSERT INTO `product_imgs` (`id`, `product_id`, `path`) VALUES
 (1, 1, 'img/shop/shirt1-1.png'),
 (2, 2, 'img/shop/shirt2-1.png'),
-(3, 3, 'img/shop/hoodie1.png'),
-(4, 4, 'img/shop/hoodie2.png'),
-(7, 7, 'img/shop/cup1.png'),
-(8, 8, 'img/shop/cup1.png'),
-(9, 9, 'img/shop/mousepad1.png'),
-(10, 10, 'img/shop/bag1.png'),
-(11, 11, 'img/shop/bag1.png'),
+(3, 3, 'img/shop/hoodie1-1.png'),
+(4, 4, 'img/shop/hoodie2-1.png'),
+(7, 7, 'img/shop/cup1-1.png'),
+(8, 8, 'img/shop/cup1-1.png'),
+(9, 9, 'img/shop/mousepad1-1.png'),
+(10, 10, 'img/shop/bag1-1.png'),
+(11, 11, 'img/shop/bag1-1.png'),
 (12, 1, 'img/shop/shirt1-2.png'),
 (13, 2, 'img/shop/shirt2-2.png'),
-(14, 12, 'img/shop/notebook1.png');
+(14, 12, 'img/shop/notebook1-1.png');
 
 -- --------------------------------------------------------
 
@@ -410,7 +422,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT für Tabelle `currencies`
 --
 ALTER TABLE `currencies`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT für Tabelle `nav`
 --
@@ -445,12 +457,12 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT für Tabelle `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT für Tabelle `product_categories`
 --
 ALTER TABLE `product_categories`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 --
 -- AUTO_INCREMENT für Tabelle `product_imgs`
 --

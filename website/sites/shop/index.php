@@ -6,6 +6,10 @@ if( ! isset($_SESSION['checkoutstep']) ){
     $_SESSION['checkoutstep'] = 1;
 }
 
+if( ! isset($_SESSION['currency']) ){
+    $_SESSION['currency'] = 1;
+}
+
 if ( ! isset($_SESSION['login']) ){
   $_SESSION['login'] = 0;
 }

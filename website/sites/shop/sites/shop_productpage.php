@@ -42,35 +42,79 @@
                     }
                   ?>
                 </h3>
+                <?php
+                  if( $row['product_type'] == 0){?>
+                    <form id="cart-add" action="#" method="post">
+                      <div class="cart-add-size">
+                        <h4>Size</h4>
+                        <select class="shop-product-select">
+                          <option <?php if( $row['stock_s'] == 0){ echo 'disabled';} ?> value="S">S<?php if( $row['stock_s'] == 0){ echo ' - Sold out';} ?></option>
+                          <option <?php if( $row['stock_m'] == 0){ echo 'disabled';} ?> value="M">M<?php if( $row['stock_m'] == 0){ echo ' - Sold out';} ?></option>
+                          <option <?php if( $row['stock_l'] == 0){ echo 'disabled';} ?> value="L">L<?php if( $row['stock_l'] == 0){ echo ' - Sold out';} ?></option>
+                          <option <?php if( $row['stock_xl'] == 0){ echo 'disabled';} ?> value="XL">XL<?php if( $row['stock_xl'] == 0){ echo ' - Sold out';} ?></option>
+                          <option <?php if( $row['stock_2xl'] == 0){ echo 'disabled';} ?> value="2XL">2XL<?php if( $row['stock_2xl'] == 0){ echo ' - Sold out';} ?></option>
+                          <option <?php if( $row['stock_3xl'] == 0){ echo 'disabled';} ?> value="3XL">3XL<?php if( $row['stock_3xl'] == 0){ echo ' - Sold out';} ?></option>
+                        </select>
+                        <button <?php if ($row['stock'] == 0){echo 'style="background-color:transparent"';} ?>type="submit" id="cart-add-button" <?php if ($row['stock'] == 0){echo 'disabled';} ?>><?php if ($row['stock'] == 0){echo 'Sold Out';}else{echo 'Add to Cart';} ?></button>
+                      </div>
+                      <div class="cart-add-quantity">
+                        <h4>Quantity</h4>
+                        <select class="shop-product-select">
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
+                          <option value="">6</option>
+                          <option value="">7</option>
+                          <option value="">8</option>
+                          <option value="">9</option>
+                          <option value="">10</option>
+                        </select>
+                      </div>
+                    </form>
+                <?php
+                  }elseif( $row['product_type'] == 1){?>
+                    <form id="cart-add" action="#" method="post">
+                      <div class="cart-add-size">
+                        <h4>Type</h4>
+                        <select class="shop-product-select">
+                          <option <?php if( $row['stock'] == 0){ echo 'disabled';} ?>><?php echo $row['name']; ?><?php if( $row['stock'] == 0){ echo ' - Sold out';} ?></option>
+                        </select>
+                        <button <?php if ($row['stock'] == 0){echo 'style="background-color:transparent; cursor:not-allowed;"';} ?>type="submit" id="cart-add-button" <?php if ($row['stock'] == 0){echo 'disabled';} ?>><?php if ($row['stock'] == 0){echo 'Sold Out';}else{echo 'Add to Cart';} ?></button>
+                      </div>
+                      <div class="cart-add-quantity">
+                        <h4>Quantity</h4>
+                        <select class="shop-product-select">
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
+                          <option value="">6</option>
+                          <option value="">7</option>
+                          <option value="">8</option>
+                          <option value="">9</option>
+                          <option value="">10</option>
+                        </select>
+                      </div>
+                    </form>
+                <?php
+              }elseif( $row['product_type'] == 2){?>
                 <form id="cart-add" action="#" method="post">
                   <div class="cart-add-size">
-                    <h4>Size</h4>
-                    <select class="shop-product-select">
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option disabled="disabled" value="L">L - sold out</option>
-                      <option value="XL">XL</option>
-                      <option value="2XL">2XL</option>
-                      <option value="3XL">3XL</option>
+                    <h4>Download on</h4>
+                    <select class="shop-product-select" id="download-select">
+                      <option value="https://apple.com">iTunes</option>
+                      <option value="https://amazon.com">Amazon</option>
+                      <option value="https://google.com">Google</option>
                     </select>
-                    <button type="submit" id="cart-add-button">Add To Cart</button>
-                  </div>
-                  <div class="cart-add-quantity">
-                    <h4>Quantity</h4>
-                    <select class="shop-product-select">
-                      <option value="">1</option>
-                      <option value="">2</option>
-                      <option value="">3</option>
-                      <option value="">4</option>
-                      <option value="">5</option>
-                      <option value="">6</option>
-                      <option value="">7</option>
-                      <option value="">8</option>
-                      <option value="">9</option>
-                      <option value="">10</option>
-                    </select>
+                    <a href="https://apple.com" id="shop-download-href"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</a>
                   </div>
                 </form>
+                <?php
+                  }
+                 ?>
                 <p><?php echo $row['description']; ?></p>
               </div>
             </div>
@@ -78,5 +122,9 @@
     <script type="text/javascript">
       function changeImage(a) {
       document.getElementById("shop-product-mainimg").src=a;
+      }
+      var sel = document.getElementById('download-select');
+        sel.onchange = function () {
+          document.getElementById("shop-download-href").href = this.value;
       }
     </script>
