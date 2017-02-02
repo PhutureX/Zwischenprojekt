@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 01. Feb 2017 um 05:46
+-- Erstellungszeit: 02. Feb 2017 um 07:23
 -- Server-Version: 10.1.19-MariaDB
 -- PHP-Version: 5.6.28
 
@@ -129,6 +129,20 @@ CREATE TABLE `orders` (
   `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Daten für Tabelle `orders`
+--
+
+INSERT INTO `orders` (`id`, `ordernumber`, `user_id`, `created_at`, `payment_id`, `status`) VALUES
+(1, 20171, 0, 1486015947, 0, 0),
+(2, 20172, 0, 1486015974, 0, 0),
+(3, 20173, 0, 1486015985, 0, 0),
+(4, 20174, 2, 1486016067, 0, 0),
+(5, 20175, 2, 1486016241, 0, 0),
+(6, 20176, 2, 1486016327, 0, 0),
+(7, 20177, 0, 1486016388, 0, 0),
+(8, 20178, 0, 1486016535, 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -141,6 +155,18 @@ CREATE TABLE `order_products` (
   `product_id` int(11) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `order_products`
+--
+
+INSERT INTO `order_products` (`id`, `order_id`, `product_id`, `quantity`) VALUES
+(1, 0, 1, 1),
+(2, 0, 1, 1),
+(3, 5, 1, 1),
+(4, 6, 7, 1),
+(5, 7, 1, 1),
+(6, 8, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -301,6 +327,36 @@ CREATE TABLE `shop_nav` (
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `tours`
+--
+
+CREATE TABLE `tours` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `feat` varchar(50) DEFAULT NULL,
+  `location` varchar(20) DEFAULT NULL,
+  `city` varchar(20) DEFAULT NULL,
+  `country` varchar(20) DEFAULT NULL,
+  `tourday` varchar(50) DEFAULT NULL,
+  `ticketlink` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `tours`
+--
+
+INSERT INTO `tours` (`id`, `title`, `feat`, `location`, `city`, `country`, `tourday`, `ticketlink`) VALUES
+(1, 'Red''s not Dead', 'Cake Break', 'Palladium', 'Cologne', 'Germany', '14.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(2, 'Red''s not Dead', 'Cake Break', 'Sporthalle Hamburg', 'Hamburg', 'Germany', '16.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(3, 'Red''s not Dead', 'Cake Break', 'Columbiahalle', 'Berlin', 'Germany', '17.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(4, 'Red''s not Dead', 'Cake Break', 'Gasometer', 'Vienna', 'Austria', '18.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(5, 'Red is not Dead', 'Cake Break', 'Alcatraz', 'Milan', 'Italy', '20.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(6, 'Red''s not Dead', 'Cake Break', 'Volkshaus', 'Zürich', 'Switzerland', '21.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(11, 'Red''s not Dead', 'Cake Break', 'Trianon', 'Paris', 'France', '23.02.2017', '');
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `users`
 --
 
@@ -409,6 +465,12 @@ ALTER TABLE `shop_nav`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indizes für die Tabelle `tours`
+--
+ALTER TABLE `tours`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indizes für die Tabelle `users`
 --
 ALTER TABLE `users`
@@ -442,12 +504,12 @@ ALTER TABLE `news_comments`
 -- AUTO_INCREMENT für Tabelle `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT für Tabelle `order_products`
 --
 ALTER TABLE `order_products`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT für Tabelle `payments`
 --
@@ -478,6 +540,11 @@ ALTER TABLE `shop_comments`
 --
 ALTER TABLE `shop_nav`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT für Tabelle `tours`
+--
+ALTER TABLE `tours`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT für Tabelle `users`
 --

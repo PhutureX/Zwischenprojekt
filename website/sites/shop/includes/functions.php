@@ -2,6 +2,11 @@
 $shop_errors = false;
 $shop_errorsMsg = array();
 
+if( isset($_POST['insertwk']) ){
+    $product = array($_POST['pid'], $_POST['quantity'], $_POST['size']);
+    array_push($_SESSION['wk'], $product);
+}
+
 if( isset($_POST['checkout_step1']) ){
   $email = cleanString($dblink, $_POST['email']);
   $first_name = cleanString($dblink, $_POST['fname']);
@@ -69,7 +74,7 @@ if( isset($_POST['checkout_step1']) ){
 if( isset($_POST['checkout_step2']) ){
   if( ! isset($_POST['shipping-option']) ){
     $shop_errors = true;
-    array_push($shop_errorsMsg, "Please select a Shipping Method!");
+    array_push($shop_errorsMsg, "Please select a shipping method!");
 }
 
   if( $shop_errors === false ){
@@ -81,15 +86,84 @@ if( isset($_POST['checkout_step2']) ){
 if( isset($_POST['checkout_step3']) ){
   if( ! isset($_POST['payment-option']) ){
     $shop_errors = true;
-    array_push($shop_errorsMsg, "Please select a Payment Method!");
+    array_push($shop_errorsMsg, "Please select a payment method!");
 }
+  if( $_POST['payment-option'] == "Credit Card"){
+    if( ! is_numeric($_POST['CC_number']) ){
+      $shop_errors = true;
+      array_push($shop_errorsMsg, "Please enter a valid credit card number!");
+    }
+    if( strlen($_POST['CC_number']) < 16){
+      $shop_errors = true;
+      array_push($shop_errorsMsg, "The credit card number is too short!");
+    }
+    if( strlen($_POST['CC_number']) > 16){
+      $shop_errors = true;
+      array_push($shop_errorsMsg, "The credit card number is too long!");
+    }
+    if( strlen($_POST['CC_name']) < 5){
+      $shop_errors = true;
+      array_push($shop_errorsMsg, "Please enter a valid credit card holder name!");
+    }
+    if( strlen($_POST['CC_date']) < 5 or strlen($_POST['CC_date']) > 5){
+      $shop_errors = true;
+      array_push($shop_errorsMsg, "Please enter a valid credit card expiration date!");
+    }
+    if( strlen($_POST['CC_CVV']) < 3 or strlen($_POST['CC_CVV']) > 3){
+      $shop_errors = true;
+      array_push($shop_errorsMsg, "Please enter a valid CVV number!");
+    }
+
+  }
 
   if( $shop_errors === false ){
-    $_SESSION['checkoutstep'] = 4;
-    $_SESSION['guest_payment'] = $_POST['payment-option'];
-  }
-}
 
+    $_SESSION['guest_payment'] = $_POST['payment-option'];
+
+    $sql = "SELECT id FROM orders ORDER BY id DESC LIMIT 1";
+    $res = mysqli_query($dblink, $sql);
+
+    if( mysqli_num_rows($res) > 0){
+      $lastOrder = mysqli_fetch_assoc($res);
+      $num = $lastOrder['id'] + 1;
+      $orderNumber = "2017" . $num;
+      $status = "0";
+    }else{
+      $orderNumber = "20171";
+    }
+
+    $createdAt = time();
+
+    if( $_SESSION['login'] == 1){
+      mysqli_query($dblink, "INSERT INTO orders (ordernumber, user_id, created_at, payment_id, status) VALUES ('$orderNumber', '{$_SESSION['uid']}', '$createdAt', '{$_SESSION['guest_payment']}', '$status')");
+    }else{
+      mysqli_query($dblink, "INSERT INTO orders (ordernumber, user_id, created_at, payment_id, status) VALUES ('$orderNumber', '0', '$createdAt', '{$_SESSION['guest_payment']}', '$status')");
+    }
+
+    $lastID = mysqli_insert_id($dblink);
+
+    foreach($_SESSION['wk'] as $product){
+      $productId = $product[0];
+      $productQuantity = $product[1];
+      mysqli_query($dblink, "INSERT INTO order_products (order_id, product_id, quantity) VALUES ('$lastID', '$productId', '$productQuantity')");
+    }
+
+  }
+
+  unset($_SESSION['wk']);
+  unset($_SESSION['guest_email']);
+  unset($_SESSION['guest_fname']);
+  unset($_SESSION['guest_lname']);
+  unset($_SESSION['guest_address']);
+  unset($_SESSION['guest_city']);
+  unset($_SESSION['guest_country']);
+  unset($_SESSION['guest_zip']);
+  unset($_SESSION['guest_tel']);
+  unset($_SESSION['guest_shipping']);
+  unset($_SESSION['guest_payment']);
+
+  $_SESSION['checkoutstep'] = 4;
+}
 
 
 function cleanString( $dblink, $string ){

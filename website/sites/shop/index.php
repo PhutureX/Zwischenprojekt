@@ -14,21 +14,10 @@ if ( ! isset($_SESSION['login']) ){
   $_SESSION['login'] = 0;
 }
 
-if( ! isset($_SESSION['logincount']) ){
-    $_SESSION['logincount'] = 0;
+if( ! isset($_SESSION['wk']) ){
+    $_SESSION['wk'] = array();
 }
 
-if( isset($_SESSION['logintimeout']) && $_SESSION['logincount'] >= 3 ){
-
-    if( time() >= ($_SESSION['logintimeout'] + 60) ){
-        $_SESSION['logincount'] = 0;
-        unset($_SESSION['logintimeout']);
-    }
-}
-
-if( ! isset($_SESSION['login']) ){
-    $_SESSION['login'] = 0;
-}
 
 require "includes/dbconnect.php";
 require "includes/functions.php";

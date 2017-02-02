@@ -971,7 +971,6 @@ ol.breadcrumbs li a{
 #shop-checkout .shop-checkout-box .shop-checkout-box-right table img{
   width: 100px;
   border-radius: 5px;
-  padding-right: 25px;
 }
 
 #shop-checkout .shop-checkout-box .shop-checkout-box-right table td{
@@ -979,7 +978,13 @@ ol.breadcrumbs li a{
 }
 
 #shop-checkout .shop-checkout-box .shop-checkout-box-right table td:nth-child(2){
-  width: 100%;
+  padding-left: 25px;
+  width: 80%;
+}
+
+#shop-checkout .shop-checkout-box .shop-checkout-box-right table td:nth-child(3){
+  text-align: right;
+  width: 20%;
 }
 
 #shop-checkout .shop-checkout-box .shop-checkout-box-right .shop-checkout-code{

@@ -32,7 +32,7 @@
                 <h2>Payment Method</h2>
                 <ul class="checkout-options" id="payment-option">
                   <li class="checkout-options-element">
-                    <input type="radio" id="payment-option-1" value="" name="payment-option" checked>
+                    <input type="radio" id="payment-option-1" value="Credit Card" name="payment-option" checked>
                     <label for="payment-option-1">Credit Card
                       <p>
                         <i class="fa fa-cc-visa" aria-hidden="true"></i>
@@ -40,10 +40,10 @@
                         <i class="fa fa-cc-amex" aria-hidden="true"></i>
                       </p>
                     </label>
-                      <input type="text" placeholder="Card number" class="shop-payment-form-1">
-                      <input type="text" placeholder="Name on card" class="shop-payment-form-2">
-                      <input type="text" placeholder="MM/YY" class="shop-payment-form-3">
-                      <input type="text" placeholder="CVV" class="shop-payment-form-3">
+                      <input type="text" placeholder="Card number" class="shop-payment-form-1" name="CC_number">
+                      <input type="text" placeholder="Name on card" class="shop-payment-form-2" name="CC_name">
+                      <input type="text" placeholder="MM/YY" class="shop-payment-form-3" name="CC_date">
+                      <input type="text" placeholder="CVV" class="shop-payment-form-3" name="CC_CVV">
                   </li>
                   <li class="checkout-options-element">
                     <input type="radio" id="payment-option-2" value="PayPal" name="payment-option">
@@ -64,30 +64,31 @@
               <h2>Order Overview</h2>
               <table class="shop-checkout-cart">
                 <tbody>
+                  <?php
+                    $total = 0;
+                    $shipping = 0;
+                    foreach( $_SESSION['wk'] as $key => $val ):
+                      $sql = "SELECT * FROM products WHERE id = '{$val[0]}'";
+                      $res = mysqli_query($dblink, $sql);
+                      $row = mysqli_fetch_assoc($res);
+                      $sql2 = "SELECT * FROM product_imgs WHERE id = '{$val[0]}'";
+                      $res2 = mysqli_query($dblink, $sql2);
+                      $row2 = mysqli_fetch_assoc($res2);
+                 ?>
                   <tr>
                     <td>
-                      <img src="img/shop/shirt1.png" alt="Product 1">
+                      <img src="<?php echo $row2['path']; ?>" alt="Product">
                     </td>
                     <td>
-                      <h3>Shirt 1</h3>
-                      <p>Additional Information</p>
+                      <h3><?php echo $row['name']; ?> x<?php echo $val[1]; ?></h3>
+                      <p><?php echo $val[2]; ?></p>
                     </td>
                     <td>
-                      <h3>€11.99</h3>
+                      <h3>&euro; <?php echo $val[1] * $row['price']; ?></h3>
                     </td>
                   </tr>
-                  <tr>
-                    <td>
-                      <img src="img/shop/bag1.png" alt="Product 1">
-                    </td>
-                    <td>
-                      <h3>Bag 1</h3>
-                      <p>Additional Information</p>
-                    </td>
-                    <td>
-                      <h3>€11.99</h3>
-                    </td>
-                  </tr>
+                  <?php $total += $val[1] * $row['price']; ?>
+                  <?php endforeach; ?>
                 </tbody>
               </table>
               <div class="shop-checkout-code">
@@ -100,13 +101,14 @@
                   <h3>Shipping</h3>
                 </div>
                 <div class="shop-checkout-price-val">
-                  <h3>€11.99</h3>
-                  <h3>€4.99</h3>
+                  <h3>&euro; <?php echo $total ?></h3>
+                  <h3><?php if( $_SESSION['guest_shipping'] == "shipping1" && $total >= 60){echo 'Free'; $shipping = 0; }elseif( $_SESSION['guest_shipping'] == "shipping1"){echo '€ 4.99'; $shipping = 4.99;}elseif( $_SESSION['guest_shipping'] == "shipping2"){echo '€ 9.99'; $shipping = 9.99;}elseif( $_SESSION['guest_shipping'] == "shipping3"){echo '€ 12.99'; $shipping = 12.99; } ?></h3>
                 </div>
               </div>
               <div class="shop-checkout-total">
+                <?php $total = $total + $shipping; ?>
                 <h4>Total</h4>
-                <h4>€16.98</h4>
+                <h4>&euro; <?php echo $total ?></h4>
               </div>
             </div>
           </div>

@@ -45,9 +45,10 @@
                 <?php
                   if( $row['product_type'] == 0){?>
                     <form id="cart-add" action="#" method="post">
+                      <input type="hidden" name="pid" value="<?php echo $row['id']; ?>">
                       <div class="cart-add-size">
                         <h4>Size</h4>
-                        <select class="shop-product-select">
+                        <select class="shop-product-select" name="size">
                           <option <?php if( $row['stock_s'] == 0){ echo 'disabled';} ?> value="S">S<?php if( $row['stock_s'] == 0){ echo ' - Sold out';} ?></option>
                           <option <?php if( $row['stock_m'] == 0){ echo 'disabled';} ?> value="M">M<?php if( $row['stock_m'] == 0){ echo ' - Sold out';} ?></option>
                           <option <?php if( $row['stock_l'] == 0){ echo 'disabled';} ?> value="L">L<?php if( $row['stock_l'] == 0){ echo ' - Sold out';} ?></option>
@@ -55,53 +56,55 @@
                           <option <?php if( $row['stock_2xl'] == 0){ echo 'disabled';} ?> value="2XL">2XL<?php if( $row['stock_2xl'] == 0){ echo ' - Sold out';} ?></option>
                           <option <?php if( $row['stock_3xl'] == 0){ echo 'disabled';} ?> value="3XL">3XL<?php if( $row['stock_3xl'] == 0){ echo ' - Sold out';} ?></option>
                         </select>
-                        <button <?php if ($row['stock'] == 0){echo 'style="background-color:transparent"';} ?>type="submit" id="cart-add-button" <?php if ($row['stock'] == 0){echo 'disabled';} ?>><?php if ($row['stock'] == 0){echo 'Sold Out';}else{echo 'Add to Cart';} ?></button>
+                        <button name="insertwk" <?php if ($row['stock'] == 0){echo 'style="background-color:transparent"';} ?>type="submit" id="cart-add-button" <?php if ($row['stock'] == 0){echo 'disabled';} ?>><?php if ($row['stock'] == 0){echo 'Sold Out';}else{echo 'Add to Cart';} ?></button>
                       </div>
                       <div class="cart-add-quantity">
                         <h4>Quantity</h4>
-                        <select class="shop-product-select">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                          <option value="">5</option>
-                          <option value="">6</option>
-                          <option value="">7</option>
-                          <option value="">8</option>
-                          <option value="">9</option>
-                          <option value="">10</option>
+                        <select class="shop-product-select" name="quantity">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
                         </select>
                       </div>
                     </form>
                 <?php
                   }elseif( $row['product_type'] == 1){?>
                     <form id="cart-add" action="#" method="post">
+                      <input type="hidden" name="pid" value="<?php echo $row['id']; ?>">
                       <div class="cart-add-size">
                         <h4>Type</h4>
-                        <select class="shop-product-select">
-                          <option <?php if( $row['stock'] == 0){ echo 'disabled';} ?>><?php echo $row['name']; ?><?php if( $row['stock'] == 0){ echo ' - Sold out';} ?></option>
+                        <select class="shop-product-select" name="size">
+                          <option value="<?php echo $row['name']; ?>" <?php if( $row['stock'] == 0){ echo 'disabled';} ?>><?php echo $row['name']; ?><?php if( $row['stock'] == 0){ echo ' - Sold out';} ?></option>
                         </select>
-                        <button <?php if ($row['stock'] == 0){echo 'style="background-color:transparent; cursor:not-allowed;"';} ?>type="submit" id="cart-add-button" <?php if ($row['stock'] == 0){echo 'disabled';} ?>><?php if ($row['stock'] == 0){echo 'Sold Out';}else{echo 'Add to Cart';} ?></button>
+                        <button name="insertwk" <?php if ($row['stock'] == 0){echo 'style="background-color:transparent; cursor:not-allowed;"';} ?>type="submit" id="cart-add-button" <?php if ($row['stock'] == 0){echo 'disabled';} ?>><?php if ($row['stock'] == 0){echo 'Sold Out';}else{echo 'Add to Cart';} ?></button>
                       </div>
                       <div class="cart-add-quantity">
                         <h4>Quantity</h4>
-                        <select class="shop-product-select">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                          <option value="">5</option>
-                          <option value="">6</option>
-                          <option value="">7</option>
-                          <option value="">8</option>
-                          <option value="">9</option>
-                          <option value="">10</option>
+                        <select class="shop-product-select" name="quantity">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
                         </select>
                       </div>
                     </form>
                 <?php
               }elseif( $row['product_type'] == 2){?>
                 <form id="cart-add" action="#" method="post">
+                  <input type="hidden" name="pid" value="<?php echo $row['id']; ?>">
                   <div class="cart-add-size">
                     <h4>Download on</h4>
                     <select class="shop-product-select" id="download-select">

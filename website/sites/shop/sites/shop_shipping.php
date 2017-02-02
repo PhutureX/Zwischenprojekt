@@ -1,6 +1,12 @@
 <?php
-
     $_SESSION['checkoutstep'] = 2;
+    $total = 0;
+    foreach( $_SESSION['wk'] as $key => $val ):
+      $sql2 = "SELECT * FROM products WHERE id = '{$val[0]}'";
+      $res2 = mysqli_query($dblink, $sql2);
+      $row2 = mysqli_fetch_assoc($res2);
+      $total += $val[1] * $row2['price'];
+    endforeach;
 
   if( $_SESSION['login'] == 1){
     $sql = "SELECT * FROM users WHERE id = '{$_SESSION['uid']}'";
@@ -38,20 +44,20 @@
                 <h2>Shipping Method</h2>
                 <ul class="checkout-options" id="shipping-option">
                   <li class="checkout-options-element">
-                    <input type="radio" id="shipping-option-1" value="Shipping Method 1" name="shipping-option" checked>
-                    <label for="shipping-option-1">Shipping Method 1
-                      <p>€ 4.99</p>
+                    <input type="radio" id="shipping-option-1" value="shipping1" name="shipping-option" checked>
+                    <label for="shipping-option-1">Post
+                      <p><?php if ( $total >= 60 ){echo 'Free';}else{echo '€ 4.99';};?></p>
                     </label>
                   </li>
                   <li class="checkout-options-element">
-                    <input type="radio" id="shipping-option-2" value="Shipping Method 2" name="shipping-option">
-                    <label for="shipping-option-2">Shipping Method 2
+                    <input type="radio" id="shipping-option-2" value="shipping2" name="shipping-option">
+                    <label for="shipping-option-2">DHL
                       <p>€ 9.99</p>
                     </label>
                   </li>
                   <li class="checkout-options-element">
-                    <input type="radio" id="shipping-option-3" value="Shipping Method 3" name="shipping-option">
-                    <label for="shipping-option-3">Shipping Method 3
+                    <input type="radio" id="shipping-option-3" value="shipping3" name="shipping-option">
+                    <label for="shipping-option-3">UPS
                       <p>€ 12.99</p>
                     </label>
                   </li>
@@ -66,30 +72,30 @@
               <h2>Order Overview</h2>
               <table class="shop-checkout-cart">
                 <tbody>
+                  <?php
+                    $total = 0;
+                    foreach( $_SESSION['wk'] as $key => $val ):
+                      $sql = "SELECT * FROM products WHERE id = '{$val[0]}'";
+                      $res = mysqli_query($dblink, $sql);
+                      $row = mysqli_fetch_assoc($res);
+                      $sql2 = "SELECT * FROM product_imgs WHERE id = '{$val[0]}'";
+                      $res2 = mysqli_query($dblink, $sql2);
+                      $row2 = mysqli_fetch_assoc($res2);
+                 ?>
                   <tr>
                     <td>
-                      <img src="img/shop/shirt1.png" alt="Product 1">
+                      <img src="<?php echo $row2['path']; ?>" alt="Product">
                     </td>
                     <td>
-                      <h3>Shirt 1</h3>
-                      <p>Additional Information</p>
+                      <h3><?php echo $row['name']; ?> x<?php echo $val[1]; ?></h3>
+                      <p><?php echo $val[2]; ?></p>
                     </td>
                     <td>
-                      <h3>€11.99</h3>
+                      <h3>&euro; <?php echo $val[1] * $row['price']; ?></h3>
                     </td>
                   </tr>
-                  <tr>
-                    <td>
-                      <img src="img/shop/bag1.png" alt="Product 1">
-                    </td>
-                    <td>
-                      <h3>Bag 1</h3>
-                      <p>Additional Information</p>
-                    </td>
-                    <td>
-                      <h3>€11.99</h3>
-                    </td>
-                  </tr>
+                  <?php $total += $val[1] * $row['price']; ?>
+                  <?php endforeach; ?>
                 </tbody>
               </table>
               <div class="shop-checkout-code">
@@ -102,13 +108,13 @@
                   <h3>Shipping</h3>
                 </div>
                 <div class="shop-checkout-price-val">
-                  <h3>€11.99</h3>
-                  <h3>€4.99</h3>
+                  <h3>&euro; <?php echo $total ?></h3>
+                  <h3><?php if ( $total >= 60){ echo 'Free';}else{echo '-';} ?></h3>
                 </div>
               </div>
               <div class="shop-checkout-total">
                 <h4>Total</h4>
-                <h4>€16.98</h4>
+                <h4>&euro; <?php echo $total ?></h4>
               </div>
             </div>
         </div>
