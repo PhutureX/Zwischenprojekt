@@ -1147,7 +1147,8 @@ ol.breadcrumbs li a{
 
 #shop-list .shop-list-box .shop-list-element img{
   display: block;
-  width: 100%;
+  width: 290px;
+  height: 290px;
 }
 
 #shop-list .shop-list-box .shop-list-element p{

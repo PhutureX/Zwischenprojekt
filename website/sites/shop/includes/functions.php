@@ -105,11 +105,11 @@ if( isset($_POST['checkout_step3']) ){
       $shop_errors = true;
       array_push($shop_errorsMsg, "Please enter a valid credit card holder name!");
     }
-    if( strlen($_POST['CC_date']) < 5 or strlen($_POST['CC_date']) > 5){
+    if( strlen($_POST['CC_date']) < 5){
       $shop_errors = true;
       array_push($shop_errorsMsg, "Please enter a valid credit card expiration date!");
     }
-    if( strlen($_POST['CC_CVV']) < 3 or strlen($_POST['CC_CVV']) > 3){
+    if( strlen($_POST['CC_CVV']) < 3){
       $shop_errors = true;
       array_push($shop_errorsMsg, "Please enter a valid CVV number!");
     }
@@ -122,6 +122,7 @@ if( isset($_POST['checkout_step3']) ){
 
     $sql = "SELECT id FROM orders ORDER BY id DESC LIMIT 1";
     $res = mysqli_query($dblink, $sql);
+
 
     if( mysqli_num_rows($res) > 0){
       $lastOrder = mysqli_fetch_assoc($res);
@@ -140,29 +141,31 @@ if( isset($_POST['checkout_step3']) ){
       mysqli_query($dblink, "INSERT INTO orders (ordernumber, user_id, created_at, payment_id, status) VALUES ('$orderNumber', '0', '$createdAt', '{$_SESSION['guest_payment']}', '$status')");
     }
 
+
     $lastID = mysqli_insert_id($dblink);
 
     foreach($_SESSION['wk'] as $product){
       $productId = $product[0];
       $productQuantity = $product[1];
+      $newStock = $stock - $productQuantity;
       mysqli_query($dblink, "INSERT INTO order_products (order_id, product_id, quantity) VALUES ('$lastID', '$productId', '$productQuantity')");
+
     }
 
+      unset($_SESSION['wk']);
+      unset($_SESSION['guest_email']);
+      unset($_SESSION['guest_fname']);
+      unset($_SESSION['guest_lname']);
+      unset($_SESSION['guest_address']);
+      unset($_SESSION['guest_city']);
+      unset($_SESSION['guest_country']);
+      unset($_SESSION['guest_zip']);
+      unset($_SESSION['guest_tel']);
+      unset($_SESSION['guest_shipping']);
+      unset($_SESSION['guest_payment']);
+
+      $_SESSION['checkoutstep'] = 4;
   }
-
-  unset($_SESSION['wk']);
-  unset($_SESSION['guest_email']);
-  unset($_SESSION['guest_fname']);
-  unset($_SESSION['guest_lname']);
-  unset($_SESSION['guest_address']);
-  unset($_SESSION['guest_city']);
-  unset($_SESSION['guest_country']);
-  unset($_SESSION['guest_zip']);
-  unset($_SESSION['guest_tel']);
-  unset($_SESSION['guest_shipping']);
-  unset($_SESSION['guest_payment']);
-
-  $_SESSION['checkoutstep'] = 4;
 }
 
 

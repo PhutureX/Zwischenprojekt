@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 02. Feb 2017 um 07:23
+-- Erstellungszeit: 03. Feb 2017 um 06:42
 -- Server-Version: 10.1.19-MariaDB
 -- PHP-Version: 5.6.28
 
@@ -125,7 +125,7 @@ CREATE TABLE `orders` (
   `ordernumber` int(20) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   `created_at` int(11) DEFAULT NULL,
-  `payment_id` int(11) DEFAULT NULL,
+  `payment` varchar(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -133,15 +133,18 @@ CREATE TABLE `orders` (
 -- Daten für Tabelle `orders`
 --
 
-INSERT INTO `orders` (`id`, `ordernumber`, `user_id`, `created_at`, `payment_id`, `status`) VALUES
-(1, 20171, 0, 1486015947, 0, 0),
-(2, 20172, 0, 1486015974, 0, 0),
-(3, 20173, 0, 1486015985, 0, 0),
-(4, 20174, 2, 1486016067, 0, 0),
-(5, 20175, 2, 1486016241, 0, 0),
-(6, 20176, 2, 1486016327, 0, 0),
-(7, 20177, 0, 1486016388, 0, 0),
-(8, 20178, 0, 1486016535, 0, 0);
+INSERT INTO `orders` (`id`, `ordernumber`, `user_id`, `created_at`, `payment`, `status`) VALUES
+(1, 20171, 0, 1486015947, '0', 0),
+(2, 20172, 0, 1486015974, '0', 0),
+(3, 20173, 0, 1486015985, '0', 0),
+(4, 20174, 2, 1486016067, '0', 0),
+(5, 20175, 2, 1486016241, '0', 0),
+(6, 20176, 2, 1486016327, '0', 0),
+(7, 20177, 0, 1486016388, '0', 0),
+(8, 20178, 0, 1486016535, '0', 0),
+(9, 20179, 0, 1486060752, '0', 0),
+(10, 201710, 0, 1486062507, '0', 0),
+(11, 201711, 0, 1486073497, '0', 0);
 
 -- --------------------------------------------------------
 
@@ -166,7 +169,17 @@ INSERT INTO `order_products` (`id`, `order_id`, `product_id`, `quantity`) VALUES
 (3, 5, 1, 1),
 (4, 6, 7, 1),
 (5, 7, 1, 1),
-(6, 8, 3, 1);
+(6, 8, 3, 1),
+(7, 9, 1, 1),
+(8, 10, 1, 1),
+(9, 11, 3, 1),
+(10, 0, 3, 1),
+(11, 0, 3, 1),
+(12, 0, 3, 1),
+(13, 0, 3, 1),
+(14, 0, 3, 1),
+(15, 0, 3, 1),
+(16, 0, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -219,27 +232,30 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `name`, `price`, `description`, `stock`, `stock_s`, `stock_m`, `stock_l`, `stock_xl`, `stock_2xl`, `stock_3xl`, `sale`, `price_sale`, `product_type`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Red July Shirt 1', '12.99', 'Dank shirt, made from dank materials in a dank country.', 30, 5, 5, 5, 5, 5, 5, 0, NULL, 0, '1485827060', NULL),
-(2, 1, 'Red July Shirt 2', '12.99', 'Another dank shirt, made from dank materials in a dank country and this time on sale PogChamp .', 32, 5, 5, 10, 10, 5, 2, 1, '9.99', 0, '1485827052', NULL),
-(3, 2, 'Red July Hoodie 1', '29.99', NULL, 1, 1, 0, 0, 0, 0, 0, 0, NULL, 0, '1485827060', NULL),
-(4, 2, 'Red July Hoodie 2', '29.99', NULL, 48, 5, 5, 10, 15, 5, 8, 1, '24.99', 0, '1485827052', NULL),
-(5, 3, 'Red July Cap', '19.99', NULL, 12, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(6, 3, 'Red July Beanie', '14.99', NULL, 18, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(7, 5, 'Red July Cup 1', '9.99', NULL, 20, 0, 0, 0, 0, 0, 0, 1, '4.99', 1, '1485827060', NULL),
-(8, 5, 'Red July Cup 2', '9.99', NULL, 12, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(9, 99, 'Red July Mousepad', '14.99', NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
-(10, 4, 'Red July Backpack', '34.99', NULL, 8, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(11, 4, 'Red July Bag', '15.99', NULL, 12, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(12, 99, 'Red July Notebook', '1.99', NULL, 50, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
-(13, 99, 'Red July Notebook 2', '2.99', NULL, 50, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(14, 6, 'Red July Album 1', '14.99', NULL, 100, 0, 0, 0, 0, 0, 0, 1, '9.99', 1, '1485827052', NULL),
-(15, 6, 'Red July Album 2', '19.99', NULL, 100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1485827060', NULL),
-(16, 7, 'Song 1', '0.99', 'Songname?', -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
-(17, 7, 'Song 2', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
-(18, 7, 'Song 3', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827052', NULL),
-(19, 7, 'Song 4', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827052', NULL),
-(20, 7, 'Album 1 - Digital Download', '14.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, 1, '9.99', 2, NULL, NULL),
-(21, 7, 'Album 2 - Digital Download', '19.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL);
+(1, 1, 'White RJ T-Shirt', '12.99', 'Our white designer T-shirt with the official Red July logo.', 30, 5, 5, 5, 5, 5, 5, 0, NULL, 0, '1485827060', NULL),
+(2, 1, 'Black RJ T-Shirt', '12.99', 'Our black designer T-shirt with the official Red July logo.', 32, 5, 5, 10, 10, 5, 2, 1, '9.99', 0, '1485827052', NULL),
+(3, 2, 'White RJ Hoodie', '29.99', 'Our white designer Hoodie with the official Red July logo.', 1, 1, 0, 0, 0, 0, 0, 0, NULL, 0, '1485827060', NULL),
+(4, 2, 'Black RJ Hoodie', '29.99', 'Our black designer Hoodie with the official Red July logo.', 48, 5, 5, 10, 15, 5, 8, 1, '24.99', 0, '1485827052', NULL),
+(5, 3, 'Red July Cap', '19.99', 'Our official designer Cap with the official Red July Logo.', 12, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
+(7, 5, 'Red July Cup ', '9.99', 'The official Red July Cup, with the official Red July Logo printed on it.', 20, 0, 0, 0, 0, 0, 0, 1, '4.99', 1, '1485827060', NULL),
+(9, 99, 'Red July Mousepad', '14.99', 'The official Red July Mousepad, with the official Logo Printed on it. <br>400 x 300 x 3mm', 0, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
+(10, 4, 'Red July Backpack', '34.99', 'Our official Backpack, with the official Red July Logo printed on the front.', 8, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
+(12, 99, 'Red July Notebook', '1.99', 'A notebook with 50 pages, with the official Red July Logo on the front.', 50, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
+(14, 6, 'Youth Box', '14.99', 'Our  First Album with 5 Songs<br>1. I Can''t Forget You <br>2. 18 Hours <br>3. Fathers Song <br>4. I Need You <br> 5. Confessions', 100, 0, 0, 0, 0, 0, 0, 1, '9.99', 1, '1485827052', NULL),
+(15, 6, 'Conversation', '19.99', 'Our Second Album with 6 Songs<br>1. Toxic <br>2. Sympathy <br>3. Pot Song <br>4. Soul <br>5. From Above <br>6. A Simple Goodbye', 100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1485827060', NULL),
+(16, 7, 'Red July - I Can''t Forget You', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
+(17, 7, 'Red July - 18 Hours', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
+(18, 7, 'Red July - Fathers Song', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827052', NULL),
+(19, 7, 'Red July - I Need You', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827052', NULL),
+(20, 7, 'Youth Box - Download', '14.99', 'Our  First Album with 5 Songs now as Digital Download available!<br>1. I Can''t Forget You <br>2. 18 Hours <br>3. Fathers Song <br>4. I Need You <br> 5. Confessions', -1, NULL, NULL, NULL, NULL, NULL, NULL, 1, '9.99', 2, NULL, NULL),
+(21, 7, 'Conversation - Download', '19.99', 'Our Second Album with 6 Songs now as Digital Download available!<br>1. Toxic <br>2. Sympathy <br>3. Pot Song <br>4. Soul <br>5. From Above <br>6. A Simple Goodbye', -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
+(26, 7, 'Red July - Confessions', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
+(27, 7, 'Red July - Toxic', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
+(28, 7, 'Red July - Sympathy', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
+(29, 7, 'Red July - Pot Song', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
+(30, 7, 'Red July - Soul', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
+(31, 7, 'Red July - From Above', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
+(32, 7, 'Red July - A Simple Goodbye', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -290,11 +306,30 @@ INSERT INTO `product_imgs` (`id`, `product_id`, `path`) VALUES
 (7, 7, 'img/shop/cup1-1.png'),
 (8, 8, 'img/shop/cup1-1.png'),
 (9, 9, 'img/shop/mousepad1-1.png'),
-(10, 10, 'img/shop/bag1-1.png'),
-(11, 11, 'img/shop/bag1-1.png'),
+(10, 10, 'img/shop/backpack1-1.png'),
 (12, 1, 'img/shop/shirt1-2.png'),
 (13, 2, 'img/shop/shirt2-2.png'),
-(14, 12, 'img/shop/notebook1-1.png');
+(14, 12, 'img/shop/notebook1-1.png'),
+(15, 16, 'img/shop/digital1-1.jpg'),
+(16, 17, 'img/shop/digital1-1.jpg'),
+(17, 18, 'img/shop/digital1-1.jpg'),
+(18, 19, 'img/shop/digital1-1.jpg'),
+(19, 20, 'img/shop/album1-1.jpg'),
+(20, 21, 'img/shop/album2-1.jpg'),
+(21, 14, 'img/shop/album1-1.jpg'),
+(22, 15, 'img/shop/album2-1.jpg'),
+(23, 24, NULL),
+(24, 25, NULL),
+(25, 25, NULL),
+(26, 26, 'img/shop/digital1-1.jpg'),
+(27, 27, 'img/shop/digital1-1.jpg'),
+(28, 28, 'img/shop/digital1-1.jpg'),
+(29, 29, 'img/shop/digital1-1.jpg'),
+(30, 28, 'img/shop/digital1-1.jpg'),
+(31, 29, 'img/shop/digital1-1.jpg'),
+(32, 30, 'img/shop/digital1-1.jpg'),
+(33, 31, 'img/shop/digital1-1.jpg'),
+(34, 32, 'img/shop/digital1-1.jpg');
 
 -- --------------------------------------------------------
 
@@ -504,12 +539,12 @@ ALTER TABLE `news_comments`
 -- AUTO_INCREMENT für Tabelle `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT für Tabelle `order_products`
 --
 ALTER TABLE `order_products`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT für Tabelle `payments`
 --
@@ -519,7 +554,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT für Tabelle `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT für Tabelle `product_categories`
 --
@@ -529,7 +564,7 @@ ALTER TABLE `product_categories`
 -- AUTO_INCREMENT für Tabelle `product_imgs`
 --
 ALTER TABLE `product_imgs`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT für Tabelle `shop_comments`
 --
