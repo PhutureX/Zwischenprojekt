@@ -27,7 +27,7 @@
     <header>
 
           <nav>
-            <a href="index.html"><img src="img/logos/headerlogo.png" alt="Logo"/></a>
+            <a href="index.php"><img src="img/logos/headerlogo.png" alt="Logo"/></a>
               <ul>
                 <?php
 

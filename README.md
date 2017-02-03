@@ -21,14 +21,10 @@ Database
 
 ##todo
 
-Shop PHP functions(50%)  
-Shop backend  
-Shop order list  
-Shop product configuration  
-Shop category configuration  
+Shop order list
+Shop backend
 Shop currency change  
 Shop search  
 ***optional*** Shop index Slider  
 ***optional*** Newsletter  
 ***optional*** Contact Us  
-

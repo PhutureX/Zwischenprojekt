@@ -1,7 +1,7 @@
 <div class="dash_site">
-<h2><?php if( $_SESSION['login'] == 1){echo $_SESSION['uname'];}else{echo '';} ?>'s Profile</h2>
+<h2>Backend</h2>
 
-</div>
+
 
 <table cellspacing="0" class="dashboard">
     <tbody>
@@ -40,3 +40,4 @@
     }?>
     </tbody>
 </table>
+</div>

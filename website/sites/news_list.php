@@ -10,7 +10,7 @@
 
 <div class="news-articlelist">
   <?php
-    $sql = "SELECT news.*, users.uname FROM news LEFT JOIN users ON news.author_id = users.id ORDER BY id DESC LIMIT 10";
+    $sql = "SELECT news.*, users.uname FROM news LEFT JOIN users ON news.author_id = users.id ORDER BY created_at DESC";
     $res = mysqli_query($dblink, $sql);
 
     while( $row = mysqli_fetch_assoc($res) ){

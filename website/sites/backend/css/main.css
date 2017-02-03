@@ -301,6 +301,31 @@ input[type=file] {
 }
 
 
+.dash_site {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.dash_site h2{
+  text-align: center;
+}
+
+.dashboard{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dash_table_center {
+  text-align: center;
+  width: 50%;
+}
+
+.dash_table_text {
+  padding-left: 1em;
+  width: 50%;
+}
+
+
 
 
 /* #################### NEWS #################### */

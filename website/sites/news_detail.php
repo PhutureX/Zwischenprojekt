@@ -61,13 +61,13 @@ if( mysqli_num_rows($res) < 1 ){
 
 
               <?php
-              $sql = "SELECT news_comments.*, users.uname FROM news_comments LEFT JOIN users ON users.id = news_comments.author_id WHERE news_id = '{$_GET['id']}' ORDER BY id DESC";
+              $sql = "SELECT news_comments.*, users.uname FROM news_comments LEFT JOIN users ON users.id = news_comments.author_id WHERE news_id = '{$_GET['id']}' ORDER BY created_at DESC";
               $res = mysqli_query($dblink, $sql);
 
               while( $row = mysqli_fetch_assoc($res) ){
               ?>"
                   <div class="comment">
-                      <div class="timestamp" ><?php echo date('d.m.Y', $row['created_at']); ?></div>
+                      <div class="timestamp" ><?php echo date('d.m.Y', $row['created_at']);?></div>
                       <h4><?php echo $row['uname']; ?>:</h4>
                       <p><?php echo $row['comment']; ?></p>
                   </div>

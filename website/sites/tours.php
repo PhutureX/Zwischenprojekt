@@ -16,8 +16,7 @@
         <th width="16%">feat.</th>
         <th width="16%">Location</th>
         <th width="16%">Day</th>
-        <th width="16%">Buy here</th>
-        <th width="16%">Settings</th>
+        <th width="16%">Ticketlinks</th>
     </tr>
     </thead>
     <tbody>
@@ -32,12 +31,7 @@
             <td class="table_center"><?php echo $row['feat']; ?></td>
             <td class="table_center"><?php echo $row['location'] . " in " . $row['city'] . ", " . $row['country']; ?></td>
             <td class="table_center"><?php echo $row['tourday']; ?></td>
-            <td class="table_center"><a href="<?php echo $row['ticketlink']; ?>">Ticketlinks</a></td>
-
-            <td class="table_center">
-                <a href="index.php?page=tours&action=edit&id=<?php echo $row['id']; ?>">Edit</a> |
-                <a href="index.php?page=tours&action=delete&id=<?php echo $row['id']; ?>">Delete</a>
-            </td>
+            <td class="table_center"><a href="<?php echo $row['ticketlink']; ?>">Buy here</a></td>
         </tr>
     <?php } ?>
     </tbody>

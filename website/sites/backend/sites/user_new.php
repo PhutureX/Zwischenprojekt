@@ -12,11 +12,12 @@
       <input type="text" placeholder="Address*" class="register_full_form" name="address" id="address">
       <input type="text" placeholder="City*" class="register_full_form" name="city" id="city">
       <select class="register_half_form" name="register_country" name="country" id="country">
-        <option value="0">Austria</option>
-        <option value="1">Germany</option>
-        <option value="2">Japan</option>
-        <option value="3">United Kingdom</option>
-        <option value="4">United States</option>
+        <option value="Austria" selected>Austria</option>
+        <option value="Germany">Germany</option>
+        <option value="Japan">Japan</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="United Stated">United States</option>
+        <option value="Canada">Canada</option>
       </select>
       <input type="text" placeholder="Postal Code*" class="register_half_form register_postal_fix" name="zip" id="zip">
       <input type="tel" placeholder="Phone" class="register_full_form" name="phone" id="phone">

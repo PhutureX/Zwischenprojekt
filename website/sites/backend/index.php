@@ -14,7 +14,7 @@ if( $_SESSION['login'] != 1 || $_SESSION['is_admin'] != 1 ){
   $page = ( isset($_GET['page'])) ? $_GET['page'] : "home";
 
   if ( $page == "home"){
-    $site = "sites/home.php";
+    $site = "sites/dashboard.php";
   }elseif( $page == "news"){
     $site = "sites/news.php";
   }elseif( $page == "user"){

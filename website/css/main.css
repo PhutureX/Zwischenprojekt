@@ -249,6 +249,8 @@ margin-bottom: 50px;
   background-color: transparent;
 }
 
+
+
 table {
   width: 100%;
 
@@ -285,6 +287,26 @@ td {
   text-align: center;
 }
 
+.dash_site {
+  margin-top: 25px;
+}
+
+
+.dashboard{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.dash_table_center {
+  text-align: center;
+  width: 50%;
+}
+
+.dash_table_text {
+  padding-left: 1em;
+  width: 50%;
+}
 
 /* #################### SLIDER #################### */
 
@@ -316,7 +338,7 @@ a.article_preview {
   text-decoration: none;
 }
 
-.news_site h2{
+.news_site h2, .dash_site h2{
   font-size: 3em;
   color: rgb(179, 24, 25);
   text-align: center;
