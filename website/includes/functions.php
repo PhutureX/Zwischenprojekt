@@ -46,9 +46,9 @@ if( isset($_POST['register']) ){
        array_push($errorsMsg, "Your passwords do not match.");
     }
 
-    if( strlen($_POST['adress']) < 5 ){
+    if( strlen($_POST['address']) < 5 ){
         $errors = true;
-        array_push($errorsMsg, "Please enter a valid adress.");
+        array_push($errorsMsg, "Please enter a valid address.");
     }
 
     if( strlen($_POST['zip']) < 4 && ! is_numeric($_POST['zip']) ){
@@ -72,7 +72,7 @@ if( isset($_POST['register']) ){
         $fname = cleanString($dblink, $_POST['fname']);
         $lname = cleanString($dblink, $_POST['lname']);
         $email = cleanString($dblink, $_POST['email']);
-        $adress = cleanString($dblink, $_POST['address']);
+        $address = cleanString($dblink, $_POST['address']);
         $zip = cleanString($dblink, $_POST['zip']);
         $city = cleanString($dblink, $_POST['city']);
         $phone = cleanString($dblink, $_POST['phone']);
@@ -82,7 +82,7 @@ if( isset($_POST['register']) ){
         $salt = rand(10000, 99999);
         $password = sha1($_POST['password'] . $salt) . ':' . $salt;
 
-        $sql = "INSERT INTO users (uname, first_name, last_name, password, email, address, zip, city, country, phone) VALUES ('$uname', '$fname', '$lname', '$password', '$email', '$adress', '$zip', '$city', '{$_POST['country']}' '$phone')";
+        $sql = "INSERT INTO users (uname, first_name, last_name, password, email, address, zip, city, country, phone) VALUES ('$uname', '$fname', '$lname', '$password', '$email', '$address', '$zip', '$city', '{$_POST['register_country']}', '$phone')";
         mysqli_query($dblink, $sql);
 
         header('Location: index.php?page=register_success');

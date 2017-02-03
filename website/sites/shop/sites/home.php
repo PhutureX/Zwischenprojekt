@@ -1,18 +1,18 @@
   <section class="spotlight">
     <section class="spotlight-top">
-      <a href="#">
+      <a href="index.php?page=productpage&id=1">
         <div class="spotlight-top-product-1">
           <div class="spotlight-top-product-1-bg">
-            <h2>Shirt 1</h2>
-            <h3>100% Cotton</h3>
+            <h2>White RJ T-Shirt</h2>
+            <h3>Official RJ Shirt</h3>
           </div>
         </div>
       </a>
-      <a href="#">
+      <a href="index.php?page=productpage&id=7">
         <div class="spotlight-top-product-2">
           <div class="spotlight-top-product-2-bg">
-            <h2>Cup 1</h2>
-            <h3>100% Cup Material</h3>
+            <h2>Red July Cup</h2>
+            <h3>With Logo</h3>
           </div>
         </div>
       </a>
@@ -20,10 +20,10 @@
     <section class="spotlight-bottom">
       <div class="spotlight-bottom-row">
         <div class="spotlight-bottom-row-wrapper">
-          <a href="#">
+          <a href="index.php?page=productpage&id=9">
             <div class="spotlight-bottom-row-inner">
               <div class="spotlight-bottom-row-inner-heading">
-                <h2>Mousepad 1</h2>
+                <h2>Red July Mousepad</h2>
                 <h3>With Logo</h3>
               </div>
             </div>
@@ -33,11 +33,11 @@
       </div>
       <div class="spotlight-bottom-row">
         <div class="spotlight-bottom-row-wrapper">
-          <a href="#">
+          <a href="index.php?page=productpage&id=12">
             <div class="spotlight-bottom-row-inner">
               <div class="spotlight-bottom-row-inner-heading">
-                <h2>Notepad 1</h2>
-                <h3>With Logo & Paper, Yay!</h3>
+                <h2>Notebook</h2>
+                <h3>With Logo</h3>
               </div>
             </div>
             <div class="spotlight-bottom-row-bg-2"></div>
@@ -46,11 +46,11 @@
       </div>
       <div class="spotlight-bottom-row">
         <div class="spotlight-bottom-row-wrapper">
-          <a href="#">
+          <a href="index.php?page=productpage&id=2">
             <div class="spotlight-bottom-row-inner">
               <div class="spotlight-bottom-row-inner-heading">
-                <h2>Hoodie 1</h2>
-                <h3>With Hood, 100% Cotton</h3>
+                <h2>Black RJ T-Shirt</h2>
+                <h3>Official RJ Shirt</h3>
               </div>
             </div>
             <div class="spotlight-bottom-row-bg-3"></div>
@@ -59,11 +59,11 @@
       </div>
       <div class="spotlight-bottom-row">
         <div class="spotlight-bottom-row-wrapper">
-          <a href="#">
+          <a href="index.php?page=productpage&id=10">
             <div class="spotlight-bottom-row-inner">
               <div class="spotlight-bottom-row-inner-heading">
-                <h2>Shirt 2</h2>
-                <h3>With Logo, 100% Cotton</h3>
+                <h2>Red July Backpack</h2>
+                <h3>With Logo</h3>
               </div>
             </div>
             <div class="spotlight-bottom-row-bg-4"></div>

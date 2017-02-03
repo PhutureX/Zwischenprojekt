@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 03. Feb 2017 um 06:42
+-- Erstellungszeit: 03. Feb 2017 um 07:41
 -- Server-Version: 10.1.19-MariaDB
 -- PHP-Version: 5.6.28
 
@@ -419,9 +419,11 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `uname`, `first_name`, `last_name`, `password`, `email`, `address`, `zip`, `city`, `country`, `phone`, `is_admin`, `is_premium`, `rank`) VALUES
 (1, 'OfficialxSmoker', 'Patrick', 'Gomez', '2f2a515f52a607e82988aa8dbadb96ad283b85d1:41543', 'red-july@hotmail.com', 'Seuttergasse 10/15', 1130, 'Vienna', 'Austria', '06644571908', 1, NULL, NULL),
 (2, 'PhutureX', 'Christoph', 'Reich', '43a79e498cbf02d21c758a8482b46111c8c2f713:32409', 'christoph.reich@gmx.at', 'Rolandweg 10/5', 1160, 'Vienna', 'Austria', '06647281920', 1, NULL, NULL),
-(3, 'RandomUser', 'Random', 'User', 'db4e2cbe55cb5b9e4a794c6b087cb738ce9f226c:83783', 'random@user.com', 'Randomstreet 10/15', 1130, 'Vienna', 'Austria', '06602193123', NULL, NULL, NULL),
-(4, 'Phillipson', 'Phil', 'Lippe', '08b03f32bfdbc174b7c795b840ac296dbfe2620f:19211', 'phil@lip.com', 'Beefsontown 10/2', 1130, 'Kobe', 'Japan', '06644871201', NULL, NULL, NULL),
-(5, 'Johnny19', 'Johnny', 'Bravo', '52f6484f835090327311436766fc1ba799729114:63179', 'johnny@hotmail.com', 'Johnson Road 3/21', 1130, 'Köln', 'Germany', '06761829324', 0, NULL, NULL);
+(3, 'RandomUser', 'Random', 'User', 'db4e2cbe55cb5b9e4a794c6b087cb738ce9f226c:83783', 'random@user.com', 'Randomstreet 10/15', 1130, 'Vienna', 'Austria', '06602193123', 0, NULL, NULL),
+(4, 'Phillipson', 'Phil', 'Lippe', '08b03f32bfdbc174b7c795b840ac296dbfe2620f:19211', 'phil@lip.com', 'Beefsontown 10/2', 1130, 'Kobe', 'Japan', '06644871201', 0, NULL, NULL),
+(5, 'Johnny19', 'Johnny', 'Bravo', '52f6484f835090327311436766fc1ba799729114:63179', 'johnny@hotmail.com', 'Johnson Road 3/21', 1130, 'Köln', 'Germany', '06761829324', 0, NULL, NULL),
+(6, 'admin', 'Admin', 'Istrator', '853d33d0663b1b1988130e6af8640050a2e29646:18981', 'admin@admin.com', 'Adminstreet 1', 1111, 'Admin City', 'Austria', '12345678901', 1, NULL, NULL),
+(8, 'test', 'test', 'test', 'f04b669390ce7ee75112b61dabbf9f987b1e33cc:13677', 'test@test.com', 'teststreet 112', 1111, 'testcity112', 'Canada', '12345678901', 0, NULL, NULL);
 
 --
 -- Indizes der exportierten Tabellen
@@ -584,7 +586,7 @@ ALTER TABLE `tours`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

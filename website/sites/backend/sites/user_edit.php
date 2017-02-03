@@ -19,11 +19,12 @@ $row = mysqli_fetch_assoc($res);
       <input type="text" value="<?php echo $row['address']; ?>" class="register_full_form" name="address" id="address">
       <input type="text" value="<?php echo $row['city']; ?>" class="register_full_form" name="city" id="city">
       <select class="register_half_form" name="country" id="country">
-        <option value="0" <?php if($row['country'] == 0){echo "selected";} ?>>Austria</option>
-        <option value="1" <?php if($row['country'] == 1){echo "selected";} ?>>Germany</option>
-        <option value="2" <?php if($row['country'] == 2){echo "selected";} ?>>Japan</option>
-        <option value="3" <?php if($row['country'] == 3){echo "selected";} ?>>United Kingdom</option>
-        <option value="4" <?php if($row['country'] == 4){echo "selected";} ?>>United States</option>
+        <option value="Austria" <?php if($row['country'] == "Austria"){echo "selected";} ?>>Austria</option>
+        <option value="Germany" <?php if($row['country'] == "Germany"){echo "selected";} ?>>Germany</option>
+        <option value="Japan" <?php if($row['country'] == "Japan"){echo "selected";} ?>>Japan</option>
+        <option value="United Kingdom" <?php if($row['country'] == "United Kingdom"){echo "selected";} ?>>United Kingdom</option>
+        <option value="United States" <?php if($row['country'] == "United States"){echo "selected";} ?>>United States</option>
+        <option value="Canada" <?php if($row['country'] == "Canada"){echo "selected";} ?>>Canada</option>
       </select>
       <select class="register_half_form" name="is_admin" id="bepermission">
         <option value="0" <?php if($row['is_admin'] == 0){echo "selected";} ?>>User</option>
