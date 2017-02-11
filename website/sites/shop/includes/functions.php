@@ -118,40 +118,31 @@ if( isset($_POST['checkout_step3']) ){
 
   if( $shop_errors === false ){
 
-    $_SESSION['guest_payment'] = $_POST['payment-option'];
-
     $sql = "SELECT id FROM orders ORDER BY id DESC LIMIT 1";
     $res = mysqli_query($dblink, $sql);
 
-
-    if( mysqli_num_rows($res) > 0){
-      $lastOrder = mysqli_fetch_assoc($res);
-      $num = $lastOrder['id'] + 1;
-      $orderNumber = "2017" . $num;
-      $status = "0";
+    if( mysqli_num_rows($res) > 0 ){
+        $lastOrder = mysqli_fetch_assoc($res);
+        $num = $lastOrder['id'] + 1;
+        $orderNumber = "2016" . $num;
+        $status = 0;
     }else{
-      $orderNumber = "20171";
+        $orderNumber = "20161";
     }
 
     $createdAt = time();
+    mysqli_query($dblink, "INSERT INTO orders (ordernumber, user_id, created_at, payment, status) VALUES ('$orderNumber', '{$_SESSION['uid']}', '$createdAt', '2', '$status')");
 
-    if( $_SESSION['login'] == 1){
-      mysqli_query($dblink, "INSERT INTO orders (ordernumber, user_id, created_at, payment_id, status) VALUES ('$orderNumber', '{$_SESSION['uid']}', '$createdAt', '{$_SESSION['guest_payment']}', '$status')");
-    }else{
-      mysqli_query($dblink, "INSERT INTO orders (ordernumber, user_id, created_at, payment_id, status) VALUES ('$orderNumber', '0', '$createdAt', '{$_SESSION['guest_payment']}', '$status')");
-    }
-
-
-    $lastID = mysqli_insert_id($dblink);
+    $lastId = mysqli_insert_id($dblink);
 
     foreach($_SESSION['wk'] as $product){
-      $productId = $product[0];
-      $productQuantity = $product[1];
-      $newStock = $stock - $productQuantity;
-      mysqli_query($dblink, "INSERT INTO order_products (order_id, product_id, quantity) VALUES ('$lastID', '$productId', '$productQuantity')");
+        $productId = $product[0];
+        $productQuantity = $product[1];
+        mysqli_query($dblink, "INSERT INTO order_products (order_id, product_id, quantity) VALUES ('$lastId', '$productId', '$productQuantity')");
 
+        // TODO: Stock for products
+        // TODO: Guest Order processing
     }
-
       unset($_SESSION['wk']);
       unset($_SESSION['guest_email']);
       unset($_SESSION['guest_fname']);
@@ -161,8 +152,6 @@ if( isset($_POST['checkout_step3']) ){
       unset($_SESSION['guest_country']);
       unset($_SESSION['guest_zip']);
       unset($_SESSION['guest_tel']);
-      unset($_SESSION['guest_shipping']);
-      unset($_SESSION['guest_payment']);
 
       $_SESSION['checkoutstep'] = 4;
   }

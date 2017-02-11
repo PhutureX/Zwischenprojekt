@@ -105,3 +105,9 @@ if( isset($_POST['updatetour']) ){
     WHERE id = '{$_GET['id']}'";
     mysqli_query($dblink, $sql);
 }
+
+if( isset($_POST['dofilter']) ){
+    $search = $_POST['orderfilter'];
+}
+
+?>

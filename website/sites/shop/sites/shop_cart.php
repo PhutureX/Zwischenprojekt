@@ -24,7 +24,7 @@
                       $sql = "SELECT * FROM products WHERE id = '{$val[0]}'";
                       $res = mysqli_query($dblink, $sql);
                       $row = mysqli_fetch_assoc($res);
-                      $sql2 = "SELECT * FROM product_imgs WHERE id = '{$val[0]}'";
+                      $sql2 = "SELECT * FROM product_imgs WHERE product_id = '{$val[0]}'";
                       $res2 = mysqli_query($dblink, $sql2);
                       $row2 = mysqli_fetch_assoc($res2);
                    ?>
@@ -34,7 +34,7 @@
                                 <a href="#" class="cart-item-img"><img src="<?php echo $row2['path']; ?>" alt="Product"></a>
                                 <div class="cart-item-info">
                                     <a href="#"><h3><?php echo $row['name']; ?></h3></a>
-                                    <h4>Size: <?php echo $val[2]; ?></h4>
+                                    <h4><?php echo $val[2]; ?></h4>
                                 </div>
                             </div>
                         </td>
@@ -56,6 +56,6 @@
             <div class="shop-cart-checkout">
                 <h2><span>Total:</span> &euro; <?php echo $total; ?></h2>
                 <h3>Free Shipping when you spend €60.00 or more</h3>
-                <a href="<?php if( empty($_SESSION['wk'])){echo '#';}else{echo 'index.php?page=checkout';} ?>" <?php if( empty($_SESSION['wk'])){echo 'style="background-color: transparent;"';}?>><?php if( empty($_SESSION['wk'])){echo 'Your Cart is empty';}else{echo 'Checkout';} ?></a>
+                <a href="<?php if( empty($_SESSION['wk'])){echo '#';}else{echo 'index.php?page=checkout';} ?>" <?php if( empty($_SESSION['wk'])){echo 'style="background-color: transparent; cursor:not-allowed;"';}?>><?php if( empty($_SESSION['wk'])){echo 'Your Cart is empty';}else{echo 'Checkout';} ?></a>
             </div>
         </div>

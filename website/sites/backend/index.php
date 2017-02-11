@@ -23,6 +23,10 @@ if( $_SESSION['login'] != 1 || $_SESSION['is_admin'] != 1 ){
     $site = "sites/tours.php";
   }elseif( $page == "shop"){
     $site = "sites/shop.php";
+  }elseif( $page == "shopedit"){
+    $site = "sites/shopedit.php";
+  }elseif( $page == "orders"){
+    $site = "sites/orders.php";
   }else{
     $site = "sites/404.php";
   }

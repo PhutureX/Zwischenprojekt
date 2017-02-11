@@ -349,7 +349,7 @@ th {
   text-shadow: 2px 2px 4px #000000;
   padding: 0.5em 0;
   font-size: 1em;
-
+  text-align: left;
 }
 
 td {
