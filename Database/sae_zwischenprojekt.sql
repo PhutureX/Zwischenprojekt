@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 03. Feb 2017 um 07:41
+-- Erstellungszeit: 11. Feb 2017 um 07:39
 -- Server-Version: 10.1.19-MariaDB
 -- PHP-Version: 5.6.28
 
@@ -90,7 +90,9 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `preview`, `content`, `created_at`, `author_id`, `headerimg`, `img1`, `img2`, `img3`) VALUES
-(1, 'Coole News', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', '1483492221', 1, 'img/news/viperroom.png', 'img/news/viperroom1.jpg', 'img/news/viperroom2.jpg', 'img/news/viperroom3.jpg');
+(1, 'Red is not Dead tour starting soon!', 'We know exactly how long you''ve been waiting for our new album. Of course we all know what a new album means, that''s right! Starting this February, we will tour around the area of Austria, Germany, Switzerland, Paris, Italy, etc. For more information about our tour, make sure to check out our tours page!', 'We know exactly how long you''ve been waiting for our new album. Of course we all know what a new album means, that''s right! Starting this February, we will tour around the area of Austria, Germany, Switzerland, Paris, Italy, etc. For more information about our tour, make sure to check out our tours page!\r\n\r\nSo we know exactly how you feel. We''ve been in the same spot just a few years ago! In our last tour "Summer Splash 2016" we got to know you guys really good and we can assure you, we miss you at least as much as our hardcore fans have missed us. Without the people supporting us throughout the whole year, we would''ve been nowhere near from where we are now. After we heard you sing along to "18 Hours" or "From Above", we just couldn''t resist to make more and more and more for you!\r\n\r\nOur motivation, creating more content for you guys, just skyrocketed to a level we would''ve never dreamt possible. So we worked hard to be able to arrange and perform the best tour this album could ever dream to deserve. \r\n\r\nSo get ready, cause we ain''t stopping!', '1483392221', 1, 'img/news/viperroom.png', 'img/news/viperroom1.jpg', 'img/news/viperroom2.jpg', 'img/news/viperroom3.jpg'),
+(2, '"Conversation" is out now!', 'Just a brief reminder, that our new album is out for sale from this day on! We really hope you guys will enjoy the tracks on this one just as much as our other songs and we are pumped to see you guys very soon!', 'Just a brief reminder, that our new album is out for sale from this day on! We really hope you guys will enjoy the tracks on this one just as much as our other songs and we are pumped to see you guys very soon! We''ve known exactly what we have gotten our selves into when Patrick had the idea of this albums theme. You will be surprised to not only see more songs with deeper meaning, but also songs in our good old fashioned alternative/punk scene.\r\n\r\nAfter the support we''ve gotten from you guys, we just knew we couldn''t stop here! We spend everyday trying to write the sickest songs and bringing them up to perfection. You know, usually good songs write themselves, now imagine we polish them up a bit and make sure we dont''t lose our touch with the old school genre of ours.\r\n\r\nThis album drop does not only mean, you guys get to hear new music, it also means that you can prepare yourselves for some good months to come. Make sure you always keep track of us since we will be announcing a lot of new stuff very soon!', '1482916516', 1, 'img/news/album2-1.jpg', 'img/news/conversation1.jpg', 'img/news/conversation2.jpg', 'img/news/conversation3.jpg'),
+(3, 'Red July wishes you Merry Christmas!', 'On behalf of every member of the band aswell as the whole production team, we wish you merry christmas! Looking back at 2016 we could not complain even a little! You guys have supported us a lot this year. Lets recap a bit shall we?', 'On behalf of every member of the band aswell as the whole production team, we wish you merry christmas! Looking back at 2016 we could not complain even a little! You guys have supported us a lot this year. Lets recap a bit shall we?\r\n\r\nWhen 2016 started we had just released our single "Fathers Song" which by the way is to date still our most sold solo EP! Woohoo! But let''s not forget what happened right after that. We released From above which was a huge hit especially in the UK. Followed by "Toxic" and last but not least, we released "18 Hours" which is still our most viewed video on Youtube. After a few concerts around in Europe, we decided to start our mid year surprise, which was the ultimate alternative/punk experience!\r\n\r\nThat''s right, you guys blew us away in the "Summer Splash" tour. It was the best feeling ever! So why would anyone think we wouldn''t wanna do anything like that again? We''re not saying that a "Summer Splash 2" is on your way. But i think you guys will be quite happy with the news we are going to share pretty soon, so stay tuned and keep an eye on the news! ', '1482218619', 1, 'img/news/mcrjh.jpg', 'img/news/mcrj1.jpg', 'img/news/mcrj3.jpg', 'img/news/mcrj2.jpg');
 
 -- --------------------------------------------------------
 
@@ -111,8 +113,18 @@ CREATE TABLE `news_comments` (
 --
 
 INSERT INTO `news_comments` (`id`, `news_id`, `author_id`, `comment`, `created_at`) VALUES
-(1, 1, 1, 'asdasdas', '1485705229'),
-(2, 2, 1, 'asdasda', '1485712688');
+(1, 2, 2, 'FeelsGoodMan', '1484705229'),
+(2, 2, 1, 'savage', '1483712688'),
+(3, 2, 9, 'Woah thats Awesome DUDE!!!!!', '1484119128'),
+(4, 3, 9, 'Are yo kidding me!? its been like 4 months since you guys just chilled out here', '1483119165'),
+(5, 1, 9, 'DOOOOOOD I KNEW IT!', '1484119181'),
+(6, 1, 9, 'sry caps...', '1484119190'),
+(7, 3, 10, 'dude who need christmas lol', '1483119624'),
+(8, 1, 10, 'OMFG thats like the best christmas present ever!!!!!!!!!!', '1484119657'),
+(9, 2, 10, 'TELL ME IM NOT DREAMING OOOOOOOOOOOOOOHHHHH i''ve waited too long for this thats awesome omg!!', '1484119711'),
+(10, 2, 5, 'NOOO WAAAAY ARE YOU KIDDING MEEE!!!!! 2017 best year ever!!!! <3', '1484129382'),
+(11, 3, 3, 'what a joke laaaaaameeeeeee', '1483292842'),
+(13, 1, 4, 'lol Jeffrey', '1484122113');
 
 -- --------------------------------------------------------
 
@@ -134,17 +146,11 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `ordernumber`, `user_id`, `created_at`, `payment`, `status`) VALUES
-(1, 20171, 0, 1486015947, '0', 0),
-(2, 20172, 0, 1486015974, '0', 0),
-(3, 20173, 0, 1486015985, '0', 0),
-(4, 20174, 2, 1486016067, '0', 0),
-(5, 20175, 2, 1486016241, '0', 0),
-(6, 20176, 2, 1486016327, '0', 0),
-(7, 20177, 0, 1486016388, '0', 0),
-(8, 20178, 0, 1486016535, '0', 0),
-(9, 20179, 0, 1486060752, '0', 0),
-(10, 201710, 0, 1486062507, '0', 0),
-(11, 201711, 0, 1486073497, '0', 0);
+(12, 20161, 2, 1486789257, '2', 0),
+(13, 201613, 0, 1486789367, '2', 0),
+(14, 201614, 2, 1486789610, '2', 0),
+(15, 201615, 2, 1486794891, '2', 0),
+(16, 201616, 0, 1486794946, '2', 0);
 
 -- --------------------------------------------------------
 
@@ -164,22 +170,26 @@ CREATE TABLE `order_products` (
 --
 
 INSERT INTO `order_products` (`id`, `order_id`, `product_id`, `quantity`) VALUES
-(1, 0, 1, 1),
-(2, 0, 1, 1),
-(3, 5, 1, 1),
-(4, 6, 7, 1),
-(5, 7, 1, 1),
-(6, 8, 3, 1),
-(7, 9, 1, 1),
-(8, 10, 1, 1),
-(9, 11, 3, 1),
-(10, 0, 3, 1),
-(11, 0, 3, 1),
-(12, 0, 3, 1),
-(13, 0, 3, 1),
-(14, 0, 3, 1),
-(15, 0, 3, 1),
-(16, 0, 3, 1);
+(32, 0, 2, 1),
+(33, 0, 4, 1),
+(34, 0, 4, 1),
+(35, 0, 3, 1),
+(36, 0, 1, 1),
+(37, 12, 1, 1),
+(38, 13, 1, 2),
+(39, 13, 3, 1),
+(40, 13, 7, 1),
+(41, 14, 1, 1),
+(42, 15, 12, 1),
+(43, 15, 3, 1),
+(44, 15, 14, 1),
+(45, 15, 2, 3),
+(46, 15, 7, 1),
+(47, 15, 15, 1),
+(48, 16, 2, 1),
+(49, 16, 14, 1),
+(50, 16, 15, 1),
+(51, 16, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -381,13 +391,13 @@ CREATE TABLE `tours` (
 --
 
 INSERT INTO `tours` (`id`, `title`, `feat`, `location`, `city`, `country`, `tourday`, `ticketlink`) VALUES
-(1, 'Red''s not Dead', 'Cake Break', 'Palladium', 'Cologne', 'Germany', '14.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
-(2, 'Red''s not Dead', 'Cake Break', 'Sporthalle Hamburg', 'Hamburg', 'Germany', '16.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
-(3, 'Red''s not Dead', 'Cake Break', 'Columbiahalle', 'Berlin', 'Germany', '17.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
-(4, 'Red''s not Dead', 'Cake Break', 'Gasometer', 'Vienna', 'Austria', '18.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
-(5, 'Red is not Dead', 'Cake Break', 'Alcatraz', 'Milan', 'Italy', '20.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
-(6, 'Red''s not Dead', 'Cake Break', 'Volkshaus', 'Zürich', 'Switzerland', '21.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
-(11, 'Red''s not Dead', 'Cake Break', 'Trianon', 'Paris', 'France', '23.02.2017', '');
+(1, 'Red is not Dead Tour', 'Cake Break', 'Palladium', 'Cologne', 'Germany', '14.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(2, 'Red is not Dead Tour', 'Cake Break', 'Sporthalle Hamburg', 'Hamburg', 'Germany', '16.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(3, 'Red is not Dead Tour', 'Cake Break', 'Columbiahalle', 'Berlin', 'Germany', '17.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(4, 'Red is not Dead Tour', 'Cake Break', 'Gasometer', 'Vienna', 'Austria', '18.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(5, 'Red is not Dead Tour', 'Cake Break', 'Alcatraz', 'Milan', 'Italy', '20.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(6, 'Red is not Dead Tour', 'Cake Break', 'Volkshaus', 'Zürich', 'Switzerland', '21.02.2017', 'http://www.ticketmaster.at/search/?keyword=red+july&language=en-us'),
+(11, 'Red is not Dead Tour', 'Cake Break', 'Trianon', 'Paris', 'France', '23.02.2017', '');
 
 -- --------------------------------------------------------
 
@@ -422,8 +432,9 @@ INSERT INTO `users` (`id`, `uname`, `first_name`, `last_name`, `password`, `emai
 (3, 'RandomUser', 'Random', 'User', 'db4e2cbe55cb5b9e4a794c6b087cb738ce9f226c:83783', 'random@user.com', 'Randomstreet 10/15', 1130, 'Vienna', 'Austria', '06602193123', 0, NULL, NULL),
 (4, 'Phillipson', 'Phil', 'Lippe', '08b03f32bfdbc174b7c795b840ac296dbfe2620f:19211', 'phil@lip.com', 'Beefsontown 10/2', 1130, 'Kobe', 'Japan', '06644871201', 0, NULL, NULL),
 (5, 'Johnny19', 'Johnny', 'Bravo', '52f6484f835090327311436766fc1ba799729114:63179', 'johnny@hotmail.com', 'Johnson Road 3/21', 1130, 'Köln', 'Germany', '06761829324', 0, NULL, NULL),
-(6, 'admin', 'Admin', 'Istrator', '853d33d0663b1b1988130e6af8640050a2e29646:18981', 'admin@admin.com', 'Adminstreet 1', 1111, 'Admin City', 'Austria', '12345678901', 1, NULL, NULL),
-(8, 'test', 'test', 'test', 'f04b669390ce7ee75112b61dabbf9f987b1e33cc:13677', 'test@test.com', 'teststreet 112', 1111, 'testcity112', 'Canada', '12345678901', 0, NULL, NULL);
+(6, 'admin', 'Admin', 'Istrator', '171288e5fbc7fb97004229ca0dbbdc720076e615:74973', 'admin@redjuly.com', 'Rainbowstreet 42', 1337, 'Arkham City', 'United States', '06603748273', 1, NULL, NULL),
+(9, 'JeffreyFan', 'Jeffrey', 'Porter', '5c0ca6f735323ad974e61666b0c2784dbebe4454:71031', 'Jeffport@gmail.com', 'Bakerstreet 62', 42311, 'Exeter', 'United Kingdom', '01282748293', NULL, NULL, NULL),
+(10, 'Dark_Dragon_Lord_666', 'Death', 'Lord', 'af27191225ccdfa8533d21893d96419d25c57c30:69740', 'd6d6d6@gmail.com', 'why should i tell you', 12412, 'Kansas', 'United Stated', '0123729372', NULL, NULL, NULL);
 
 --
 -- Indizes der exportierten Tabellen
@@ -531,22 +542,22 @@ ALTER TABLE `nav`
 -- AUTO_INCREMENT für Tabelle `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT für Tabelle `news_comments`
 --
 ALTER TABLE `news_comments`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT für Tabelle `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT für Tabelle `order_products`
 --
 ALTER TABLE `order_products`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT für Tabelle `payments`
 --
@@ -586,7 +597,7 @@ ALTER TABLE `tours`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
