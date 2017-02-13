@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 11. Feb 2017 um 07:39
+-- Erstellungszeit: 13. Feb 2017 um 09:50
 -- Server-Version: 10.1.19-MariaDB
 -- PHP-Version: 5.6.28
 
@@ -138,6 +138,7 @@ CREATE TABLE `orders` (
   `user_id` int(11) DEFAULT NULL,
   `created_at` int(11) DEFAULT NULL,
   `payment` varchar(11) DEFAULT NULL,
+  `shipping` varchar(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -145,12 +146,11 @@ CREATE TABLE `orders` (
 -- Daten für Tabelle `orders`
 --
 
-INSERT INTO `orders` (`id`, `ordernumber`, `user_id`, `created_at`, `payment`, `status`) VALUES
-(12, 20161, 2, 1486789257, '2', 0),
-(13, 201613, 0, 1486789367, '2', 0),
-(14, 201614, 2, 1486789610, '2', 0),
-(15, 201615, 2, 1486794891, '2', 0),
-(16, 201616, 0, 1486794946, '2', 0);
+INSERT INTO `orders` (`id`, `ordernumber`, `user_id`, `created_at`, `payment`, `shipping`, `status`) VALUES
+(50, 20171, 2, 1486975193, 'PayPal', 'UPS', 0),
+(51, 201751, 2, 1486975512, 'Sofort', 'Post', 0),
+(52, 201752, 2, 1486975547, 'PayPal', 'Post', 0),
+(53, 201753, 2, 1486975698, 'Sofort', 'UPS', 0);
 
 -- --------------------------------------------------------
 
@@ -162,6 +162,7 @@ CREATE TABLE `order_products` (
   `id` int(11) UNSIGNED NOT NULL,
   `order_id` int(11) DEFAULT NULL,
   `product_id` int(11) DEFAULT NULL,
+  `size` varchar(100) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -169,27 +170,29 @@ CREATE TABLE `order_products` (
 -- Daten für Tabelle `order_products`
 --
 
-INSERT INTO `order_products` (`id`, `order_id`, `product_id`, `quantity`) VALUES
-(32, 0, 2, 1),
-(33, 0, 4, 1),
-(34, 0, 4, 1),
-(35, 0, 3, 1),
-(36, 0, 1, 1),
-(37, 12, 1, 1),
-(38, 13, 1, 2),
-(39, 13, 3, 1),
-(40, 13, 7, 1),
-(41, 14, 1, 1),
-(42, 15, 12, 1),
-(43, 15, 3, 1),
-(44, 15, 14, 1),
-(45, 15, 2, 3),
-(46, 15, 7, 1),
-(47, 15, 15, 1),
-(48, 16, 2, 1),
-(49, 16, 14, 1),
-(50, 16, 15, 1),
-(51, 16, 4, 1);
+INSERT INTO `order_products` (`id`, `order_id`, `product_id`, `size`, `quantity`) VALUES
+(32, 0, 2, '0', 1),
+(33, 0, 4, '0', 1),
+(34, 0, 4, '0', 1),
+(35, 0, 3, '0', 1),
+(36, 0, 1, '0', 1),
+(124, 50, 4, '2XL', 1),
+(125, 50, 1, 'XL', 1),
+(126, 50, 3, '3XL', 1),
+(127, 50, 12, 'Red July Notebook', 1),
+(128, 50, 14, 'Youth Box', 1),
+(129, 50, 15, 'Conversation', 1),
+(130, 51, 2, 'L', 1),
+(131, 52, 4, 'L', 1),
+(132, 52, 2, '2XL', 1),
+(133, 52, 10, 'Red July Backpack', 1),
+(134, 52, 14, 'Youth Box', 1),
+(135, 53, 1, 'XL', 1),
+(136, 53, 7, 'Red July Cup ', 1),
+(137, 53, 12, 'Red July Notebook', 1),
+(138, 53, 14, 'Youth Box', 1),
+(139, 53, 15, 'Conversation', 1),
+(140, 53, 10, 'Red July Backpack', 1);
 
 -- --------------------------------------------------------
 
@@ -242,17 +245,17 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `name`, `price`, `description`, `stock`, `stock_s`, `stock_m`, `stock_l`, `stock_xl`, `stock_2xl`, `stock_3xl`, `sale`, `price_sale`, `product_type`, `created_at`, `updated_at`) VALUES
-(1, 1, 'White RJ T-Shirt', '12.99', 'Our white designer T-shirt with the official Red July logo.', 30, 5, 5, 5, 5, 5, 5, 0, NULL, 0, '1485827060', NULL),
-(2, 1, 'Black RJ T-Shirt', '12.99', 'Our black designer T-shirt with the official Red July logo.', 32, 5, 5, 10, 10, 5, 2, 1, '9.99', 0, '1485827052', NULL),
-(3, 2, 'White RJ Hoodie', '29.99', 'Our white designer Hoodie with the official Red July logo.', 1, 1, 0, 0, 0, 0, 0, 0, NULL, 0, '1485827060', NULL),
-(4, 2, 'Black RJ Hoodie', '29.99', 'Our black designer Hoodie with the official Red July logo.', 48, 5, 5, 10, 15, 5, 8, 1, '24.99', 0, '1485827052', NULL),
+(1, 1, 'White RJ T-Shirt', '12.99', 'Our white designer T-shirt with the official Red July logo.', 25, 5, 5, 3, 3, 4, 5, 0, NULL, 0, '1485827060', NULL),
+(2, 1, 'Black RJ T-Shirt', '12.99', 'Our black designer T-shirt with the official Red July logo.', 32, 4, 5, 9, 10, 4, 2, 1, '9.99', 0, '1485827052', NULL),
+(3, 2, 'White RJ Hoodie', '29.99', 'Our white designer Hoodie with the official Red July logo.', 21, 0, 5, 0, 2, 5, 9, 0, NULL, 0, '1485827060', NULL),
+(4, 2, 'Black RJ Hoodie', '29.99', 'Our black designer Hoodie with the official Red July logo.', 42, 2, 5, 8, 15, 4, 8, 1, '24.99', 0, '1485827052', NULL),
 (5, 3, 'Red July Cap', '19.99', 'Our official designer Cap with the official Red July Logo.', 12, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(7, 5, 'Red July Cup ', '9.99', 'The official Red July Cup, with the official Red July Logo printed on it.', 20, 0, 0, 0, 0, 0, 0, 1, '4.99', 1, '1485827060', NULL),
-(9, 99, 'Red July Mousepad', '14.99', 'The official Red July Mousepad, with the official Logo Printed on it. <br>400 x 300 x 3mm', 0, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
-(10, 4, 'Red July Backpack', '34.99', 'Our official Backpack, with the official Red July Logo printed on the front.', 8, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(12, 99, 'Red July Notebook', '1.99', 'A notebook with 50 pages, with the official Red July Logo on the front.', 50, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
-(14, 6, 'Youth Box', '14.99', 'Our  First Album with 5 Songs<br>1. I Can''t Forget You <br>2. 18 Hours <br>3. Fathers Song <br>4. I Need You <br> 5. Confessions', 100, 0, 0, 0, 0, 0, 0, 1, '9.99', 1, '1485827052', NULL),
-(15, 6, 'Conversation', '19.99', 'Our Second Album with 6 Songs<br>1. Toxic <br>2. Sympathy <br>3. Pot Song <br>4. Soul <br>5. From Above <br>6. A Simple Goodbye', 100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1485827060', NULL),
+(7, 5, 'Red July Cup ', '9.99', 'The official Red July Cup, with the official Red July Logo printed on it.', 23, 0, 0, 0, 0, 0, 0, 1, '4.99', 1, '1485827060', NULL),
+(9, 99, 'Red July Mousepad', '14.99', 'The official Red July Mousepad, with the official Logo Printed on it. <br>400 x 300 x 3mm', 30, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
+(10, 4, 'Red July Backpack', '34.99', 'Our official Backpack, with the official Red July Logo printed on the front.', 23, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
+(12, 99, 'Red July Notebook', '1.99', 'A notebook with 50 pages, with the official Red July Logo on the front.', 97, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
+(14, 6, 'Youth Box', '14.99', 'Our  First Album with 5 Songs<br>1. I Can''t Forget You <br>2. 18 Hours <br>3. Fathers Song <br>4. I Need You <br> 5. Confessions', 76, 0, 0, 0, 0, 0, 0, 1, '9.99', 1, '1485827052', NULL),
+(15, 6, 'Conversation', '19.99', 'Our Second Album with 6 Songs<br>1. Toxic <br>2. Sympathy <br>3. Pot Song <br>4. Soul <br>5. From Above <br>6. A Simple Goodbye', 147, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1485827060', NULL),
 (16, 7, 'Red July - I Can''t Forget You', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
 (17, 7, 'Red July - 18 Hours', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
 (18, 7, 'Red July - Fathers Song', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827052', NULL),
@@ -428,13 +431,30 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `uname`, `first_name`, `last_name`, `password`, `email`, `address`, `zip`, `city`, `country`, `phone`, `is_admin`, `is_premium`, `rank`) VALUES
 (1, 'OfficialxSmoker', 'Patrick', 'Gomez', '2f2a515f52a607e82988aa8dbadb96ad283b85d1:41543', 'red-july@hotmail.com', 'Seuttergasse 10/15', 1130, 'Vienna', 'Austria', '06644571908', 1, NULL, NULL),
-(2, 'PhutureX', 'Christoph', 'Reich', '43a79e498cbf02d21c758a8482b46111c8c2f713:32409', 'christoph.reich@gmx.at', 'Rolandweg 10/5', 1160, 'Vienna', 'Austria', '06647281920', 1, NULL, NULL),
+(2, 'PhutureX', 'Christoph', 'Reich', '43a79e498cbf02d21c758a8482b46111c8c2f713:32409', 'christoph.reich@gmx.at', 'Rolandweg 10/5', 1160, 'Vienna', 'Austria', '06605502285', 1, NULL, NULL),
 (3, 'RandomUser', 'Random', 'User', 'db4e2cbe55cb5b9e4a794c6b087cb738ce9f226c:83783', 'random@user.com', 'Randomstreet 10/15', 1130, 'Vienna', 'Austria', '06602193123', 0, NULL, NULL),
 (4, 'Phillipson', 'Phil', 'Lippe', '08b03f32bfdbc174b7c795b840ac296dbfe2620f:19211', 'phil@lip.com', 'Beefsontown 10/2', 1130, 'Kobe', 'Japan', '06644871201', 0, NULL, NULL),
 (5, 'Johnny19', 'Johnny', 'Bravo', '52f6484f835090327311436766fc1ba799729114:63179', 'johnny@hotmail.com', 'Johnson Road 3/21', 1130, 'Köln', 'Germany', '06761829324', 0, NULL, NULL),
 (6, 'admin', 'Admin', 'Istrator', '171288e5fbc7fb97004229ca0dbbdc720076e615:74973', 'admin@redjuly.com', 'Rainbowstreet 42', 1337, 'Arkham City', 'United States', '06603748273', 1, NULL, NULL),
 (9, 'JeffreyFan', 'Jeffrey', 'Porter', '5c0ca6f735323ad974e61666b0c2784dbebe4454:71031', 'Jeffport@gmail.com', 'Bakerstreet 62', 42311, 'Exeter', 'United Kingdom', '01282748293', NULL, NULL, NULL),
-(10, 'Dark_Dragon_Lord_666', 'Death', 'Lord', 'af27191225ccdfa8533d21893d96419d25c57c30:69740', 'd6d6d6@gmail.com', 'why should i tell you', 12412, 'Kansas', 'United Stated', '0123729372', NULL, NULL, NULL);
+(10, 'Dark_Dragon_Lord_666', 'Death', 'Lord', 'af27191225ccdfa8533d21893d96419d25c57c30:69740', 'd6d6d6@gmail.com', 'why should i tell you', 12412, 'Kansas', 'United Stated', '0123729372', NULL, NULL, NULL),
+(16, 'Guest', 'Max', 'Musterman', '', 'max@musterman.com', 'Musterstraße 1', 11225, 'Muster', 'Germany', '', NULL, NULL, NULL),
+(17, 'Guest', 'Max', 'Musterman', '', 'max@musterman.com', 'Musterstraße 1', 11225, 'Muster', 'Germany', '', NULL, NULL, NULL),
+(18, 'Guest', 'Max', 'Musterman', '', 'max@musterman.com', 'Musterstraße 1', 11225, 'Muster', 'Germany', '', NULL, NULL, NULL),
+(19, 'Guest', 'Max', 'Musterman', '', 'max@musterman.com', 'Musterstraße 1', 11225, 'Muster', 'Germany', '', NULL, NULL, NULL),
+(20, 'Guest', 'Kappa', 'Chino', '', 'Kappa123@kappa.com', 'Kappastreet 1', 123123, 'Meme City', 'United States', '', NULL, NULL, NULL),
+(21, 'Guest', 'Kappa', 'Chino', '', 'Kappa123@kappa.com', 'Kappastreet 1', 1234, 'Kappahausen', 'Austria', '', NULL, NULL, NULL),
+(22, 'Guest', 'Kappa', 'Chino', '', 'Kappa123@kappa.com', 'Kappastreet 1', 1234, 'Kappahausen', 'Austria', '', NULL, NULL, NULL),
+(23, 'Guest', 'Kappa', 'Chino', '', 'Kappa123@kappa.com', 'Kappastreet 1', 1234, 'Kappahausen', 'Austria', '', NULL, NULL, NULL),
+(24, 'Guest', 'Guest', 'Customer', '', 'guest@customer.com', 'Guest', 1234, 'Guestcity', 'Austria', '', NULL, NULL, NULL),
+(25, 'Guest', 'Test', 'Customer', '', 'test@test.com', 'Teststreet', 1111, 'Test', 'Austria', '', NULL, NULL, NULL),
+(26, 'Guest', 'Test', 'Customer', '', 'test@test.com', 'Teststreet', 1111, 'Test', 'Austria', '', NULL, NULL, NULL),
+(27, 'Guest', 'Test', 'Customer', '', 'test@test.com', 'Teststreet', 1111, 'Test', 'Austria', '', NULL, NULL, NULL),
+(28, 'Guest', 'Test', 'Customer', '', 'test@test.com', 'Teststreet', 1111, 'Test', 'Austria', '', NULL, NULL, NULL),
+(29, 'Guest', 'Test', 'Customer', '', 'test@test.com', 'Teststreet', 1111, 'Test', 'Austria', '', NULL, NULL, NULL),
+(30, 'Guest', 'Test', 'Customer', '', 'test@test.com', 'Teststreet', 1111, 'Test', 'Austria', '', NULL, NULL, NULL),
+(31, 'Guest', 'Stock', 'Test', '', 'stock@test.com', 'Stock 1', 1111, 'Stock', 'Austria', '', NULL, NULL, NULL),
+(32, 'Guest', 'Stock', 'Test', '', 'stock@test.com', 'Stock 1', 1111, 'Stock', 'Austria', '', NULL, NULL, NULL);
 
 --
 -- Indizes der exportierten Tabellen
@@ -552,12 +572,12 @@ ALTER TABLE `news_comments`
 -- AUTO_INCREMENT für Tabelle `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 --
 -- AUTO_INCREMENT für Tabelle `order_products`
 --
 ALTER TABLE `order_products`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 --
 -- AUTO_INCREMENT für Tabelle `payments`
 --
@@ -597,7 +617,7 @@ ALTER TABLE `tours`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

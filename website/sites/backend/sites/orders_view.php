@@ -5,7 +5,7 @@ $orderRES = mysqli_query($dblink, $orderSQL);
 $order = mysqli_fetch_assoc($orderRES);
 ?>
 <h2>View Order: <?php echo $order['ordernumber']; ?></h2>
-<p>Bought at: <?php echo date('d.m.Y - h:i', $order['created_at']); ?></p>
+<p>Ordered at: <?php echo date('d.m.Y - h:i', $order['created_at']); ?></p>
 
 <form action="" method="post" enctype="multipart/form-data">
     <label for="status">Status</label>
@@ -17,7 +17,7 @@ $order = mysqli_fetch_assoc($orderRES);
     </select>
     <br>
     <br>
-    <input type="submit" value="Status ändern" name="editstatus">
+    <input type="submit" value="Change Status" name="editstatus">
 </form>
 
 <hr>
@@ -32,7 +32,7 @@ $user = mysqli_fetch_assoc($userRES);
 ?>
 <p>Name: <?php echo $user['first_name']; echo " "; echo $user['last_name'];  ?></p>
 <p>E-Mail: <?php echo $user['email']; ?></p>
-<p>Adresse: <?php echo $user['address'] . ', ' . $user['zip'] . ' ' . $user['city'] . ', ' . $user['country']; ?></p>
+<p>Address: <?php echo $user['address'] . ', ' . $user['zip'] . ' ' . $user['city'] . ', ' . $user['country']; ?></p>
 
 <hr>
 
@@ -42,6 +42,7 @@ $user = mysqli_fetch_assoc($userRES);
     <thead>
     <tr>
         <th>Product</th>
+        <th width="100px">Size</th>
         <th width="100px">Quantity</th>
         <th width="150px" style="text-align: right;">Price/piece</th>
         <th width="150px" style="text-align: right;">Total</th>
@@ -64,15 +65,21 @@ $user = mysqli_fetch_assoc($userRES);
 
         $total += $productInfo['price'] * $products['quantity'];
 
-        $shipping = 0;
-        if($total > 60){
+        if($order['shipping'] === "Post" && $total >= 60){
           $shipping = 0;
-        }else{
+        }elseif($order['shipping'] === "Post" && $total < 60){
           $shipping = 4.99;
+        }elseif($order['shipping'] === "DHL"){
+          $shipping = 9.99;
+        }elseif($order['shipping'] === "UPS"){
+          $shipping = 12.99;
+        }else{
+          $shipping = "Error";
         }
     ?>
         <tr>
-            <td><?php echo $productInfo['name'] ?></td>
+            <td><?php echo $productInfo['name']; ?></td>
+            <td><?php if(strlen($products['size']) > 3 ) { echo "-"; }else{ echo $products['size']; } ?></td>
             <td><?php echo $products['quantity']; ?></td>
             <td style="text-align: right;">&euro; <?php echo $productInfo['price'] ?></td>
             <td style="text-align: right;">&euro; <?php echo $productInfo['price'] * $products['quantity']; ?></td>
@@ -84,10 +91,12 @@ $user = mysqli_fetch_assoc($userRES);
         <td>Shipping</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td style="text-align: right;"><?php if($total > 60){ echo "Free"; }else{ echo "&euro; ".$shipping; } ?></td>
+        <td>&nbsp;</td>
+        <td style="text-align: right;"><?php if($order['shipping'] === "Post" && $total >= 60){ echo "Free"; }else{ echo "&euro; ".$shipping; } ?></td>
     </tr>
     <tr>
         <td><strong>Total</strong></td>
+        <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td style="text-align: right;">&euro; <?php echo $total + $shipping; ?></td>
@@ -98,10 +107,6 @@ $user = mysqli_fetch_assoc($userRES);
 <hr>
 
 <h3>Payment Method</h3>
-<?php
-$paymentSQL = "SELECT * FROM payments WHERE id = '{$order['payment']}'";
-$paymentRES = mysqli_query($dblink, $paymentSQL);
-
-$payment = mysqli_fetch_assoc($paymentRES);
-?>
-<p><?php echo $payment['name']; ?></p>
+<p><?php echo $order['payment']; ?></p>
+<h3>Shipping Method</h3>
+<p><?php echo $order['shipping']; ?></p>

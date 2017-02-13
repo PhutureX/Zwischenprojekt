@@ -44,19 +44,19 @@
                 <h2>Shipping Method</h2>
                 <ul class="checkout-options" id="shipping-option">
                   <li class="checkout-options-element">
-                    <input type="radio" id="shipping-option-1" value="shipping1" name="shipping-option" checked>
+                    <input type="radio" id="shipping-option-1" value="Post" name="shipping-option" checked>
                     <label for="shipping-option-1">Post
                       <p><?php if ( $total >= 60 ){echo 'Free';}else{echo '€ 4.99';};?></p>
                     </label>
                   </li>
                   <li class="checkout-options-element">
-                    <input type="radio" id="shipping-option-2" value="shipping2" name="shipping-option">
+                    <input type="radio" id="shipping-option-2" value="DHL" name="shipping-option">
                     <label for="shipping-option-2">DHL
                       <p>€ 9.99</p>
                     </label>
                   </li>
                   <li class="checkout-options-element">
-                    <input type="radio" id="shipping-option-3" value="shipping3" name="shipping-option">
+                    <input type="radio" id="shipping-option-3" value="UPS" name="shipping-option">
                     <label for="shipping-option-3">UPS
                       <p>€ 12.99</p>
                     </label>
@@ -78,7 +78,7 @@
                       $sql = "SELECT * FROM products WHERE id = '{$val[0]}'";
                       $res = mysqli_query($dblink, $sql);
                       $row = mysqli_fetch_assoc($res);
-                      $sql2 = "SELECT * FROM product_imgs WHERE id = '{$val[0]}'";
+                      $sql2 = "SELECT * FROM product_imgs WHERE product_id = '{$val[0]}'";
                       $res2 = mysqli_query($dblink, $sql2);
                       $row2 = mysqli_fetch_assoc($res2);
                  ?>

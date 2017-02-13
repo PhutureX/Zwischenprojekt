@@ -59,15 +59,28 @@ if( isset($_POST['checkout_step1']) ){
   }
 
   if( $shop_errors === false ){
-    $_SESSION['checkoutstep'] = 2;
-    $_SESSION['guest_email'] = $email;
+
     $_SESSION['guest_fname'] = $first_name;
     $_SESSION['guest_lname'] = $last_name;
     $_SESSION['guest_address'] = $address;
+    $_SESSION['guest_zip'] = $zip;
     $_SESSION['guest_city'] = $city;
     $_SESSION['guest_country'] = $country;
-    $_SESSION['guest_zip'] = $zip;
-    $_SESSION['guest_tel'] = $phone;
+
+    if($_SESSION['login'] === 0){
+      $sql = "INSERT INTO users (uname, first_name, last_name, password, email, address, zip, city, country, phone) VALUES ('Guest', '{$_POST['fname']}', '{$_POST['lname']}', '', '{$_POST['email']}', '{$_POST['address']}', '{$_POST['zip']}', '{$_POST['city']}', '{$_POST['country']}', '{$_POST['tel']}' )";
+      mysqli_query($dblink, $sql);
+
+      $sql2 = "SELECT * FROM users ORDER BY id DESC LIMIT 1";
+      $res = mysqli_query($dblink, $sql2);
+      $row = mysqli_fetch_assoc($res);
+
+      $_SESSION['uid'] = $row['id'];
+
+      $_SESSION['checkoutstep'] = 2;
+    }else{
+      $_SESSION['checkoutstep'] = 2;
+    }
   }
 }
 
@@ -79,7 +92,7 @@ if( isset($_POST['checkout_step2']) ){
 
   if( $shop_errors === false ){
     $_SESSION['checkoutstep'] = 3;
-    $_SESSION['guest_shipping'] = $_POST['shipping-option'];
+    $_SESSION['shipping'] = $_POST['shipping-option'];
   }
 }
 
@@ -118,32 +131,72 @@ if( isset($_POST['checkout_step3']) ){
 
   if( $shop_errors === false ){
 
+    $_SESSION['payment'] = $_POST['payment-option'];
+
     $sql = "SELECT id FROM orders ORDER BY id DESC LIMIT 1";
     $res = mysqli_query($dblink, $sql);
 
     if( mysqli_num_rows($res) > 0 ){
         $lastOrder = mysqli_fetch_assoc($res);
         $num = $lastOrder['id'] + 1;
-        $orderNumber = "2016" . $num;
+        $orderNumber = "2017" . $num;
         $status = 0;
     }else{
-        $orderNumber = "20161";
+        $orderNumber = "20171";
     }
 
     $createdAt = time();
-    mysqli_query($dblink, "INSERT INTO orders (ordernumber, user_id, created_at, payment, status) VALUES ('$orderNumber', '{$_SESSION['uid']}', '$createdAt', '2', '$status')");
+    mysqli_query($dblink, "INSERT INTO orders (ordernumber, user_id, created_at, payment, shipping, status) VALUES ('$orderNumber', '{$_SESSION['uid']}', '$createdAt', '{$_SESSION['payment']}', '{$_SESSION['shipping']}', '$status')");
 
     $lastId = mysqli_insert_id($dblink);
 
     foreach($_SESSION['wk'] as $product){
         $productId = $product[0];
         $productQuantity = $product[1];
-        mysqli_query($dblink, "INSERT INTO order_products (order_id, product_id, quantity) VALUES ('$lastId', '$productId', '$productQuantity')");
+        $productSize = $product[2];
+        $sql2 = "SELECT * FROM products WHERE id = $productId";
+        $res2 = mysqli_query($dblink, $sql2);
+        $row = mysqli_fetch_assoc($res2);
+
+        if($productSize == "S"){
+          $newStockS = $row['stock_s'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock_s= '$newStockS'  WHERE id = $productId");
+          $newStock = $row['stock'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock= '$newStock'  WHERE id = $productId");
+        }elseif($productSize == "M"){
+          $newStockM = $row['stock_m'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock_m= '$newStockM'  WHERE id = $productId");
+          $newStock = $row['stock'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock= '$newStock'  WHERE id = $productId");
+        }elseif($productSize == "L"){
+          $newStockL = $row['stock_l'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock_l= '$newStockL'  WHERE id = $productId");
+          $newStock = $row['stock'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock= '$newStock'  WHERE id = $productId");
+        }elseif($productSize == "XL"){
+          $newStockXL = $row['stock_xl'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock_xl= '$newStockXL'  WHERE id = $productId");
+          $newStock = $row['stock'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock= '$newStock'  WHERE id = $productId");
+        }elseif($productSize == "2XL"){
+          $newStock2XL = $row['stock_2xl'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock_2xl= '$newStock2XL'  WHERE id = $productId");
+          $newStock = $row['stock'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock= '$newStock'  WHERE id = $productId");
+        }elseif($productSize == "3XL"){
+          $newStock3XL = $row['stock_3xl'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock_3xl= '$newStock3XL'  WHERE id = $productId");
+          $newStock = $row['stock'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock= '$newStock'  WHERE id = $productId");
+        }else{
+          $newStock = $row['stock'] - $productQuantity;
+          mysqli_query($dblink, "UPDATE products SET stock= '$newStock'  WHERE id = $productId");
+        }
+
+        mysqli_query($dblink, "INSERT INTO order_products (order_id, product_id, size, quantity) VALUES ('$lastId', '$productId', '$productSize', '$productQuantity')");
 
         // TODO: Stock for products
-        // TODO: Guest Order processing
     }
-      unset($_SESSION['wk']);
       unset($_SESSION['guest_email']);
       unset($_SESSION['guest_fname']);
       unset($_SESSION['guest_lname']);

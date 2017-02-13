@@ -71,7 +71,7 @@
                       $sql = "SELECT * FROM products WHERE id = '{$val[0]}'";
                       $res = mysqli_query($dblink, $sql);
                       $row = mysqli_fetch_assoc($res);
-                      $sql2 = "SELECT * FROM product_imgs WHERE id = '{$val[0]}'";
+                      $sql2 = "SELECT * FROM product_imgs WHERE product_id = '{$val[0]}'";
                       $res2 = mysqli_query($dblink, $sql2);
                       $row2 = mysqli_fetch_assoc($res2);
                  ?>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="shop-checkout-price-val">
                   <h3>&euro; <?php echo $total ?></h3>
-                  <h3><?php if( $_SESSION['guest_shipping'] == "shipping1" && $total >= 60){echo 'Free'; $shipping = 0; }elseif( $_SESSION['guest_shipping'] == "shipping1"){echo '€ 4.99'; $shipping = 4.99;}elseif( $_SESSION['guest_shipping'] == "shipping2"){echo '€ 9.99'; $shipping = 9.99;}elseif( $_SESSION['guest_shipping'] == "shipping3"){echo '€ 12.99'; $shipping = 12.99; } ?></h3>
+                  <h3><?php if( $_SESSION['shipping'] == "shipping1" && $total >= 60){echo 'Free'; $shipping = 0; }elseif( $_SESSION['shipping'] == "Post"){echo '€ 4.99'; $shipping = 4.99;}elseif( $_SESSION['shipping'] == "DHL"){echo '€ 9.99'; $shipping = 9.99;}elseif( $_SESSION['shipping'] == "UPS"){echo '€ 12.99'; $shipping = 12.99; } ?></h3>
                 </div>
               </div>
               <div class="shop-checkout-total">

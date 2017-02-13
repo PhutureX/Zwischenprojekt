@@ -42,7 +42,7 @@
       </nav>
       <nav class="shop-nav-list">
         <ul>
-          <li><a href="index.php?page=cart"><i class="fa fa-shopping-cart" aria-hidden="true"><div class="cart-count">12</div></i></a></li>
+          <li><a href="index.php?page=cart"><i class="fa fa-shopping-cart" aria-hidden="true"><div class="cart-count"><?php echo count($_SESSION['wk']); ?></div></i></a></li>
           <li><a href="#"><i class="fa fa-eur" aria-hidden="true"></i></a>
             <ul>
               <li><a href="#"><i class="fa fa-usd" aria-hidden="true"></i> USD</a></li>
