@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <title>Red July</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon"href="../../img/logos/favicon.ico" />
+    <!-- Font Awesome Libary -->
     <link rel="stylesheet" href="../../css/font-awesome.min.css">
     <!-- Slider Libary -->
     <link rel="stylesheet" type="text/css" href="libaries/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="libaries/slick/slick-theme.css"/>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <!-- -->
+    <!-- JQuery -->
     <script language="JavaScript" type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
   </head>
   <body>

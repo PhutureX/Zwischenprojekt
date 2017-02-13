@@ -5,7 +5,7 @@
     <title>Red July</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="libaries/flexslider/flexslider.css" type="text/css">
+    <link rel="shortcut icon"href="../../img/logos/favicon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="libaries/flexslider/jquery.flexslider.js"></script>
     <script type="text/javascript">
