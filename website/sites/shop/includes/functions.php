@@ -2,9 +2,39 @@
 $shop_errors = false;
 $shop_errorsMsg = array();
 
+
 if( isset($_POST['insertwk']) ){
+  $sql = "SELECT products.*, product_categories.name AS category FROM products LEFT JOIN product_categories ON products.category_id = product_categories.id WHERE products.id = '{$_GET['id']}'";
+  $res = mysqli_query($dblink, $sql);
+  $row = mysqli_fetch_assoc($res);
+  if($row['stock'] == 0){
+    $shop_errors = true;
+    array_push($shop_errorsMsg, '<script>alert("Sold Out!");</script>');
+  }elseif($_POST['quantity'] > $row['stock']){
+    $shop_errors = true;
+    array_push($shop_errorsMsg, '<script>alert("We dont have enough left!");</script>');
+  }elseif($_POST['size'] === "S" && $_POST['quantity'] > $row['stock_s']){
+    $shop_errors = true;
+    array_push($shop_errorsMsg, '<script>alert("We dont have enough left of that size!");</script>');
+  }elseif($_POST['size'] === "M" && $_POST['quantity'] > $row['stock_m']){
+    $shop_errors = true;
+    array_push($shop_errorsMsg, '<script>alert("We dont have enough left of that size!");</script>');
+  }elseif($_POST['size'] === "L" && $_POST['quantity'] > $row['stock_l']){
+    $shop_errors = true;
+    array_push($shop_errorsMsg, '<script>alert("We dont have enough left of that size!");</script>');
+  }elseif($_POST['size'] === "XL" && $_POST['quantity'] > $row['stock_xl']){
+    $shop_errors = true;
+    array_push($shop_errorsMsg, '<script>alert("We dont have enough left of that size!");</script>');
+  }elseif($_POST['size'] === "2XL" && $_POST['quantity'] > $row['stock_2xl']){
+    $shop_errors = true;
+    array_push($shop_errorsMsg, '<script>alert("We dont have enough left of that size!");</script>');
+  }elseif($_POST['size'] === "3XL" && $_POST['quantity'] > $row['stock_3xl']){
+    $shop_errors = true;
+    array_push($shop_errorsMsg, '<script>alert("We dont have enough left of that size!");</script>');
+  }else{
     $product = array($_POST['pid'], $_POST['quantity'], $_POST['size']);
     array_push($_SESSION['wk'], $product);
+  }
 }
 
 if( isset($_POST['checkout_step1']) ){

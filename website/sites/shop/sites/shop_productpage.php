@@ -9,6 +9,13 @@
                 <li><a href="index.php?page=<?php echo lcfirst($row['category']); ?>"><?php echo $row['category']; ?></a></li>
                 <li><a href="#"><?php echo $row['name']; ?></a></li>
             </ol>
+            <?php
+              if( $shop_errors === true){
+                foreach( $shop_errorsMsg as $error){
+                  echo "<p>$error</p>";
+                }
+              }
+             ?>
             <div class="shop-product-page">
               <div class="shop-product-gallery">
                 <?php

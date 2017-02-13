@@ -1,4 +1,8 @@
 
+<?php
+var_dump($_SESSION['wk']);
+ ?>
+
 <div id="shop-cart" class="shop-wrapper">
             <ol class="breadcrumbs">
                 <li><a href="index.php?page=home">Shop</a></li>
