@@ -42,13 +42,20 @@
                             <input type="number" name="" value="<?php echo $val[1]; ?>">
                         </td>
                         <td>
-                            <h4>&euro; <?php echo $val[1] * $row['price']; ?></h4>
+                            <h4>&euro; <?php if($row['sale'] == 0){ echo $val[1] * $row['price']; }elseif($row['sale'] == 1){ echo $val[1] * $row['price_sale']; } ?></h4>
                         </td>
                         <td>
                             <a href="#" class="cart-item-del"><h4>X</h4></a>
                         </td>
                     </tr>
-                    <?php $total += $val[1] * $row['price']; ?>
+                    <?php
+                      if($row['sale'] == 0){
+                        $subtotal = $row['price'];
+                      }elseif($row['sale'] == 1){
+                        $subtotal = $row['price_sale'];
+                      }
+                      $total += $val[1] * $subtotal;
+                    ?>
                     <?php endforeach; ?>
 
                 </tbody>

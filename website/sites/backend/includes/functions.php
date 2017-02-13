@@ -106,6 +106,15 @@ if( isset($_POST['updatetour']) ){
     mysqli_query($dblink, $sql);
 }
 
+if( isset($_POST['editstatus']) ){
+
+    $sql = "UPDATE orders SET status = '{$_POST['status']}' WHERE id = '{$_GET['id']}'";
+    mysqli_query($dblink, $sql);
+
+    header('Location: index.php?page=orders');
+    exit();
+}
+
 if( isset($_POST['dofilter']) ){
     $search = $_POST['orderfilter'];
 }

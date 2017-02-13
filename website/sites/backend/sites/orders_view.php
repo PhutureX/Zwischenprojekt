@@ -63,7 +63,11 @@ $user = mysqli_fetch_assoc($userRES);
 
         $productInfo = mysqli_fetch_assoc($productsSubRES);
 
-        $total += $productInfo['price'] * $products['quantity'];
+        if($productInfo['sale'] == 0){
+          $total += $productInfo['price'] * $products['quantity'];
+        }elseif($productInfo['sale'] == 1){
+          $total += $productInfo['price_sale'] * $products['quantity'];
+        }
 
         if($order['shipping'] === "Post" && $total >= 60){
           $shipping = 0;

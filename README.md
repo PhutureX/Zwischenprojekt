@@ -26,6 +26,7 @@ Database
 Shop product configuration  
 Shop currency change  
 Shop search  
+Shop checkout navigation  
 ***optional*** Shop Discount Code  
 ***optional*** Shop index Slider  
 ***optional*** Newsletter  

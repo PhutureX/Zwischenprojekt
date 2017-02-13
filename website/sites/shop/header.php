@@ -31,8 +31,8 @@
           </li>
           <li><a href="index.php?page=albums">Albums &#9662;</a>
             <ul>
-              <li><a href="index.php?page=productpage&id=14">Album 1<span>&#10143;</span></a></li>
-              <li><a href="index.php?page=productpage&id=15">Album 2<span>&#10143;</span></a></li>
+              <li><a href="index.php?page=productpage&id=14">Youth Box<span>&#10143;</span></a></li>
+              <li><a href="index.php?page=productpage&id=15">Conversation<span>&#10143;</span></a></li>
             </ul>
           </li>
           <li><a href="index.php?page=downloads">Digital Downloads</a></li>
@@ -69,7 +69,7 @@
               <i class="fa fa-search" aria-hidden="true">
                 <form action="#">
                   <input id="header-search" name="search" type="text" placeholder="Search...">
-                  <input id="header-search-submit" type="submit">
+                  <input id="header-search-submit" name="shop-search" type="submit">
                 </form>
               </i>
             </a>

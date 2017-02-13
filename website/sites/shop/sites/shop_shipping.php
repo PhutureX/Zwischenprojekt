@@ -91,10 +91,17 @@
                       <p><?php echo $val[2]; ?></p>
                     </td>
                     <td>
-                      <h3>&euro; <?php echo $val[1] * $row['price']; ?></h3>
+                      <h3>&euro; <?php if($row['sale'] == 0){ echo $val[1] * $row['price']; }elseif($row['sale'] == 1){ echo $val[1] * $row['price_sale']; } ?></h3>
                     </td>
                   </tr>
-                  <?php $total += $val[1] * $row['price']; ?>
+                  <?php
+                    if($row['sale'] == 0){
+                      $subtotal = $row['price'];
+                    }elseif($row['sale'] == 1){
+                      $subtotal = $row['price_sale'];
+                    }
+                    $total += $val[1] * $subtotal;
+                  ?>
                   <?php endforeach; ?>
                 </tbody>
               </table>
