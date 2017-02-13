@@ -1,8 +1,3 @@
-
-<?php
-var_dump($_SESSION['wk']);
- ?>
-
 <div id="shop-cart" class="shop-wrapper">
             <ol class="breadcrumbs">
                 <li><a href="index.php?page=home">Shop</a></li>
@@ -35,9 +30,9 @@ var_dump($_SESSION['wk']);
                     <tr>
                         <td>
                             <div class="cart-item">
-                                <a href="#" class="cart-item-img"><img src="<?php echo $row2['path']; ?>" alt="Product"></a>
+                                <a href="index.php?page=productpage&id=<?php echo $val[0]; ?>" class="cart-item-img"><img src="<?php echo $row2['path']; ?>" alt="Product"></a>
                                 <div class="cart-item-info">
-                                    <a href="#"><h3><?php echo $row['name']; ?></h3></a>
+                                    <a href="index.php?page=productpage&id=<?php echo $val[0]; ?>"><h3><?php echo $row['name']; ?></h3></a>
                                     <h4><?php echo $val[2]; ?></h4>
                                 </div>
                             </div>

@@ -7,6 +7,8 @@ if( isset($_POST['insertwk']) ){
   $sql = "SELECT products.*, product_categories.name AS category FROM products LEFT JOIN product_categories ON products.category_id = product_categories.id WHERE products.id = '{$_GET['id']}'";
   $res = mysqli_query($dblink, $sql);
   $row = mysqli_fetch_assoc($res);
+
+
   if($row['stock'] == 0){
     $shop_errors = true;
     array_push($shop_errorsMsg, '<script>alert("Sold Out!");</script>');
@@ -224,8 +226,6 @@ if( isset($_POST['checkout_step3']) ){
         }
 
         mysqli_query($dblink, "INSERT INTO order_products (order_id, product_id, size, quantity) VALUES ('$lastId', '$productId', '$productSize', '$productQuantity')");
-
-        // TODO: Stock for products
     }
       unset($_SESSION['guest_email']);
       unset($_SESSION['guest_fname']);

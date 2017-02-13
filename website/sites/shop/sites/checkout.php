@@ -8,6 +8,8 @@ if( $_SESSION['checkoutstep'] == 1 ){
   require 'sites/shop_payment.php';
 }elseif ($_SESSION['checkoutstep'] == 4) {
   require 'sites/shop_completed.php';
+}elseif ($_SESSION['checkoutstep'] == 5) {
+  require 'sites/shop_error.php';
 }
 
  ?>
