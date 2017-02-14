@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 14. Feb 2017 um 14:21
+-- Erstellungszeit: 14. Feb 2017 um 18:05
 -- Server-Version: 10.1.19-MariaDB
 -- PHP-Version: 5.6.28
 
@@ -148,7 +148,8 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `ordernumber`, `user_id`, `created_at`, `payment`, `shipping`, `status`) VALUES
 (50, 20171, 2, 1486975193, 'PayPal', 'UPS', 0),
-(86, 201751, 2, 1487078446, 'Sofort', 'DHL', 0);
+(86, 201751, 2, 1487078446, 'Sofort', 'DHL', 0),
+(87, 201787, 2, 1487091624, 'PayPal', 'DHL', 1);
 
 -- --------------------------------------------------------
 
@@ -194,7 +195,10 @@ INSERT INTO `order_products` (`id`, `order_id`, `product_id`, `size`, `quantity`
 (174, 0, 9, 'Red July Mousepad', 1),
 (193, 86, 1, 'S', 1),
 (194, 86, 1, 'S', 1),
-(195, 86, 15, 'Conversation', 1);
+(195, 86, 15, 'Conversation', 1),
+(196, 87, 7, 'Red July Cup ', 1),
+(197, 87, 9, 'Red July Mousepad', 1),
+(198, 87, 14, 'Youth Box', 1);
 
 -- --------------------------------------------------------
 
@@ -252,11 +256,11 @@ INSERT INTO `products` (`id`, `category_id`, `name`, `price`, `description`, `st
 (3, 2, 'White RJ Hoodie', '29.99', 'Our white designer Hoodie with the official Red July logo.', 25, 5, 5, 3, 2, 5, 5, 0, NULL, 0, '1485827060', NULL),
 (4, 2, 'Black RJ Hoodie', '29.99', 'Our black designer Hoodie with the official Red July logo.', 31, 1, 5, 5, 10, 5, 5, 1, '24.99', 0, '1485827052', NULL),
 (5, 3, 'Red July Cap', '19.99', 'Our official designer Cap with the official Red July Logo.', 12, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(7, 5, 'Red July Cup ', '9.99', 'The official Red July Cup, with the official Red July Logo printed on it.', 23, 0, 0, 0, 0, 0, 0, 1, '4.99', 1, '1485827060', NULL),
-(9, 99, 'Red July Mousepad', '14.99', 'The official Red July Mousepad, with the official Logo Printed on it. <br>400 x 300 x 3mm', 2, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
+(7, 5, 'Red July Cup ', '9.99', 'The official Red July Cup, with the official Red July Logo printed on it.', 22, 0, 0, 0, 0, 0, 0, 1, '4.99', 1, '1485827060', NULL),
+(9, 99, 'Red July Mousepad', '14.99', 'The official Red July Mousepad, with the official Logo Printed on it. <br>400 x 300 x 3mm', 1, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
 (10, 4, 'Red July Backpack', '34.99', 'Our official Backpack, with the official Red July Logo printed on the front.', 18, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
 (12, 99, 'Red July Notebook', '1.99', 'A notebook with 50 pages, with the official Red July Logo on the front.', 99, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
-(14, 6, 'Youth Box', '14.99', 'Our  First Album with 5 Songs<br>1. I Can''t Forget You <br>2. 18 Hours <br>3. Fathers Song <br>4. I Need You <br> 5. Confessions', 74, 0, 0, 0, 0, 3, 0, 1, '9.99', 1, '1485827052', NULL),
+(14, 6, 'Youth Box', '14.99', 'Our  First Album with 5 Songs<br>1. I Can''t Forget You <br>2. 18 Hours <br>3. Fathers Song <br>4. I Need You <br> 5. Confessions', 73, 0, 0, 0, 0, 3, 0, 1, '9.99', 1, '1485827052', NULL),
 (15, 6, 'Conversation', '19.99', 'Our Second Album with 6 Songs<br>1. Toxic <br>2. Sympathy <br>3. Pot Song <br>4. Soul <br>5. From Above <br>6. A Simple Goodbye', 145, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1485827060', NULL),
 (16, 7, 'Red July - I Can''t Forget You', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
 (17, 7, 'Red July - 18 Hours', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
@@ -557,12 +561,12 @@ ALTER TABLE `news_comments`
 -- AUTO_INCREMENT für Tabelle `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 --
 -- AUTO_INCREMENT für Tabelle `order_products`
 --
 ALTER TABLE `order_products`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
 --
 -- AUTO_INCREMENT für Tabelle `payments`
 --
@@ -602,7 +606,7 @@ ALTER TABLE `tours`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
