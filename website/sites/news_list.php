@@ -19,7 +19,7 @@
         <section>
           <a class="article_preview" href="index.php?page=news&id=<?php echo $row['id']; ?>" >
             <figure>
-              <img src="<?php echo $row['headerimg']; ?>" alt="<?php echo $row['title']; ?>" width="300px" height="300px"/>
+              <img src="<?php echo $row['headerimg']; ?>" alt="<?php echo $row['title']; ?>" width="320px" height="300px"/>
             </figure>
 
               <article>

@@ -9,9 +9,9 @@
     <div class="footer-row">
       <h3>Red July</h3>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sites/news.html">News</a></li>
-        <li><a href="#">Tours</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php?page=news">News</a></li>
+        <li><a href="index.php?page=tours">Tours</a></li>
       </ul>
     </div>
     <div class="footer-row">
@@ -39,10 +39,10 @@
     </div>
     <div class="footer-social">
       <ul>
-        <li><a href="#"><i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.youtube.com/user/Tomfelix101"><i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.facebook.com/patrick.gomez.9212"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/?lang=de"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/officialxsmoker/?hl=en"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li>
       </ul>
     </div>
   </div>

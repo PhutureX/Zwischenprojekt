@@ -110,7 +110,9 @@ if( mysqli_num_rows($res) < 1 ){
                   </form>
               </div>
           <?php }else{ ?>
-              <p>Please login to comment.</p>
+            <div class="btn space">
+            <a href="index.php?page=login">login to comment</a>
+            </div>
           <?php } ?>
       </div>
 

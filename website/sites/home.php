@@ -2,7 +2,7 @@
 
 <div class="news_site">
 
-<div class="news-articlelist">
+<div class="news-articlelistmain">
 <?php
 $sql = "SELECT news.*, users.uname FROM news LEFT JOIN users ON news.author_id = users.id ORDER BY created_at DESC LIMIT 3";
 $res = mysqli_query($dblink, $sql);
@@ -32,6 +32,6 @@ while( $row = mysqli_fetch_assoc($res) ){
 
 </div>
 
-<div class="btn">
+<div class="btn space">
   <a href="index.php?page=news">More News!</a>
 </div>

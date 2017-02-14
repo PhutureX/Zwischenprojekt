@@ -3,9 +3,9 @@
 <table cellspacing="0">
     <thead>
     <tr>
-        <th>Title</th>
-        <th width="30%">created at</th>
-        <th width="25%">Settings</th>
+        <th class="table_text">Title</th>
+        <th width="30%" class="table_center">created at</th>
+        <th width="25%" class="table_center">Settings</th>
     </tr>
     </thead>
     <tbody>
@@ -26,6 +26,6 @@
     <?php } ?>
     </tbody>
 </table>
-<div class="btn">
+<div class="btn space">
 <a href="index.php?page=news&action=new">Create News</a>
 </div>

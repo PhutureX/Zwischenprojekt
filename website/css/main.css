@@ -128,7 +128,7 @@ header .headerimg{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../img/news/titleimage.jpg");
+  background-image: url("../img/news/titleimage1.png");
   height: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -308,6 +308,9 @@ td {
   width: 50%;
 }
 
+.space {
+  margin-bottom: 15%;
+}
 /* #################### SLIDER #################### */
 
 /* IMPORT FROM libaries/flexslider */
@@ -327,11 +330,19 @@ td {
 
 /* #################### NEWS ARTICLE PREVIEW #################### */
 
-main .news-articlelist{
+.news-articlelistmain{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 100px;
+}
+
+.news-articlelist{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  margin-bottom: 15%;
 }
 
 a.article_preview {
@@ -421,14 +432,14 @@ main section .article p {
 .article_figure {
   margin: auto;
   margin-top: 50px;
-  height: 320px;
-  width: 100%;
-  justify-content: space-between;
+  height: 245px;
   display: flex;
+  justify-content: space-between;
 }
 
 .article_figure img{
-  width: 33%;
+  height: 100%;
+  flex: auto;
 }
 
 .newsbutton {
@@ -448,6 +459,10 @@ main section .article p {
 .newsbutton:hover{
   background-color: rgb(186, 41, 42);
   border: solid 1px rgb(186, 41, 42);
+}
+
+.loginto {
+  margin: 0 auto;
 }
 
 /*#################################################### CONTACT US ################################### */

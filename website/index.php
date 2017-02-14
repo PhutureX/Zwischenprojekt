@@ -31,6 +31,8 @@ if( $page == "home" ){
         $site = "sites/tours.php";
     }elseif( $page == "contact_us" ){
         $site = "sites/contact_us.php";
+      }elseif( $page == "contact_us_complete" ){
+          $site = "sites/contact_us_complete.php";
     }elseif( $page == "register" ){
         $site = "sites/register.php";
     }elseif( $page == "register_success" ){

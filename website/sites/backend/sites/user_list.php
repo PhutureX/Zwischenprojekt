@@ -3,14 +3,14 @@
 <table cellspacing="0">
     <thead>
     <tr>
-        <th width="12.5%">Username</th>
-        <th width="12.5%">First Name</th>
-        <th width="12.5%">Last Name</th>
-        <th width="12.5%">E-Mail</th>
-        <th width="17.5%">Address</th>
-        <th width="12.5%">Phone</th>
-        <th width="7.5%">Admin</th>
-        <th width="12.5%">Settings</th>
+        <th width="12.5%" class="table_text">Username</th>
+        <th width="12.5%" class="table_text">First Name</th>
+        <th width="12.5%" class="table_text">Last Name</th>
+        <th width="12.5%" class="table_text">E-Mail</th>
+        <th width="17.5%" class="table_text">Address</th>
+        <th width="12.5%" class="table_center">Phone</th>
+        <th width="7.5%" class="table_center">Admin</th>
+        <th width="12.5%" class="table_center">Settings</th>
     </tr>
     </thead>
     <tbody>
@@ -36,6 +36,6 @@
     <?php } ?>
     </tbody>
 </table>
-<div class="btn">
+<div class="btn space">
 <a href="index.php?page=user&action=new">Create User</a>
 </div>
