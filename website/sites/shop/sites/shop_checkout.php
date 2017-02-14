@@ -13,9 +13,9 @@
     <main>
         <div id="shop-checkout" class="shop-wrapper">
             <ol class="breadcrumbs">
-                <li><a href="../index.html">Shop</a></li>
-                <li><a href="shop_cart.html">Cart</a></li>
-                <li><a href="shop_checkout.html">Customer Information</a></li>
+                <li><a href="index.php?page=home">Shop</a></li>
+                <li><a href="index.php?page=cart">Cart</a></li>
+                <li><a href="#">Customer Information</a></li>
                 <li>Shipping</li>
                 <li>Payment</li>
             </ol>

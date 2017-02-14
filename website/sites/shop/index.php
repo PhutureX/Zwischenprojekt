@@ -57,6 +57,10 @@ if($page == "home"){
     $site = "sites/shop_productpage.php";
 }elseif($page == "checkout"){
     $site = "sites/checkout.php";
+}elseif($page == "return_1"){
+    $site = "sites/checkout_return_1.php";
+}elseif($page == "return_2"){
+    $site = "sites/checkout_return_2.php";
 }elseif( $page == "search"){
     $site = "sites/shop_list_search.php";
 }else{

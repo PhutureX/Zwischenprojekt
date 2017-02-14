@@ -19,13 +19,13 @@ Shop PHP
 Shop PHP Functions  
 Shop pictures/media  
 Shop Order List  
+Shop Search Function  
 Database  
 
 ##todo
 
 Shop product configuration  
 Shop currency change  
-Shop checkout navigation  
 ***optional*** Shop Cart Quantity change   
 ***optional*** Shop Discount Code  
 ***optional*** Shop index Slider  

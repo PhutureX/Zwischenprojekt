@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 14. Feb 2017 um 13:52
+-- Erstellungszeit: 14. Feb 2017 um 14:21
 -- Server-Version: 10.1.19-MariaDB
 -- PHP-Version: 5.6.28
 
@@ -148,14 +148,7 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `ordernumber`, `user_id`, `created_at`, `payment`, `shipping`, `status`) VALUES
 (50, 20171, 2, 1486975193, 'PayPal', 'UPS', 0),
-(51, 201751, 2, 1486975512, 'Sofort', 'Post', 0),
-(52, 201752, 2, 1486975547, 'PayPal', 'Post', 0),
-(53, 201753, 2, 1486975698, 'Sofort', 'UPS', 0),
-(69, 201754, 2, 1486990647, 'PayPal', 'Post', 0),
-(70, 201754, 2, 1486990647, 'PayPal', 'Post', 0),
-(71, 201771, 2, 1486990876, 'PayPal', 'Post', 0),
-(72, 201771, 2, 1486990876, 'PayPal', 'Post', 0),
-(85, 201773, 55, 1486992919, 'PayPal', 'Post', 0);
+(86, 201751, 2, 1487078446, 'Sofort', 'DHL', 0);
 
 -- --------------------------------------------------------
 
@@ -187,17 +180,6 @@ INSERT INTO `order_products` (`id`, `order_id`, `product_id`, `size`, `quantity`
 (127, 50, 12, 'Red July Notebook', 1),
 (128, 50, 14, 'Youth Box', 1),
 (129, 50, 15, 'Conversation', 1),
-(130, 51, 2, 'L', 1),
-(131, 52, 4, 'L', 1),
-(132, 52, 2, '2XL', 1),
-(133, 52, 10, 'Red July Backpack', 1),
-(134, 52, 14, 'Youth Box', 1),
-(135, 53, 1, 'XL', 1),
-(136, 53, 7, 'Red July Cup ', 1),
-(137, 53, 12, 'Red July Notebook', 1),
-(138, 53, 14, 'Youth Box', 1),
-(139, 53, 15, 'Conversation', 1),
-(140, 53, 10, 'Red July Backpack', 1),
 (163, 0, 1, 'S', 1),
 (164, 0, 1, 'S', 1),
 (165, 0, 1, 'S', 1),
@@ -210,8 +192,9 @@ INSERT INTO `order_products` (`id`, `order_id`, `product_id`, `size`, `quantity`
 (172, 0, 9, 'Red July Mousepad', 1),
 (173, 0, 9, 'Red July Mousepad', 1),
 (174, 0, 9, 'Red July Mousepad', 1),
-(191, 85, 10, 'Red July Backpack', 2),
-(192, 85, 12, 'Red July Notebook', 5);
+(193, 86, 1, 'S', 1),
+(194, 86, 1, 'S', 1),
+(195, 86, 15, 'Conversation', 1);
 
 -- --------------------------------------------------------
 
@@ -264,7 +247,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `name`, `price`, `description`, `stock`, `stock_s`, `stock_m`, `stock_l`, `stock_xl`, `stock_2xl`, `stock_3xl`, `sale`, `price_sale`, `product_type`, `created_at`, `updated_at`) VALUES
-(1, 1, 'White RJ T-Shirt', '12.99', 'Our white designer T-shirt with the official Red July logo.', 30, 5, 5, 5, 5, 5, 5, 0, NULL, 0, '1485827060', NULL),
+(1, 1, 'White RJ T-Shirt', '12.99', 'Our white designer T-shirt with the official Red July logo.', 28, 3, 5, 5, 5, 5, 5, 0, NULL, 0, '1485827060', NULL),
 (2, 1, 'Black RJ T-Shirt', '12.99', 'Our black designer T-shirt with the official Red July logo.', 26, 2, 3, 1, 0, 10, 10, 1, '9.99', 0, '1485827052', NULL),
 (3, 2, 'White RJ Hoodie', '29.99', 'Our white designer Hoodie with the official Red July logo.', 25, 5, 5, 3, 2, 5, 5, 0, NULL, 0, '1485827060', NULL),
 (4, 2, 'Black RJ Hoodie', '29.99', 'Our black designer Hoodie with the official Red July logo.', 31, 1, 5, 5, 10, 5, 5, 1, '24.99', 0, '1485827052', NULL),
@@ -274,7 +257,7 @@ INSERT INTO `products` (`id`, `category_id`, `name`, `price`, `description`, `st
 (10, 4, 'Red July Backpack', '34.99', 'Our official Backpack, with the official Red July Logo printed on the front.', 18, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
 (12, 99, 'Red July Notebook', '1.99', 'A notebook with 50 pages, with the official Red July Logo on the front.', 99, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
 (14, 6, 'Youth Box', '14.99', 'Our  First Album with 5 Songs<br>1. I Can''t Forget You <br>2. 18 Hours <br>3. Fathers Song <br>4. I Need You <br> 5. Confessions', 74, 0, 0, 0, 0, 3, 0, 1, '9.99', 1, '1485827052', NULL),
-(15, 6, 'Conversation', '19.99', 'Our Second Album with 6 Songs<br>1. Toxic <br>2. Sympathy <br>3. Pot Song <br>4. Soul <br>5. From Above <br>6. A Simple Goodbye', 146, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1485827060', NULL),
+(15, 6, 'Conversation', '19.99', 'Our Second Album with 6 Songs<br>1. Toxic <br>2. Sympathy <br>3. Pot Song <br>4. Soul <br>5. From Above <br>6. A Simple Goodbye', 145, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1485827060', NULL),
 (16, 7, 'Red July - I Can''t Forget You', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
 (17, 7, 'Red July - 18 Hours', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),
 (18, 7, 'Red July - Fathers Song', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827052', NULL),
@@ -456,8 +439,7 @@ INSERT INTO `users` (`id`, `uname`, `first_name`, `last_name`, `password`, `emai
 (5, 'Johnny19', 'Johnny', 'Bravo', '52f6484f835090327311436766fc1ba799729114:63179', 'johnny@hotmail.com', 'Johnson Road 3/21', 1130, 'Köln', 'Germany', '06761829324', 0, NULL, NULL),
 (6, 'admin', 'Admin', 'Istrator', '171288e5fbc7fb97004229ca0dbbdc720076e615:74973', 'admin@redjuly.com', 'Rainbowstreet 42', 1337, 'Arkham City', 'United States', '06603748273', 1, NULL, NULL),
 (9, 'JeffreyFan', 'Jeffrey', 'Porter', '5c0ca6f735323ad974e61666b0c2784dbebe4454:71031', 'Jeffport@gmail.com', 'Bakerstreet 62', 42311, 'Exeter', 'United Kingdom', '01282748293', NULL, NULL, NULL),
-(10, 'Dark_Dragon_Lord_666', 'Death', 'Lord', 'af27191225ccdfa8533d21893d96419d25c57c30:69740', 'd6d6d6@gmail.com', 'why should i tell you', 12412, 'Kansas', 'United Stated', '0123729372', NULL, NULL, NULL),
-(55, 'Guest', 'Test', 'Kappa123', '', 'test@test.com', 'Kappastreet', 1111, 'Kappaland', 'Germany', '', NULL, NULL, NULL);
+(10, 'Dark_Dragon_Lord_666', 'Death', 'Lord', 'af27191225ccdfa8533d21893d96419d25c57c30:69740', 'd6d6d6@gmail.com', 'why should i tell you', 12412, 'Kansas', 'United Stated', '0123729372', NULL, NULL, NULL);
 
 --
 -- Indizes der exportierten Tabellen
@@ -575,12 +557,12 @@ ALTER TABLE `news_comments`
 -- AUTO_INCREMENT für Tabelle `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 --
 -- AUTO_INCREMENT für Tabelle `order_products`
 --
 ALTER TABLE `order_products`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
 --
 -- AUTO_INCREMENT für Tabelle `payments`
 --

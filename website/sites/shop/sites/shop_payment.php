@@ -13,11 +13,11 @@
   <main>
       <div id="shop-checkout" class="shop-wrapper">
           <ol class="breadcrumbs">
-              <li><a href="../index.html">Shop</a></li>
-              <li><a href="shop_cart.html">Cart</a></li>
-              <li><a href="shop_checkout.html">Customer Information</a></li>
-              <li><a href="shop_shipping.html">Shipping</a></li>
-              <li><a href="shop_payment.html">Payment</a></li>
+              <li><a href="index.php?page=home">Shop</a></li>
+              <li><a href="index.php?page=cart">Cart</a></li>
+              <li><a href="index.php?page=return_1">Customer Information</a></li>
+              <li><a href="index.php?page=return_2">Shipping</a></li>
+              <li><a href="#">Payment</a></li>
           </ol>
           <?php
             if( $shop_errors === true){
@@ -55,7 +55,7 @@
                   </li>
                 </ul>
                 <div class="shop-checkout-continue">
-                  <a href="shop_shipping.html" class="shop-checkout-return"><span>&larr;</span> Return</a>
+                  <a href="index.php?page=return_2" class="shop-checkout-return"><span>&larr;</span> Return</a>
                   <input type="submit" class="shop-checkout-btn" name="checkout_step3" value="Complete Order">
                 </div>
               </form>

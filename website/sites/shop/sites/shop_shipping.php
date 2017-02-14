@@ -19,10 +19,10 @@
   <main>
       <div id="shop-checkout" class="shop-wrapper">
           <ol class="breadcrumbs">
-              <li><a href="../index.html">Shop</a></li>
-              <li><a href="shop_cart.html">Cart</a></li>
-              <li><a href="shop_checkout.html">Customer Information</a></li>
-              <li><a href="shop_shipping.html">Shipping</a></li>
+              <li><a href="index.php?page=home">Shop</a></li>
+              <li><a href="index.php?page=cart">Cart</a></li>
+              <li><a href="index.php?page=return_1">Customer Information</a></li>
+              <li><a href="#">Shipping</a></li>
               <li>Payment</li>
           </ol>
           <?php
@@ -63,7 +63,7 @@
                   </li>
                 </ul>
                 <div class="shop-checkout-continue">
-                  <a href="index.php?page=information" class="shop-checkout-return"><span>&larr;</span> Return</a>
+                  <a href="index.php?page=return_1" class="shop-checkout-return"><span>&larr;</span> Return</a>
                   <input type="submit" class="shop-checkout-btn" name="checkout_step2" value="Continue to Payment">
                 </div>
               </form>
