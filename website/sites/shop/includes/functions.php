@@ -241,6 +241,12 @@ if( isset($_POST['checkout_step3']) ){
 }
 
 
+if( isset($_POST['header-search-submit']) ){
+  $search = $_POST['header-search'];
+  $site = "sites/shop_list_search.php";
+}
+
+
 function cleanString( $dblink, $string ){
   $string = str_replace("<!--", "", $string);
   $string = str_replace("-->", "", $string);

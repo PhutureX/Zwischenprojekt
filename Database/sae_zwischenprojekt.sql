@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 13. Feb 2017 um 14:37
+-- Erstellungszeit: 14. Feb 2017 um 13:52
 -- Server-Version: 10.1.19-MariaDB
 -- PHP-Version: 5.6.28
 
@@ -264,15 +264,15 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `name`, `price`, `description`, `stock`, `stock_s`, `stock_m`, `stock_l`, `stock_xl`, `stock_2xl`, `stock_3xl`, `sale`, `price_sale`, `product_type`, `created_at`, `updated_at`) VALUES
-(1, 1, 'White RJ T-Shirt', '12.99', 'Our white designer T-shirt with the official Red July logo.', 26, 5, 5, 1, 5, 5, 5, 0, NULL, 0, '1485827060', NULL),
-(2, 1, 'Black RJ T-Shirt', '12.99', 'Our black designer T-shirt with the official Red July logo.', 26, 0, 5, 1, 0, 10, 10, 1, '9.99', 0, '1485827052', NULL),
-(3, 2, 'White RJ Hoodie', '29.99', 'Our white designer Hoodie with the official Red July logo.', 20, 0, 5, 0, 2, 5, 8, 0, NULL, 0, '1485827060', NULL),
-(4, 2, 'Black RJ Hoodie', '29.99', 'Our black designer Hoodie with the official Red July logo.', 39, 1, 5, 8, 13, 4, 8, 1, '24.99', 0, '1485827052', NULL),
+(1, 1, 'White RJ T-Shirt', '12.99', 'Our white designer T-shirt with the official Red July logo.', 30, 5, 5, 5, 5, 5, 5, 0, NULL, 0, '1485827060', NULL),
+(2, 1, 'Black RJ T-Shirt', '12.99', 'Our black designer T-shirt with the official Red July logo.', 26, 2, 3, 1, 0, 10, 10, 1, '9.99', 0, '1485827052', NULL),
+(3, 2, 'White RJ Hoodie', '29.99', 'Our white designer Hoodie with the official Red July logo.', 25, 5, 5, 3, 2, 5, 5, 0, NULL, 0, '1485827060', NULL),
+(4, 2, 'Black RJ Hoodie', '29.99', 'Our black designer Hoodie with the official Red July logo.', 31, 1, 5, 5, 10, 5, 5, 1, '24.99', 0, '1485827052', NULL),
 (5, 3, 'Red July Cap', '19.99', 'Our official designer Cap with the official Red July Logo.', 12, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
 (7, 5, 'Red July Cup ', '9.99', 'The official Red July Cup, with the official Red July Logo printed on it.', 23, 0, 0, 0, 0, 0, 0, 1, '4.99', 1, '1485827060', NULL),
 (9, 99, 'Red July Mousepad', '14.99', 'The official Red July Mousepad, with the official Logo Printed on it. <br>400 x 300 x 3mm', 2, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
 (10, 4, 'Red July Backpack', '34.99', 'Our official Backpack, with the official Red July Logo printed on the front.', 18, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827052', NULL),
-(12, 99, 'Red July Notebook', '1.99', 'A notebook with 50 pages, with the official Red July Logo on the front.', 91, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
+(12, 99, 'Red July Notebook', '1.99', 'A notebook with 50 pages, with the official Red July Logo on the front.', 99, 0, 0, 0, 0, 0, 0, 0, NULL, 1, '1485827060', NULL),
 (14, 6, 'Youth Box', '14.99', 'Our  First Album with 5 Songs<br>1. I Can''t Forget You <br>2. 18 Hours <br>3. Fathers Song <br>4. I Need You <br> 5. Confessions', 74, 0, 0, 0, 0, 3, 0, 1, '9.99', 1, '1485827052', NULL),
 (15, 6, 'Conversation', '19.99', 'Our Second Album with 6 Songs<br>1. Toxic <br>2. Sympathy <br>3. Pot Song <br>4. Soul <br>5. From Above <br>6. A Simple Goodbye', 146, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1485827060', NULL),
 (16, 7, 'Red July - I Can''t Forget You', '0.99', NULL, -1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, '1485827060', NULL),

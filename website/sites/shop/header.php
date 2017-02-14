@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Red July</title>
+    <title>Red July Shop</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon"href="../../img/logos/favicon.ico" />
     <!-- Font Awesome Libary -->
@@ -10,9 +10,10 @@
     <!-- Slider Libary -->
     <link rel="stylesheet" type="text/css" href="libaries/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="libaries/slick/slick-theme.css"/>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!-- JQuery -->
-    <script language="JavaScript" type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Slick Slider Libary -->
+    <script type="text/javascript" src="libaries/slick/slick.min.js"></script>
   </head>
   <body>
     <header>
@@ -69,9 +70,9 @@
           <li>
             <a href="#">
               <i class="fa fa-search" aria-hidden="true">
-                <form action="#">
-                  <input id="header-search" name="search" type="text" placeholder="Search...">
-                  <input id="header-search-submit" name="shop-search" type="submit">
+                <form action="index.php?page=search" method="post">
+                  <input id="header-search" name="header-search" type="text" placeholder="Search...">
+                  <input id="header-search-submit" name="header-search-submit" type="submit">
                 </form>
               </i>
             </a>

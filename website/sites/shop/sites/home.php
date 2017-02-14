@@ -75,11 +75,11 @@
   <section class="shop-slider-box">
     <h2>Featured Products</h2>
     <div class="shop-slider">
-      <a href="#" class="shop-slider-slide"></a>
-      <a href="#" class="shop-slider-slide"></a>
-      <a href="#" class="shop-slider-slide"></a>
-      <a href="#" class="shop-slider-slide"></a>
-      <a href="#" class="shop-slider-slide"></a>
+      <a href="index.php?page=productpage&id=10" class="shop-slider-slide_1"></a>
+      <a href="index.php?page=productpage&id=3" class="shop-slider-slide_2"></a>
+      <a href="index.php?page=productpage&id=4" class="shop-slider-slide_3"></a>
+      <a href="index.php?page=productpage&id=9" class="shop-slider-slide_4"></a>
+      <a href="index.php?page=productpage&id=7" class="shop-slider-slide_5"></a>
     </div>
   </section>
   <section class="shop-info">
@@ -98,3 +98,13 @@
       <h2>24/7 Support</h2>
     </div>
   </section>
+  <script>
+    $(document).ready(function(e) {
+      $('.shop-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+      });
+    });
+  </script>

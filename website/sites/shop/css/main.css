@@ -491,8 +491,44 @@ main .shop-slider-box .shop-slider{
   width: 100%;
 }
 
-main .shop-slider-box .shop-slider .shop-slider-slide{
+main .shop-slider-box .shop-slider .shop-slider-slide_1{
   background-image: url("../img/shop/backpack1-1.png");
+  height: 350px;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+main .shop-slider-box .shop-slider .shop-slider-slide_2{
+  background-image: url("../img/shop/hoodie1-1.png");
+  height: 350px;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+main .shop-slider-box .shop-slider .shop-slider-slide_3{
+  background-image: url("../img/shop/hoodie2-1.png");
+  height: 350px;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+main .shop-slider-box .shop-slider .shop-slider-slide_4{
+  background-image: url("../img/shop/mousepad1-1.png");
+  height: 350px;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+main .shop-slider-box .shop-slider .shop-slider-slide_5{
+  background-image: url("../img/shop/cup1-1.png");
   height: 350px;
   width: 350px;
   background-repeat: no-repeat;
@@ -1303,6 +1339,7 @@ ol.breadcrumbs li a{
 /* #################### Footer #################### */
 
 footer{
+  margin: auto;
   height: 325px;
   display: flex;
   justify-content: space-around;
@@ -1367,7 +1404,6 @@ footer .footer-nl input:last-child{
   display: block;
   margin: 10px 0px 10px 0px;
   cursor: pointer;
-  transition: all 400ms ease;
 }
 
 footer .footer-nl input:last-child:hover{
@@ -1388,10 +1424,6 @@ footer .footer-social ul{
 footer .footer-social ul li{
   display: inline-block;
   padding-left: 20px;
-}
-
-footer .footer-social ul li a{
-  transition: all 800ms ease;
 }
 
 footer .footer-social ul li:nth-child(1) a:hover{
